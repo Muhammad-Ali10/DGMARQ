@@ -2,7 +2,7 @@ const CompanyIntroSection = () => {
   return (
     <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-8 md:py-12 xl:py-16 grid grid-cols-1 xl:grid-cols-2 gap-8">
       <img
-        src="/images/team.png"
+        src="https://dgmarq-z9uy.vercel.app//team.png"
         alt="Team"
         className="rounded-[21px] w-full h-auto object-cover"
       />

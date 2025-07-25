@@ -10,9 +10,9 @@ const BundleDeals = () => {
                 <h3 className=" text-4xl -tracking-tight font-semibold text-center">Exclusive bundle deals</h3>
                 <p className="text-base font-normal -tracking-tight text-center">Add some funds in a flash and enjoy new games, DLC, and more!</p>
                 <div className="flex flex-col md:flex-row justify-between items-center mt-9">
-                    <ProductCardVertical productimage="/images/trandingimage.png" />
+                    <ProductCardVertical productimage="https://dgmarq-z9uy.vercel.app//trandingimage.png" />
                     <CirclePlus className="text-white" />
-                    <ProductCardVertical productimage="/images/trandingimage.png" />
+                    <ProductCardVertical productimage="https://dgmarq-z9uy.vercel.app//trandingimage.png" />
                     <CircleEqual className="text-white" />
                     <Card className="w-[382px] h-[175px] flex flex-col items-center justify-center border-0 p-0 gap-0 bg-[#041536] text-white">
                         <CardHeader className="p-0 w-full">

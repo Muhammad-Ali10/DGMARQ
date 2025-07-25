@@ -6,19 +6,19 @@ const DgmarqFeatures = ({ title, data }) => {
     const platformData = [
         {
             name: "PC",
-            imageUrl: "/images/PC.svg"
+            imageUrl: "https://dgmarq-z9uy.vercel.app//PC.svg"
         },
         {
             name: "Xbox",
-            imageUrl: "/images/Xbox.svg"
+            imageUrl: "https://dgmarq-z9uy.vercel.app//Xbox.svg"
         },
         {
             name: "Playstation",
-            imageUrl: "/images/Playstation.svg"
+            imageUrl: "https://dgmarq-z9uy.vercel.app//Playstation.svg"
         },
         {
             name: "pc",
-            imageUrl: "/images/Nintendo.svg"
+            imageUrl: "https://dgmarq-z9uy.vercel.app//Nintendo.svg"
         },
     ]
 

@@ -11,7 +11,7 @@ const Giftcards = ({ cards }) => {
         >
           <div className="w-[174px] h-[240px]">
             <img
-              src="/images/gift-card.png"
+              src="https://dgmarq-z9uy.vercel.app//gift-card.png"
               alt="Gift cards"
               className="w-full h-full object-cover rounded-21"
             />

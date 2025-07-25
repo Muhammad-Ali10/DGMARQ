@@ -3,27 +3,27 @@ import { Button } from "@/components/ui/button";
 const DgmarDna = () => {
   const DAN_Data = [
     {
-      imgUrl: "/images/DAN_Deliver.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DAN_Deliver.png",
       title: "Deliver Value",
     },
     {
-      imgUrl: "/images/DNA_Team.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DNA_Team.png",
       title: "Team Spirit",
     },
     {
-      imgUrl: "/images/DNA_Growth.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DNA_Growth.png",
       title: "Growth",
     },
     {
-      imgUrl: "/images/DNA_Communication.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DNA_Communication.png",
       title: "Communication",
     },
     {
-      imgUrl: "/images/DNA_Accountability.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DNA_Accountability.png",
       title: "Trust",
     },
     {
-      imgUrl: "/images/DNA_Trust.png",
+      imgUrl: "https://dgmarq-z9uy.vercel.app//DNA_Trust.png",
       title: "Accountability",
     },
   ];

@@ -35,7 +35,7 @@ const WorkingSteps = () => {
 
         {/* Image */}
         <img 
-          src="/images/stepimage.png" 
+          src="https://dgmarq-z9uy.vercel.app//stepimage.png" 
           alt="Working Steps" 
           className="rounded-xl w-full max-w-full h-auto object-contain" 
         />

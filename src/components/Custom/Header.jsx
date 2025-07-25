@@ -41,7 +41,7 @@ export default function Header() {
                     {/* Logo */}
                     <div className="flex items-center gap-3 flex-shrink-0">
                         <Link to="/">
-                        <img src="/images/logo.png" alt="Logo" className="w-36 h-11" />
+                        <img src="https://dgmarq-z9uy.vercel.app//logo.png" alt="Logo" className="w-36 h-11" />
                         </Link>
                     </div>
 

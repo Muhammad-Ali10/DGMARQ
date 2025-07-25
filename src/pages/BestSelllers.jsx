@@ -7,27 +7,27 @@ import { Button } from '@/components/ui/button';
 const BestSellers = () => {
 
     const product = [
-        "/images/BestSeller7.png",
-        "/images/BestSeller8.png",
-        "/images/BestSeller9.png",
-        "/images/BestSeller8.png",
-        "/images/BestSeller10.png",
-        "/images/BestSeller11.png",
-        "/images/BestSeller12.png",
-        "/images/BestSeller13.png",
-        "/images/BestSeller14.png",
-        "/images/BestSeller15.png",
-        "/images/BestSeller16.png",
-        "/images/BestSeller17.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller7.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller8.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller9.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller8.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller10.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller11.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller12.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller13.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller14.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller15.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller16.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller17.png",
     ]
 
     const SoftwareBestSeller = [
-        "/images/BestSeller1.png",
-        "/images/BestSeller2.png",
-        "/images/BestSeller3.png",
-        "/images/BestSeller4.png",
-        "/images/BestSeller5.png",
-        "/images/BestSeller6.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller1.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller2.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller3.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller4.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller5.png",
+        "https://dgmarq-z9uy.vercel.app//BestSeller6.png",
     ];
 
     const PlatformsButton = [
