@@ -24,7 +24,7 @@ const ContactUs = () => {
                     </div>
                     <div className="flex flex-col gap-5">
                         <h3 className="text-26 font-poppins font-bold text-white">Find us on social media</h3>
-                        <img src="../../../assets/images/Social.png" className="w-full max-w-[409px]"/>
+                        <img src="./images/Social.png" className="w-full max-w-[409px]"/>
                     </div>
                 </div>
 

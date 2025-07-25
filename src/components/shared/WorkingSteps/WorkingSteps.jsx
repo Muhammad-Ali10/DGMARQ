@@ -35,7 +35,7 @@ const WorkingSteps = () => {
 
         {/* Image */}
         <img 
-          src="../../../assets/images/stepimage.png" 
+          src="./images/stepimage.png" 
           alt="Working Steps" 
           className="rounded-xl w-full max-w-full h-auto object-contain" 
         />

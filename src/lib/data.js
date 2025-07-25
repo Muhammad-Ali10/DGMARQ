@@ -196,7 +196,7 @@ export const giftCards = [
 
 // About Page Data Start
 export const AboutpageVarified = {
-    imgSrc: "../../../assets/images/verifiedlogo.png",
+    imgSrc: "./images/verifiedlogo.png",
     title: "Recognized as “Best Marketplace” of the 21st Century",
     description: "in the Spanish VII Edition of the 21st Century National Technology Awards 2024"
 }
@@ -235,26 +235,26 @@ export const CompanyFeatures = [
 
 
 export const MarketplacepageVarified = {
-    imgSrc: "../../../assets/images/varifiedlogo2.png",
+    imgSrc: "./images/varifiedlogo2.png",
     title: "Fraud prevention supported by AI",
     description: "Comprehensive fraud prevention system"
 }
 
 export const MarketplaceFeature = [
     {
-        imgSrc: "../../../assets/images/Games.png",
+        imgSrc: "./images/Games.png",
         description: "Triple-A games, hot releases, indie games, and classics that never grow old, and many more for PC & Console gamers"
     },
     {
-        imgSrc: "../../../assets/images/Subscriptions.png",
+        imgSrc: "./images/Subscriptions.png",
         description: "Vast range of subscription vouchers including the most popular streaming services, gift cards, prepays for all online shopping destinations, and mobile top-ups"
     },
     {
-        imgSrc: "../../../assets/images/Software.png",
+        imgSrc: "./images/Software.png",
         description: "Software items that enhance both your work and hobbies, offering creative suites and diagnostic tools with a wide range of customizable options"
     },
     {
-        imgSrc: "../../../assets/images/Online_courses.png",
+        imgSrc: "./images/Online_courses.png",
         description: "Online courses perfect for learning new skills and broadening your horizons"
     },
 ]
@@ -262,7 +262,7 @@ export const MarketplaceFeature = [
 export const MarketplaceHeroSection = {
     title: "World’s largest marketplace for digital entertainment",
     description: "We operate across both B2B and B2C channels, ensuring security and transparency through rigorous business and AML verification of all sellers. Our top priority is client satisfaction, which is why we offer a purchasing process that is easy, safe, and fast",
-    bgurl: "bg-blend-overlay bg-black/50 bg-[url('../../../assets/images/bgMarketplace.png')]"
+    bgurl: "bg-blend-overlay bg-black/50 bg-[url('./images/bgMarketplace.png')]"
 }
 
 export const SellerDetails = [
@@ -286,7 +286,7 @@ export const FarmeWorkData =
     description: "We guarantee security and transparency as all our sellers undergo strict business and AML verification. We ensure an easy, safe and fast purchasing process as our clients’ satisfaction is the top priority for us",
     buttonName: "Find out more",
     url: "#",
-    bgurl: "bg-blend-overlay  bg-blue-2  bg-[url('../../../assets/images/marketbg2.png')]"
+    bgurl: "bg-blend-overlay  bg-blue-2  bg-[url('./images/marketbg2.png')]"
 
 }
 
@@ -316,7 +316,7 @@ export const FaqsData = [
 //Security page
 export const SecurityHeroSection = {
     title: "DGMARQ.COM: secure and trusted marketplace",
-    bgurl: " bg-blend-overlay bg-black/50 bg-[url('../../../assets/images/bgSecurity.png')] "
+    bgurl: " bg-blend-overlay bg-black/50 bg-[url('./images/bgSecurity.png')] "
 }
 export const SecurityPromoSection = {
     title: "How we operate",
@@ -354,7 +354,7 @@ export const ContactUsHeroSection = {
             description: "teachers using games in education",
         },
     ],
-    bgurl: "bg-blend-soft-light bg-blue-2 bg-[url('../../../assets/images/Contactusbg.png')]",
+    bgurl: "bg-blend-soft-light bg-blue-2 bg-[url('./images/Contactusbg.png')]",
 }
 
 
@@ -364,25 +364,25 @@ export const ContactUsHeroSection = {
 export const CareersHeroSection = {
     title: "Your talent will flourish at DGMAR.COM",
     description: "Looking for an exciting challenge? Join over 400 talents shaping the future of global e-commerce together. Discover everything we can offer you. Meet our team, values, and culture. See for yourself that DGMAR.COM is the place to unlock your full potentia",
-    bgurl: "bg-blend-hard-light bg-blue-3 bg-[url('../../../assets/images/Careersbg.png')]",
+    bgurl: "bg-blend-hard-light bg-blue-3 bg-[url('./images/Careersbg.png')]",
 }
 
 export const CareerDgmarqFeatures =
     [
         {
-            imageUrl: "../../../assets/images/web.png",
+            imageUrl: "./images/web.png",
             title: "Global impact – influence millions of people worldwide",
         },
         {
-            imageUrl: "../../../assets/images/hands.png",
+            imageUrl: "./images/hands.png",
             title: "Inclusive culture – DEI at the core of everything we do",
         },
         {
-            imageUrl: "../../../assets/images/Flexiblework.png",
+            imageUrl: "./images/Flexiblework.png",
             title: "Flexible work – hybrid or remote, whichever suits you best",
         },
         {
-            imageUrl: "../../../assets/images/rocket.png",
+            imageUrl: "./images/rocket.png",
             title: "Future-oriented solutions – first in digital – digital first",
         }
     ]
@@ -394,7 +394,7 @@ export const CareerFarmeWork =
     description: "Our culture is built on trust, collaboration, and openness to diversity. We create a friendly and inclusive space for everyone, regardless of their personal traits, experiences, or roles",
     buttonName: "More about DEI",
     url: "#",
-    bgurl: "bg-blend-screen bg-blue-6  bg-[url('../../../assets/images/Careerwork.png')]"
+    bgurl: "bg-blend-screen bg-blue-6  bg-[url('./images/Careerwork.png')]"
 
 }
 

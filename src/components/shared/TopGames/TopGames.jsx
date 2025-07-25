@@ -4,12 +4,12 @@ import ProductSection from '@/components/Custom/ProductSection'
 const TopGames = () => {
 
     const product = [
-        "../../../assets/images/BestSeller1.png",
-        "../../../assets/images/BestSeller2.png",
-        "../../../assets/images/BestSeller3.png",
-        "../../../assets/images/BestSeller4.png",
-        "../../../assets/images/BestSeller5.png",
-        "../../../assets/images/BestSeller6.png",
+        "./images/BestSeller1.png",
+        "./images/BestSeller2.png",
+        "./images/BestSeller3.png",
+        "./images/BestSeller4.png",
+        "./images/BestSeller5.png",
+        "./images/BestSeller6.png",
     ]
     return (
         <>

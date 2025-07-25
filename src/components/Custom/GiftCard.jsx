@@ -11,7 +11,7 @@ const Giftcards = ({ cards }) => {
         >
           <div className="w-[174px] h-[240px]">
             <img
-              src="../../../assets/images/gift-card.png"
+              src="./images/gift-card.png"
               alt="Gift cards"
               className="w-full h-full object-cover rounded-21"
             />

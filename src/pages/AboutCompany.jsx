@@ -9,7 +9,7 @@ const AboutCompany = () => {
         <div className="flex flex-col max-w-1440 bg-blue items-center justify-center m-auto">
 
             <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-overlay
-            bg-blue-3 bg-[url('../../../assets/images/bgAbout.png')]">
+            bg-blue-3 bg-[url('./images/bgAbout.png')]">
 
 
                 {/* Content */}
@@ -69,7 +69,7 @@ const AboutCompany = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-hard-light bg-blue-3  bg-[url('../../../assets/images/Aboutbg2.png')]">
+            <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-hard-light bg-blue-3  bg-[url('./images/Aboutbg2.png')]">
 
                 {/* Content */}
                 <div className="relative z-10 flex items-center justify-center h-full">

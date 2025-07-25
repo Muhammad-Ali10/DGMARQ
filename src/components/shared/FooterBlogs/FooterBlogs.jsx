@@ -3,10 +3,10 @@ import { BlogCard } from "@/components";
 const FooterBlogs = () => {
   
     const blogs = [
-        { Image: "../../../assets/images/Blog1.png" },
-        { Image: "../../../assets/images/Blog2.png" },
-        { Image: "../../../assets/images/Blog3.png" },
-        { Image: "../../../assets/images/Blog4.png" },
+        { Image: "./images/Blog1.png" },
+        { Image: "./images/Blog2.png" },
+        { Image: "./images/Blog3.png" },
+        { Image: "./images/Blog4.png" },
     ]
 
     return (
