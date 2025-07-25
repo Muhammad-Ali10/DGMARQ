@@ -7,27 +7,27 @@ import { Button } from '@/components/ui/button';
 const BestSellers = () => {
 
     const product = [
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller7.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller8.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller9.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller8.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller10.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller11.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller12.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller13.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller14.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller15.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller16.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller17.png",
+        "./images/BestSeller7.png",
+        "./images/BestSeller8.png",
+        "./images/BestSeller9.png",
+        "./images/BestSeller8.png",
+        "./images/BestSeller10.png",
+        "./images/BestSeller11.png",
+        "./images/BestSeller12.png",
+        "./images/BestSeller13.png",
+        "./images/BestSeller14.png",
+        "./images/BestSeller15.png",
+        "./images/BestSeller16.png",
+        "./images/BestSeller17.png",
     ]
 
     const SoftwareBestSeller = [
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller1.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller2.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller3.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller4.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller5.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller6.png",
+        "./images/BestSeller1.png",
+        "./images/BestSeller2.png",
+        "./images/BestSeller3.png",
+        "./images/BestSeller4.png",
+        "./images/BestSeller5.png",
+        "./images/BestSeller6.png",
     ];
 
     const PlatformsButton = [

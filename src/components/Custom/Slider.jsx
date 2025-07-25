@@ -11,42 +11,42 @@ const Slider = () => {
 
     const rewards = [
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward1.png",
+            imgSrc: "./images/reward1.png",
             title: "Marketplace",
             decripition: "21st Century National Technology Awards, 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward2.png",
+            imgSrc: "./images/reward2.png",
             title: "Payments Innovations of the Year category (3rd place)",
             decripition: "eCommerce Awards 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward3.png",
+            imgSrc: "./images/reward3.png",
             title: "Best Digital Marketing Campaign (1st place)",
             decripition: "21st Century National Technology Awards, 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward4.png",
+            imgSrc: "./images/reward4.png",
             title: "Company of the Year: Retail Gold Winner",
             decripition: "21st Century National Technology Awards, 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward1.png",
+            imgSrc: "./images/reward1.png",
             title: "Marketplace",
             decripition: "21st Century National Technology Awards, 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward2.png",
+            imgSrc: "./images/reward2.png",
             title: "Payments Innovations of the Year category (3rd place)",
             decripition: "eCommerce Awards 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward3.png",
+            imgSrc: "./images/reward3.png",
             title: "Best Digital Marketing Campaign (1st place)",
             decripition: "21st Century National Technology Awards, 2024",
         },
         {
-            imgSrc: "https://dgmarq-z9uy.vercel.app/images/reward4.png",
+            imgSrc: "./images/reward4.png",
             title: "Company of the Year: Retail Gold Winner",
             decripition: "21st Century National Technology Awards, 2024",
         }

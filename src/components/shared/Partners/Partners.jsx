@@ -1,9 +1,9 @@
 const Partner = () => {
   const partnersData = [
-    { title: "Industry", imgSrc: "https://dgmarq-z9uy.vercel.app/images/partners1.png" },
-    { title: "Business", imgSrc: "https://dgmarq-z9uy.vercel.app/images/partners2.png" },
-    { title: "Developers and publishers", imgSrc: "https://dgmarq-z9uy.vercel.app/images/partners3.png" },
-    { title: "Influencers", imgSrc: "https://dgmarq-z9uy.vercel.app/images/partners4.png" },
+    { title: "Industry", imgSrc: "./images/partners1.png" },
+    { title: "Business", imgSrc: "./images/partners2.png" },
+    { title: "Developers and publishers", imgSrc: "./images/partners3.png" },
+    { title: "Influencers", imgSrc: "./images/partners4.png" },
   ];
 
   return (

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-col max-w-1440  text-white">
             <div className="flex flex-col md:flex-row justify-between items-center w-full p-5 md:px-11 md:py-6 xl:px-22 bg-[#07173D]">
                 <h3 >Payment methods:</h3>
-                <img src="https://dgmarq-z9uy.vercel.app/images/payments.png" alt="payments" className="w-full max-w-[460px]" />
+                <img src="./images/payments.png" alt="payments" className="w-full max-w-[460px]" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 p-5 md:px-11 md:py-6 xl:px-22 xl:py-13 bg-primary">
                 <div className="flex flex-col">

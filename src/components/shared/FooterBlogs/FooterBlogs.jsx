@@ -3,10 +3,10 @@ import { BlogCard } from "@/components";
 const FooterBlogs = () => {
   
     const blogs = [
-        { Image: "https://dgmarq-z9uy.vercel.app/images/Blog1.png" },
-        { Image: "https://dgmarq-z9uy.vercel.app/images/Blog2.png" },
-        { Image: "https://dgmarq-z9uy.vercel.app/images/Blog3.png" },
-        { Image: "https://dgmarq-z9uy.vercel.app/images/Blog4.png" },
+        { Image: "./images/Blog1.png" },
+        { Image: "./images/Blog2.png" },
+        { Image: "./images/Blog3.png" },
+        { Image: "./images/Blog4.png" },
     ]
 
     return (

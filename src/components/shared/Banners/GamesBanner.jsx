@@ -7,17 +7,17 @@ const GamesBanner = () => {
     const cardData =
         [
             {
-                imageUrl: "https://dgmarq-z9uy.vercel.app/images/mobileapp.svg",
+                imageUrl: "./images/mobileapp.svg",
                 title: "Vast selection in best prices",
                 description: "Over 70K digital items"
             },
             {
-                imageUrl: "https://dgmarq-z9uy.vercel.app/images/share.svg",
+                imageUrl: "./images/share.svg",
                 title: "Secured payments",
                 description: "2000+ Payment  Methods"
             },
             {
-                imageUrl: "https://dgmarq-z9uy.vercel.app/images/mobile.svg",
+                imageUrl: "./images/mobile.svg",
                 title: "Loyal users",
                 description: "30M  customers in 180 countries"
             }
@@ -26,7 +26,7 @@ const GamesBanner = () => {
 
     return (
         <div className="flex flex-col max-w-1440 w-full pt-8">
-            <img src="https://dgmarq-z9uy.vercel.app/images/banner2.jpg" alt="banner" className="w-full object-cover h-[386px] max-w-1440" />
+            <img src="./images/banner2.jpg" alt="banner" className="w-full object-cover h-[386px] max-w-1440" />
             <div className="max-w-1440 w-full flex justify-center  px-7 py-12 bg-[#0E092C] -mt-12">
                 <div className="flex flex-col md:flex-row items-center justify-between max-w-1260 w-full ">
                     <h3 className="text-26 font-bold font-poppins text-white">Why DGMARQ?</h3>

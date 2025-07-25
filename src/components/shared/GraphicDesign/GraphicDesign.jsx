@@ -3,12 +3,12 @@ import ProductSection from '@/components/Custom/ProductSection'
 const GraphicDesign = () => {
 
     const product = [
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller1.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller2.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller3.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller4.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller5.png",
-        "https://dgmarq-z9uy.vercel.app/images/BestSeller6.png",
+        "./images/BestSeller1.png",
+        "./images/BestSeller2.png",
+        "./images/BestSeller3.png",
+        "./images/BestSeller4.png",
+        "./images/BestSeller5.png",
+        "./images/BestSeller6.png",
         
     ]
     return (
