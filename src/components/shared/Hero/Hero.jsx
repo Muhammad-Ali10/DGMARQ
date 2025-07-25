@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel
 
 const Hero = () => {
   return (
-    <div className="w-full max-w-1440  py-8 relative bg-[#0E092C] overflow-hidden">
+    <div className="w-full   py-8 relative bg-[#0E092C] overflow-hidden">
      <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl"/>
         <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl"/>
       <Carousel className="w-full max-w-1260 mx-auto">

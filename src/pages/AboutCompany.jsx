@@ -6,7 +6,7 @@ const AboutCompany = () => {
 
 
     return (
-        <div className="flex flex-col max-w-1440 bg-blue items-center justify-center m-auto">
+        <div className="flex flex-col  bg-blue items-center justify-center m-auto">
 
             <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-overlay
             bg-blue-3 bg-[url('./images/bgAbout.png')]">

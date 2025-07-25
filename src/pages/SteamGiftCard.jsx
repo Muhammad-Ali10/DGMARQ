@@ -93,8 +93,14 @@ const SteamGiftCard = ()=> {
   }, [filters])
 
   return (
-    <div className="flex flex-col md:flex-row items-start justify-between max-w-1440 p-5 md:px-11 md:py-6 xl:px-22 xl:py-13 bg-blue-2">
-      <FilterSidebar filters={filters} onFilterChange={handleFilterChange} isMobile={isMobile} />      <GiftCard cards={filteredCards} />
+    <div className="flex w-full bg-blue-2 overflow-hidden">
+    <div className="flex flex-col md:flex-row items-start justify-between max-w-1260 bg-blue-2 m-auto pt-12">
+      <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
+            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" />
+      <FilterSidebar filters={filters} onFilterChange={handleFilterChange} isMobile={isMobile} />  
+  
+       <GiftCard cards={filteredCards} />
+    </div>
     </div>
   )
 }

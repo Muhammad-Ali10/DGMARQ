@@ -32,7 +32,7 @@ const Home = () => {
 
     ]
     return (
-        <div className="flex flex-col max-w-1440 bg-blue items-center justify-center m-auto">
+        <div className="flex flex-col bg-blue items-center justify-center m-auto ">
             <Hero />
             <BestSeller product={product} />
             <FlashDeal displayImage={false} displayDirection="flex-row" />
