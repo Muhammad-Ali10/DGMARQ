@@ -47,7 +47,7 @@ export { default as ThreeKeys } from "./shared/ThreeKeys/ThreeKeys";
 export { default as Fortnite } from './shared/Fortnite/Fortnite';
 export { default as TwoKeys } from "./shared/TwoKeys/TwoKeys";
 export { default as FooterBlogs } from './shared/FooterBlogs/FooterBlogs';
-export { default as Verified } from './shared/Verified/Verified';
+export { default as Verified } from './shared/Verifie/Verifie';
 export { default as WorkingSteps } from './shared/WorkingSteps/WorkingSteps';
 export { default as Partner } from "./shared/Partners/Partners";
 export { default as FarmeWork } from "./shared/FarmeWork/FarmeWork";
