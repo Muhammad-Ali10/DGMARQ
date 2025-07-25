@@ -1,5 +1,5 @@
 import ProductCardVertical from "@/components/Custom/ProductCardVertical"
-
+import productimg from "../../../../public/images/trandingimage.png"
 const TrendingOffer = ({gridNumber}) => {
 
 
@@ -9,7 +9,7 @@ const TrendingOffer = ({gridNumber}) => {
             <p className="text-base font-normal -tracking-tight  text-white mb-4">Don't miss out – grab them while you still have the chance!</p>
             <div className={`grid  grid-cols-1 md:${gridNumber} gap-5 justify-center`}>
                 {Array(6).fill().map((_, index) =>
-                    <ProductCardVertical key={index} productimage="https://dgmarq-z9uy.vercel.app/images/trandingimage.png" />
+                    <ProductCardVertical key={index} productimage={productimg} />
                 )}
             </div>
         </div>
