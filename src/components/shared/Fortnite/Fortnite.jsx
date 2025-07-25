@@ -3,12 +3,12 @@ import ProductSection from '@/components/Custom/ProductSection'
 const Fortnite = () => {
 
     const product = [
-        "./images/RandomKey9.png",
-        "./images/RandomKey8.png",
-        "./images/BestSeller3.png",
-        "./images/BestSeller4.png",
-        "./images/RandomKey9.png",
-        "./images/RandomKey8.png",
+        "/images/RandomKey9.png",
+        "/images/RandomKey8.png",
+        "/images/BestSeller3.png",
+        "/images/BestSeller4.png",
+        "/images/RandomKey9.png",
+        "/images/RandomKey8.png",
     ]
     return (
         <>

@@ -77,7 +77,7 @@ const Marketplace = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-center w-full">
 
                     {/* Image */}
-                    <img src="./images/seller.png" alt="seller-laptop" className="rounded-xl w-full max-w-full h-auto object-contain" />
+                    <img src="/images/seller.png" alt="seller-laptop" className="rounded-xl w-full max-w-full h-auto object-contain" />
 
                     {/* Detail Cards */}
                     {SellerDetails.map((step, index) => (
