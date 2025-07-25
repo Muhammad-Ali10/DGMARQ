@@ -1,6 +1,6 @@
 import ProductSection from '@/components/Custom/ProductSection'
 
-import pf from "../../../assets../../../assets/images"
+
 const BestSeller = ({ product }) => {
     const productimage = [
         "../../../assets/images/BestSeller1.png",
