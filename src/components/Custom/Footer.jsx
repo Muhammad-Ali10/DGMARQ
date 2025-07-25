@@ -3,12 +3,14 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
-        <div className="flex flex-col max-w-1440  text-white">
-            <div className="flex flex-col md:flex-row justify-between items-center w-full p-5 md:px-11 md:py-6 xl:px-22 bg-[#07173D]">
+        <div className="flex flex-col w-full bg-primary  text-white">
+            <div className=" w-full py-10 bg-[#07173D]">
+            <div className="max-w-1260 bg-[#07173D] flex flex-col md:flex-row justify-between items-center w-full m-auto">
                 <h3 >Payment methods:</h3>
                 <img src="./images/payments.png" alt="payments" className="w-full max-w-[460px]" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 p-5 md:px-11 md:py-6 xl:px-22 xl:py-13 bg-primary">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 max-w-1260 p-5 md:py-6 xl:py-13 bg-primary m-auto">
                 <div className="flex flex-col">
                     <h3 className="text-base font-poppins font-semibold uppercase pb-4">About</h3>
                     <Link to="/about-company" className="font-poppins font-normal text-sm leading-7 underline ">Company</Link>
