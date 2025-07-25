@@ -30,7 +30,7 @@ const FlashDealCard = () => {
 
             <div className="flex  flex-col justify-center items-center w-full">
                 <div className="max-w-[308px]">
-                    <img src="/images/flashdeal.png" alt="Steam Logo" className="w-full  h-[169px] object-contain z-0" />
+                    <img src="../../../assets/images/flashdeal.png" alt="Steam Logo" className="w-full  h-[169px] object-contain z-0" />
                     <div className="text-base font-normal font-poppins flex flex-col -mt-12 ml-2.5 absolute z-50 text-white rounded-lg bg-primary w-[99px] h-[70px] px-3.5 py-1">
                         Save <span className="text-2xl font-bold font-poppins text-center">$ 1.54</span>
                     </div>

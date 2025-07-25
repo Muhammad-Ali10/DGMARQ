@@ -7,27 +7,27 @@ import { Button } from '@/components/ui/button';
 const BestSellers = () => {
 
     const product = [
-        "/images/BestSeller7.png",
-        "/images/BestSeller8.png",
-        "/images/BestSeller9.png",
-        "/images/BestSeller8.png",
-        "/images/BestSeller10.png",
-        "/images/BestSeller11.png",
-        "/images/BestSeller12.png",
-        "/images/BestSeller13.png",
-        "/images/BestSeller14.png",
-        "/images/BestSeller15.png",
-        "/images/BestSeller16.png",
-        "/images/BestSeller17.png",
+        "../../../assets/images/BestSeller7.png",
+        "../../../assets/images/BestSeller8.png",
+        "../../../assets/images/BestSeller9.png",
+        "../../../assets/images/BestSeller8.png",
+        "../../../assets/images/BestSeller10.png",
+        "../../../assets/images/BestSeller11.png",
+        "../../../assets/images/BestSeller12.png",
+        "../../../assets/images/BestSeller13.png",
+        "../../../assets/images/BestSeller14.png",
+        "../../../assets/images/BestSeller15.png",
+        "../../../assets/images/BestSeller16.png",
+        "../../../assets/images/BestSeller17.png",
     ]
 
     const SoftwareBestSeller = [
-        "/images/BestSeller1.png",
-        "/images/BestSeller2.png",
-        "/images/BestSeller3.png",
-        "/images/BestSeller4.png",
-        "/images/BestSeller5.png",
-        "/images/BestSeller6.png",
+        "../../../assets/images/BestSeller1.png",
+        "../../../assets/images/BestSeller2.png",
+        "../../../assets/images/BestSeller3.png",
+        "../../../assets/images/BestSeller4.png",
+        "../../../assets/images/BestSeller5.png",
+        "../../../assets/images/BestSeller6.png",
     ];
 
     const PlatformsButton = [

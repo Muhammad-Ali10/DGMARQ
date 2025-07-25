@@ -4,18 +4,18 @@ import ProductSection from '@/components/Custom/ProductSection'
 const TwoKeys = () => {
 
     const product = [
-        "/images/RandomKey11.png",
-        "/images/RandomKey8.png",
-        "/images/RandomKey13.png",
-        "/images/RandomKey13.png",
-        "/images/RandomKey11.png",
-        "/images/RandomKey13.png",
-        "/images/RandomKey13.png",
-        "/images/RandomKey11.png",
-        "/images/RandomKey14.png",
-        "/images/RandomKey11.png",
-        "/images/RandomKey8.png",
-        "/images/RandomKey13.png",
+        "../../../assets/images/RandomKey11.png",
+        "../../../assets/images/RandomKey8.png",
+        "../../../assets/images/RandomKey13.png",
+        "../../../assets/images/RandomKey13.png",
+        "../../../assets/images/RandomKey11.png",
+        "../../../assets/images/RandomKey13.png",
+        "../../../assets/images/RandomKey13.png",
+        "../../../assets/images/RandomKey11.png",
+        "../../../assets/images/RandomKey14.png",
+        "../../../assets/images/RandomKey11.png",
+        "../../../assets/images/RandomKey8.png",
+        "../../../assets/images/RandomKey13.png",
     ]
 
 

@@ -3,27 +3,27 @@ import { Button } from "@/components/ui/button";
 const DgmarDna = () => {
   const DAN_Data = [
     {
-      imgUrl: "/images/DAN_Deliver.png",
+      imgUrl: "../../../assets/images/DAN_Deliver.png",
       title: "Deliver Value",
     },
     {
-      imgUrl: "/images/DNA_Team.png",
+      imgUrl: "../../../assets/images/DNA_Team.png",
       title: "Team Spirit",
     },
     {
-      imgUrl: "/images/DNA_Growth.png",
+      imgUrl: "../../../assets/images/DNA_Growth.png",
       title: "Growth",
     },
     {
-      imgUrl: "/images/DNA_Communication.png",
+      imgUrl: "../../../assets/images/DNA_Communication.png",
       title: "Communication",
     },
     {
-      imgUrl: "/images/DNA_Accountability.png",
+      imgUrl: "../../../assets/images/DNA_Accountability.png",
       title: "Trust",
     },
     {
-      imgUrl: "/images/DNA_Trust.png",
+      imgUrl: "../../../assets/images/DNA_Trust.png",
       title: "Accountability",
     },
   ];
