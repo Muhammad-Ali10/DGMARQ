@@ -19,7 +19,7 @@ const PromoSection = ({data}) => {
                 </div>
             </div>
             <img
-                src="./images/secure.png"
+                src="/images/secure.png"
                 className="w-full  mx-auto rounded-21"
                 alt="images"
             />

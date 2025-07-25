@@ -3,18 +3,18 @@ import ProductSection from '@/components/Custom/ProductSection'
 const RandomKeySeller = () => {
 
     const product = [
-        "./images/RandomKey.png",
-        "./images/RandomKey1.png",
-        "./images/RandomKey.png",
-        "./images/RandomKey1.png",
-        "./images/RandomKey.png",
-        "./images/RandomKey1.png",
-        "./images/RandomKey2.png",
-        "./images/RandomKey3.png",
-        "./images/RandomKey4.png",
-        "./images/RandomKey5.png",
-        "./images/RandomKey6.png",
-        "./images/RandomKey.png"
+        "/images/RandomKey.png",
+        "/images/RandomKey1.png",
+        "/images/RandomKey.png",
+        "/images/RandomKey1.png",
+        "/images/RandomKey.png",
+        "/images/RandomKey1.png",
+        "/images/RandomKey2.png",
+        "/images/RandomKey3.png",
+        "/images/RandomKey4.png",
+        "/images/RandomKey5.png",
+        "/images/RandomKey6.png",
+        "/images/RandomKey.png"
     ]
 
 
