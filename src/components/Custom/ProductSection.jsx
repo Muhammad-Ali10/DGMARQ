@@ -22,7 +22,7 @@ const ProductSection = ({productimage, title, description}) => {
                 <p className="text-base font-normal -tracking-tight text-center">{description}</p>
             </div>
             {/*isPending && <div>Loading...</div>*/}
-            <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-6 md:gap-[15px]">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 lg:grid-cols-6 md:gap-[15px]">
                 {productimage?.map((product,index) =>
                     <ProductCardHorizontal key={index} productimage={product}/>
                   
