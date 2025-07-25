@@ -31,6 +31,7 @@ export { default as Software } from './shared/Software/Software';
 export { default as TopGames } from './shared/TopGames/TopGames';
 export { default as TrendingCategories } from './shared/TrendingCategories/TrendingCategories';
 export { default as UpcomingGames } from './shared/UpcomingGames/UpcomingGames';
+
 export { default as GamesBanner } from './shared/Banners/GamesBanner';
 export { default as CallToAction } from './shared/CallToAction/CallToAction';
 export { default as TrendingOffer } from "./shared/TrendingOffer/TrendingOffer";
