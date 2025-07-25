@@ -4,18 +4,18 @@ import ProductSection from '@/components/Custom/ProductSection'
 const ThreeKeys = () => {
 
     const product = [
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey9.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey9.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey9.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey9.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey10.png",
     ]
 
 

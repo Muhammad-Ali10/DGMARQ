@@ -3,12 +3,12 @@ import ProductSection from '@/components/Custom/ProductSection'
 const Fortnite = () => {
 
     const product = [
-        "https://dgmarq-z9uy.vercel.app//RandomKey9.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller3.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller4.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey9.png",
-        "https://dgmarq-z9uy.vercel.app//RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey9.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller3.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller4.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey9.png",
+        "https://dgmarq-z9uy.vercel.app/images/RandomKey8.png",
     ]
     return (
         <>

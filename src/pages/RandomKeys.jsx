@@ -17,7 +17,7 @@ const RandomKeys = () => {
                 <h3 className=" text-4xl -tracking-tight font-semibold text-center">Best Software</h3>
                 <p className="text-base font-normal -tracking-tight text-center">For Home and Business</p>
             </div>
-            <img src="https://dgmarq-z9uy.vercel.app//RandomKeybanner.png" alt="offerimage" className="max-w-1260 w-full mt-12" />
+            <img src="https://dgmarq-z9uy.vercel.app/images/RandomKeybanner.png" alt="offerimage" className="max-w-1260 w-full mt-12" />
             <RandomKeySeller />
             <Champions/>
             <FiveKeys/>

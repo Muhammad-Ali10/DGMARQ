@@ -19,7 +19,7 @@ const PromoSection = ({data}) => {
                 </div>
             </div>
             <img
-                src="https://dgmarq-z9uy.vercel.app//secure.png"
+                src="https://dgmarq-z9uy.vercel.app/images/secure.png"
                 className="w-full  mx-auto rounded-21"
                 alt="images"
             />

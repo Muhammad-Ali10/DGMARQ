@@ -7,27 +7,27 @@ import { Button } from '@/components/ui/button';
 const BestSellers = () => {
 
     const product = [
-        "https://dgmarq-z9uy.vercel.app//BestSeller7.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller8.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller9.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller8.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller10.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller11.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller12.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller13.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller14.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller15.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller16.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller17.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller7.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller8.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller9.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller8.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller10.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller11.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller12.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller13.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller14.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller15.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller16.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller17.png",
     ]
 
     const SoftwareBestSeller = [
-        "https://dgmarq-z9uy.vercel.app//BestSeller1.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller2.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller3.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller4.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller5.png",
-        "https://dgmarq-z9uy.vercel.app//BestSeller6.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller1.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller2.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller3.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller4.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller5.png",
+        "https://dgmarq-z9uy.vercel.app/images/BestSeller6.png",
     ];
 
     const PlatformsButton = [
