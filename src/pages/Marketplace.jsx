@@ -110,7 +110,7 @@ const Marketplace = () => {
 
                 <ContactFrom />
             </div>
- 
+
             <Partner />
             <Help />
             <Slider2 />

@@ -39,10 +39,34 @@ const Careers = () => {
     ];
 
     return (
-        <div className="flex flex-col bg-blue max-w-1440 items-center justify-center m-auto">
+        <div className="flex flex-col bg-blue w-full items-center justify-center m-auto">
+
             <CustomizedHero data={CareersHeroSection} />
+
             <DgmarqFeatures title="Why join us" data={CareerDgmarqFeatures} />
-            <CompanyIntroSection />
+
+            <div className="relative w-full  flex flex-col items-center justify-center bg-[#008AC9]/20 m-auto">
+                {/* Shadow images on top */}
+                {/* <img
+                    src="/images/LeftShedow.png"
+                    alt="shadow"
+                    className="absolute left-0 top-0 "
+                /> */}
+                <img
+                    src="/images/RightShedow.png"
+                    alt="shadow"
+                    className="absolute right-0 top-0 z-30"
+                />
+
+                {/* Content rendered above shadows */}
+                <div className="relative z-0 m-auto">
+                    <CompanyIntroSection />
+
+                </div>
+            </div>
+
+
+
             <Slider2 />
             <DgmarDna />
             <FarmeWork data={CareerFarmeWork} />
@@ -71,21 +95,27 @@ const Careers = () => {
             <ValuePropositionSection imageUrl="./images/CareeerFeatures.png" data={CareerValueProposition} btn={false} />
 
 
-            <div className="max-w-1440 flex flex-col p-5 md:px-11 md:py-6 xl:px-22 xl:py-13 gap-[30px] text-white">
-                <h2 className="font-poppins text-4xl font-bold text-center text-white">We’re creating a future full of opportunities</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-2 text-white gap-[30px]">
-                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/80 bg-[url('./images/Careersbannerbg1.png')] bg-cover bg-no-repeat bg-center">
-                        <h3 className="font-poppins font-bold text-[22px] text-center">Our Values and Culture</h3>
-                        <p className="text-base font-normal font-poppins text-center">
+            <div className="max-w-1440 mx-auto flex flex-col gap-[30px] text-white px-4 py-12">
+                <h2 className="font-poppins text-3xl md:text-4xl font-bold text-center text-white">
+                    We’re creating a future full of opportunities
+                </h2>
+
+                <div className="flex flex-col lg:flex-row gap-[30px] max-w-1260 mx-auto">
+                    {/* Block 1 */}
+                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/80 bg-[url('./images/Careersbannerbg1.png')] bg-cover bg-no-repeat bg-center text-center px-6 w-full">
+                        <h3 className="font-poppins font-bold text-[22px]">Our Values and Culture</h3>
+                        <p className="text-base font-normal font-poppins">
                             Find out how we co-create an open and inspiring culture based on strong values that matter most to us
                         </p>
                         <Button className="py-2.5 px-6 rounded-md bg-primary font-bold text-[22px] font-poppins h-14">
                             Learn More
                         </Button>
                     </div>
-                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/30 bg-[url('./images/Careersbannerbg2.png')] bg-cover bg-no-repeat bg-center">
-                        <h3 className="font-poppins font-bold text-[22px] text-center">Learning, Development and Well-being</h3>
-                        <p className="text-base font-normal font-poppins text-center">
+
+                    {/* Block 2 */}
+                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/30 bg-[url('./images/Careersbannerbg2.png')] bg-cover bg-no-repeat bg-center text-center px-6">
+                        <h3 className="font-poppins font-bold text-[22px]">Learning, Development and Well-being</h3>
+                        <p className="text-base font-normal font-poppins">
                             Explore a wide range of development opportunities, knowledge-sharing programs, and initiatives supporting well-being, including work-life balance
                         </p>
                         <Button className="py-2.5 px-6 rounded-md bg-primary font-bold text-[22px] font-poppins h-14">
@@ -94,6 +124,7 @@ const Careers = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

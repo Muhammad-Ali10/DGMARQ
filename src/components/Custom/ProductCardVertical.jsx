@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../ui/card
 const ProductCardVertical = ({productimage}) => {
 
     return (
-        <Card className="w-80 md:!w-[382px] flex flex-row  items-start md:items-center bg-[#041536] p-4 rounded-21 border-0 text-white font-poppins gap-2.5 box-border">
+        <Card className="w-full md:w-[382px] flex flex-row  items-start md:items-center bg-[#041536] p-4 rounded-21 border-0 text-white font-poppins gap-2.5 box-border">
 
             <img src={productimage} className="w-[150px] h-[150px] rounded-2xl"/>
            <div className="w-full md:max-w-[175px]">

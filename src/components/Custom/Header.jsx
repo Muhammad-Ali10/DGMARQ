@@ -6,6 +6,32 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Link } from "react-router-dom"
+import { US, ZA, FR, ES } from 'country-flag-icons/react/3x2'
+
+
+
+const languages = [
+    {
+        name: 'ENG',
+        country: 'United States',
+        Flag: US,
+    },
+    {
+        name: 'FRA',
+        country: 'France',
+        Flag: FR,
+    },
+    {
+        name: 'ESP',
+        country: 'Spain',
+        Flag: ES,
+    },
+    {
+        name: 'ZAF',
+        country: 'South Africa',
+        Flag: ZA,
+    },
+]
 
 
 
@@ -26,36 +52,40 @@ const navigationItems = [
     { name: "Steam Gift Cards", Url: "/steam-gift" },
     { name: "Random Keys", Url: "/random-keys" },
     { name: "Software", Url: "/software" },
-] 
+]
 
 export default function Header() {
     const [selectedCategory, setSelectedCategory] = useState("All Categories")
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
 
     return (
         <>
-            <header className="bg-[#1a365d] text-white relative z-50 w-full">
+            <header className=" text-white relative z-50 w-full">
                 {/* Main Header */}
-
-                <div className="flex items-center gap-4 max-w-1260 mx-auto py-5">
+                {/* <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 " /> */}
+                {/* <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" /> */}
+                <div className="flex items-center gap-4 max-w-1260 mx-auto py-5 justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-3 flex-shrink-0">
                         <Link to="/">
-                        <img src="./images/logo.png" alt="Logo" className="w-36 h-11" />
+                            <img src="./images/logo.png" alt="Logo" className="w-36 h-11" />
                         </Link>
                     </div>
 
                     {/* Search Bar - Desktop */}
-                    <div className="hidden md:flex flex-1 text-white items-center">
+                    <div className="hidden md:flex flex-1 text-white justify-center items-center max-w-[700px]">
                         <div className="p-[1px] rounded-md bg-gradient-to-r from-[#172AA4] via-purple-500 to-[#0E9FE2] w-full">
-                            <div className="flex w-full rounded-md overflow-hidden bg-[#1a365d] px-4 py-1">
+                            <div className="flex w-full rounded-md overflow-hidden bg-[#060318] px-4 items-center">
                                 <Input
                                     type="text"
                                     placeholder="What are you looking for?"
-                                    className="flex-1 border-0 bg-transparent text-white placeholder:text-white focus-visible:ring-0 shadow-none text-base font-medium font-poppins"
+                                    className="flex-1 border-0 bg-transparent text-white placeholder:text-white focus-visible:ring-0 shadow-none text-base font-medium font-poppins
+                                    h-9 "
                                 />
 
-                                <div className="border-l ml-10 border-gray-200">
+                                <div className="max-w-[254px] w-full flex items-center  justify-between">
+                                    <div className="border border-white w-5 rotate-90"></div>
                                     <DropdownMenu>
                                         <DropdownMenuTrigger asChild>
                                             <Button
@@ -77,11 +107,11 @@ export default function Header() {
                                             ))}
                                         </DropdownMenuContent>
                                     </DropdownMenu>
+                                    <Button className="bg-primary rounded-[9px] px-4 py-2.5 h-auto">
+                                        <Search className="h-4 w-4" />
+                                    </Button>
                                 </div>
 
-                                <Button className="bg-primary rounded-[9px] px-4 py-2.5 h-auto">
-                                    <Search className="h-4 w-4" />
-                                </Button>
                             </div>
                         </div>
                     </div>
@@ -90,38 +120,44 @@ export default function Header() {
                     {/* Right Actions */}
                     <div className="flex items-center gap-2 lg:gap-3">
                         {/* Language Selector */}
+
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button
-                                    variant="outline"
-                                    size="sm"
-                                    className="bg-transparent border-white/30 text-white hover:bg-white/10 px-2 lg:px-3 py-1.5"
+                                    className="bg-transparent hover:bg-transparent outline-0  focus:outline-0 text-white  px-4 h-auto  text-base font-medium font-poppins border-[#1266c4] border-2 rounded-[9px] py-1.5"
                                 >
-                                    <span className="text-sm mr-1">🇺🇸</span>
-                                    <span className="hidden sm:inline text-sm font-medium">ENG</span>
-                                    <ChevronDown className="ml-1 h-3 w-3" />
+                                    <selectedLanguage.Flag title={selectedLanguage.country} className="w-4 h-4 mr-2" />
+                                    {selectedLanguage.name}
+
                                 </Button>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent>
-                                <DropdownMenuItem>🇺🇸 English</DropdownMenuItem>
-                                <DropdownMenuItem>🇪🇸 Español</DropdownMenuItem>
-                                <DropdownMenuItem>🇫🇷 Français</DropdownMenuItem>
-                                <DropdownMenuItem>🇩🇪 Deutsch</DropdownMenuItem>
+                            <DropdownMenuContent align="end" className="w-full text-base font-medium font-poppins">
+                                {languages.map((languages) => {
+                                    console.log(languages)
+                                  return(
+                                      <DropdownMenuItem
+                                        key={languages.name}
+                                        onClick={() => setSelectedLanguage(languages)}
+                                        className="text-sm" >
+                                        <languages.Flag title={languages.country} className="w-4 h-4" />
+                                        <span className="ml-2">{languages.name}</span>
+                                    </DropdownMenuItem>
+                                  )
+                                })}
                             </DropdownMenuContent>
                         </DropdownMenu>
-
                         {/* Register Button */}
-                        <Button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-1.5 hidden sm:inline-flex">
+                        <Button className="bg-primary text-white text-sm font-medium px-4 py-1.5 hidden sm:inline-flex">
                             Register
                         </Button>
 
                         {/* Wishlist */}
-                        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 p-2">
+                        <Button variant="ghost" size="icon" className=" bg-primary text-white hover:bg-white/10 p-2">
                             <Heart className="h-5 w-5" />
                         </Button>
 
                         {/* Cart */}
-                        <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 p-2">
+                        <Button variant="ghost" size="icon" className="bg-primary text-white hover:bg-white/10 p-2">
                             <ShoppingCart className="h-5 w-5" />
                         </Button>
 
@@ -153,13 +189,13 @@ export default function Header() {
 
 
                 {/* Secondary Navigation */}
-                <div className="bg-[#153e75] border-t border-blue-700/20 hidden md:block">
+                <div className="bg-[#060318]/20 border-t border-blue-700/20 hidden md:block z-30">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex items-center justify-between py-2.5">
                             {/* Navigation Items */}
                             <nav className="hidden lg:flex items-center space-x-6">
                                 {navigationItems.map((item) => (
-                                    <Button asChild   className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" >
+                                    <Button asChild className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" >
                                         <Link
                                             key={item.name}
                                             to={item.Url}>

@@ -1,11 +1,8 @@
 const CompanyIntroSection = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-8 md:py-12 xl:py-16 grid grid-cols-1 xl:grid-cols-2 gap-8">
-      <img
-        src="./images/team.png"
-        alt="Team"
-        className="rounded-[21px] w-full h-auto object-cover"
-      />
+    <div className="w-full relative max-w-1260 py-12 grid grid-cols-1 xl:grid-cols-2 gap-8">
+   
+        <div className="h-96 relative rounded-[21px] overflow-hidden bg-blend-color-dodge bg-blue-3 bg-[url('./images/team.png')] bg-cover bg-no-repeat bg-center w-full"></div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 text-white">
         <div className="flex flex-col gap-6 items-center md:items-start justify-center text-center md:text-left">

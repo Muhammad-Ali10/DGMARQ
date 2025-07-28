@@ -5,7 +5,7 @@ import bgimg from "/images/BgCategories1.png"
 
 const TrendingCategories = () => {
     return (
-        <div className="flex w-full justify-center relative gap-5">
+        <div className="flex w-full justify-center relative gap-5" id="trending-categories">
             <img src="/images/CenterShedow.png" className="absolute z-10" />
             <div className="flex flex-col items-center md:items-start max-w-1260 w-full gap-4 md:gap-8 z-20 px-4">
                 <div>

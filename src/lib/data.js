@@ -191,7 +191,7 @@ export const giftCards = [
 
 
 
-
+ 
 
 
 // About Page Data Start
@@ -200,6 +200,33 @@ export const AboutpageVarified = {
     title: "Recognized as “Best Marketplace” of the 21st Century",
     description: "in the Spanish VII Edition of the 21st Century National Technology Awards 2024"
 }
+
+export const CompanyHeroSection = {
+    title: "Your talent will flourish at DGMAR.COM",
+    description: "DGMAE is the world’s leading marketplace for digital entertainment, recognized for excellence in innovation, security, fraud prevention, and business impact. Trusted by global partners, we deliver award-winning solutions for the digital age",
+    bgurl: "bg-blend-overlay bg-blue-3 bg-[url('./images/bgAbout.png')]",
+}
+
+export const CompanyDgmarqFeatures =
+    [
+        {
+            imageUrl: "./images/mobileapp.svg",
+            title: "Top global digital entertainment marketplace",
+        },
+        {
+            imageUrl: "./images/share.svg",
+            title: "Pioneering online fraud prevention and security",
+        },
+        {
+            imageUrl: "./images/mobile.svg",
+            title: "Collaborating with leading partners worldwide",
+        },
+        {
+            imageUrl: "./images/mobile.svg",
+            title: "Enabling seamless transactions worldwide     ",
+        }
+    ]
+
 export const companyData = [
     { count: "2010", description: "Establishment as a store" },
     { count: "400+", description: " Employees with 40% women representation" },
@@ -404,24 +431,24 @@ export const CareerFarmeWork =
 export const CareerFaqs = [
     {
         title: "Development and Well-being",
-        description:"We provide extensive development opportunities through the “DGMAR for Learning & Development & Well-being” program. You’ll have the chance to participate in various development and well-being events. We encourage knowledge sharing and taking care of your well-being, including work-life balance",
+        description: "We provide extensive development opportunities through the “DGMAR for Learning & Development & Well-being” program. You’ll have the chance to participate in various development and well-being events. We encourage knowledge sharing and taking care of your well-being, including work-life balance",
     },
     {
         title: "Additional Bonus",
-        description:  "Each month, you will receive 220 points worth 220 PLN in the Motivizer cafeteria system. Use them to enjoy a wide range of benefits available on the platform, depending on your preferences and needs",
+        description: "Each month, you will receive 220 points worth 220 PLN in the Motivizer cafeteria system. Use them to enjoy a wide range of benefits available on the platform, depending on your preferences and needs",
     },
     {
         title: "Culture and Values",
         description: "We offer you the chance to have a direct impact on the culture and functioning of the organization. Together, we’ve created our unique set of values, DGMAR DNA. We value and support diverse perspectives. We are building a feedback culture",
     },
-       {
+    {
         title: "First in Digital",
         description: "We work in an innovative, digital environment. We are constantly implementing and utilizing the latest technologies such as artificial intelligence (AI) and augmented reality (AR), as well as specialized solutions in cybersecurity",
     }
 ];
 
 export const CareerValueProposition = [
-      {
+    {
         title: "Welcome",
         description: "From the start, you’ll receive full support, a welcome package, and a laptop. We will warmly welcome you and inform the whole team about your arrival. We’ll prepare a detailed onboarding plan for you and invite you to a series of onboarding meetings"
     },

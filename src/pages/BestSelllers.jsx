@@ -61,9 +61,9 @@ const BestSellers = () => {
     ];
 
     return (
-        <div className="flex flex-col bg-blue items-center justify-center gap-12 m-auto pt-12 overflow-hidden">
-            <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
-            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" />
+        <div className="flex flex-col items-center justify-center gap-12 m-auto pt-12 overflow-hidden">
+            {/* <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
+            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" /> */}
             {/* <BestSellers component starts here in this componemet Our Marketplace Best Sellers */}
 
             <ProductSection productimage={product} title="Best sellers" description="The hottest items on our marketplace – discover what captured our users' hearts!" />
@@ -71,25 +71,9 @@ const BestSellers = () => {
             {/* <BestSellers component ends here */}
 
 
-            {/* Random key Seller component starts here In This component Our Marketplace Random Key Seller */}
-            <div className="relative w-full flex flex-col items-center justify-center py-12 bg-blue m-auto">
-                {/* Shadow images on top */}
-                <img
-                    src="/images/CenterShedow.png"
-                    alt="shadow"
-                    className="absolute -left-[35%] z-0  drop-shadow-2xl"
-                />
-                 <img
-                    src="/images/CenterShedow.png"
-                    alt="shadow"
-                    className="absolute -right-[35%] z-0  drop-shadow-2xl"
-                />
 
-                {/* Content rendered above shadows */}
-                <div className="relative z-10 m-auto">
-                    <RandomKeySeller />
-                </div>
-            </div>
+
+            <RandomKeySeller />
 
 
             {/* Random key Seller component ends here */}
@@ -99,26 +83,15 @@ const BestSellers = () => {
 
 
 
-            <div className="relative w-full flex flex-col items-center justify-center py-12 bg-blue m-auto">
-                {/* Background Shadows */}
-                      <img
-                    src="/images/CenterShedow.png"
-                    alt="shadow"
-                    className="absolute  z-0  drop-shadow-2xl"
-                />
 
-                {/* Content Over Shadows */}
-                <div className="relative z-10 m-auto">
-                    <ProductSection productimage={SoftwareBestSeller} title="Software Best sellers" description="The hottest software items on our marketplace – discover what captured our users' hearts!" />
-                </div>
-            </div>
+            <ProductSection productimage={SoftwareBestSeller} title="Software Best sellers" description="The hottest software items on our marketplace – discover what captured our users' hearts!" />
 
 
             {/* software Bestseller section ends here */}
 
             {/* Platforms Button section starts here */}
 
-            <div className="flex flex-col items-center justify-center gap-7 bg-blue-2 py-12  w-full">
+            <div className="flex flex-col items-center justify-center gap-7 bg-[#0E092C] py-12  w-full">
 
                 <h3 className="text-2xl font-semibold text-white">TOP Game Platforms</h3>
                 <p className="text-sm font-poppins font-normal text-white">Are you low on cash or just want to score a great bargain? DGMARQ offers a selection of great video games for all major gaming platforms!</p>

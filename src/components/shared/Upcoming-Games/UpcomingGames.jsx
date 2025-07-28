@@ -16,10 +16,10 @@ const UpcomingGames = () => {
             {/*isPending && <div>Loading...</div>*/}
             {/*queryKey="BestSeller"
                 queryFn={() => BestSellerApi(1, 6)}*/}
-            <h3 className="font-poppins font-semibold text-4xl -tracking-tight text-center text-white">New and upcoming releases</h3>
-            <img src="./images/banner.png" className="max-w-1260 w-full rounded-21 m-auto" />
+            <h3 className="font-poppins font-semibold text-4xl -tracking-tight text-center text-white mt-9">New and upcoming releases</h3>
+            <img src="./images/banner.png" className="max-w-1260 w-full rounded-21 m-auto mt-9" />
             
-            <ProductSection productimage={product} title="Upcoming games" description="Can’t wait to play your game? Preorder the key now and experience it on day one!" />
+            <ProductSection productimage={product} id="upcoming-games" title="Upcoming games" description="Can’t wait to play your game? Preorder the key now and experience it on day one!" />
         </>
     )
 }

@@ -53,8 +53,8 @@ const Slider2 = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-10 sm:px-6 md:px-11 xl:px-20 xl:py-14 max-w-[1440px] mx-auto">
-      <Carousel className="w-full">
+    <div className="w-full flex flex-col items-center justify-center ">
+      <Carousel className="w-full max-w-1260 mx-auto">
         {/* Section Heading */}
         <div className="flex flex-col gap-2.5 mb-5 px-2 sm:px-4 md:px-6">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold font-poppins text-white">
@@ -66,7 +66,7 @@ const Slider2 = () => {
         </div>
 
         {/* Carousel Items */}
-        <CarouselContent className="flex items-center justify-center gap-4">
+        <CarouselContent className="flex items-center justify-center gap-4 max-w-1260">
           {rewards.map((item, index) => (
             <CarouselItem
               key={index}

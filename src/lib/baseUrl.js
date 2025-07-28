@@ -1,3 +1,3 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
 
-export const Base_url = process.env.DGMARQ_BASE_URL|| 'http://localhost:5000/api';
+export const Base_url = import.meta.env.VITE_DGMARQ_BASE_URL || 'http://localhost:5000/api';

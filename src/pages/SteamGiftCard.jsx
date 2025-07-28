@@ -2,7 +2,7 @@
 
 import { useState,useEffect, useMemo } from "react"
 import { FilterSidebar } from "@/components"
-import { GiftCard } from "@/components"
+import { GiftCard, CallToAction, FooterBlogs } from "@/components"
 import { giftCards } from "@/lib/data"
 
 const SteamGiftCard = ()=> {
@@ -93,14 +93,20 @@ const SteamGiftCard = ()=> {
   }, [filters])
 
   return (
-    <div className="flex w-full bg-blue-2 overflow-hidden">
-    <div className="flex flex-col md:flex-row items-start justify-between max-w-1260 bg-blue-2 m-auto pt-12">
-      <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
-            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" />
+    <div className="flex flex-col items-center justify-center gap-12 w-full overflow-hidden">
+    <div className="flex flex-col md:flex-row items-start justify-between max-w-1260 m-auto pt-12">
+      {/* <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
+            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" /> */}
       <FilterSidebar filters={filters} onFilterChange={handleFilterChange} isMobile={isMobile} />  
   
        <GiftCard cards={filteredCards} />
     </div>
+ {/* Call to Action section starts here */}
+            <CallToAction />
+            {/* Call to Action section ends here */}
+            {/* Footer Blogs section starts here */}
+            <FooterBlogs />
+            {/* Footer Blogs section ends here */}
     </div>
   )
 }

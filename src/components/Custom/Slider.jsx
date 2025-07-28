@@ -1,11 +1,11 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import '../../App.css';
+
+import { Pagination } from 'swiper/modules';
 
 const Slider = () => {
 
@@ -53,20 +53,28 @@ const Slider = () => {
     ]
 
     return (
-        <Carousel className="max-w-[1230px] w-full m-auto">
-            <CarouselContent className="flex items-center justify-center gap-4">
+        <>
+            <Swiper
+                slidesPerView={4}
+                spaceBetween={10}
+                // pagination={{
+                //     clickable: true,
+                // }}
+                modules={[Pagination]}
+                className="mySwiper max-w-1260"
+            >
                 {rewards.map((item, index) =>
-                    <CarouselItem className=" max-w-[292px] w-full bg-blue-4 flex flex-col rounded-21 p-4 gap-2.5 text-white">
-                        <img src={item.imgSrc} alt="reward" className="size-[262px]" />
-                        <h3 className="text-base font-semibold tracking-tighter font-poppins">{item.title}</h3>
-                        <p className="text-sm font-normal font-poppins tracking-tighter capitalize text-justify">{item.decripition}</p>
-                    </CarouselItem>
-                )}
+                    <SwiperSlide className="w-full rounded-21  p-4 text-white text-start">
 
-            </CarouselContent>
-            <CarouselPrevious className="left-0" />
-            <CarouselNext className="right-0" />
-        </Carousel>
+                      <div className="size-[262px] rounded-2xl">
+                          <img src={item.imgSrc} alt="reward" className="h-full m-auto rounded-2xl" />
+                      </div>
+                        <h3 className="text-base font-semibold tracking-tighter font-poppins truncate text-start mt-2.5">{item.title}</h3>
+                        <p className="text-sm font-normal font-poppins tracking-tighter capitalize text-justify">{item.decripition}</p>
+                    </SwiperSlide>
+                )}
+            </Swiper>
+        </>
     )
 }
 

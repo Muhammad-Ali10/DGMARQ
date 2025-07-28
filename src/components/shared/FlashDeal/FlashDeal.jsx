@@ -1,12 +1,12 @@
 import FlashDealCard from "@/components/Custom/FlashDealCard"
 import TrendingOffer from "@/components/shared/TrendingOffer/TrendingOffer"
-const FlashDeal = ({ displayImage, displayDirection }) => {
+const FlashDeal = ({ displayDirection }) => {
 
 
     return (
-        <div className={`flex flex-col  md:${displayDirection} px-4 md:px-0 justify-center items-center max-w-1260 w-full gap-6 pt-11`}>
+        <div className={`flex flex-col  lg:flex-row  md:px-0 justify-center items-center max-w-1260 w-full gap-6 pt-11`} id="FlashDeal" >
 
-            {displayImage ? <img src="./images/offerimage.png" alt="offerimage" className="h-[500px]" /> : <FlashDealCard />}
+            {<FlashDealCard />}
             <TrendingOffer gridNumber="grid-cols-2" />
         </div>
     )

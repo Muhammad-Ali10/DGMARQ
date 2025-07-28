@@ -15,7 +15,7 @@ const CryptoCorner = () => {
             {/*isPending && <div>Loading...</div>*/}
             {/*queryKey="BestSeller"
                 queryFn={() => BestSellerApi(1, 6)}*/}
-            <ProductSection productimage={product}  title="Crypto Corner" description="Gift cards, gaming NFTs, and other digital goodies for all the cryptocurrency enthusiasts." />
+            <ProductSection productimage={product}  title="Crypto Corner" id="cryptocurrencies"  description="Gift cards, gaming NFTs, and other digital goodies for all the cryptocurrency enthusiasts." />
         </>
     )
 }

@@ -15,7 +15,7 @@ const BestSeller = ({ product }) => {
             {/*isPending && <div>Loading...</div>*/}
             {/*queryKey="BestSeller"
                 queryFn={() => BestSellerApi(1, 6)}*/}
-            <ProductSection productimage={product? product : productimage} title="Best sellers" description="The hottest items on our marketplace – discover what captured our users' hearts!" />
+            <ProductSection productimage={product? product : productimage} id="bestSellers" title="Best sellers" description="The hottest items on our marketplace – discover what captured our users' hearts!" />
         </>
     )
 } 

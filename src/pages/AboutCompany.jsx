@@ -1,31 +1,20 @@
-import { DgmarqFeatures, Verified, WorkingSteps, Slider, Partner, CallToAction, FooterBlogs } from "@/components";
+import { DgmarqFeatures, Verified, WorkingSteps, Slider, Partner, CallToAction, FooterBlogs, CustomizedHero } from "@/components";
 import { Button } from "@/components/ui/button";
-import { AboutpageVarified, companyData, CompanyFeatures } from "@/lib/data";
+import { AboutpageVarified, companyData, CompanyFeatures, CompanyHeroSection, CompanyDgmarqFeatures } from "@/lib/data";
+
+
 
 const AboutCompany = () => {
 
 
     return (
         <div className="flex flex-col  bg-blue items-center justify-center m-auto">
+            {/* Hero Section Start Here */}
+            <CustomizedHero data={CompanyHeroSection} />
+            {/* Hero Section End Here */}
 
-            <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-overlay
-            bg-blue-3 bg-[url('./images/bgAbout.png')]">
-
-
-                {/* Content */}
-                <div className="relative z-10 flex items-center justify-center h-full">
-                    <div className="flex flex-col items-start justify-center gap-2.5 max-w-1260 w-full">
-                        <h1 className="text-[56px] font-extrabold font-inter text-white max-w-[814px]">
-                            DGMARQ – opening the Gate 2 Adventure since 2010
-                        </h1>
-                        <p className="text-lg font-medium font-inter text-white max-w-[814px]">
-                            DGMAE is the world’s leading marketplace for digital entertainment, recognized for excellence in innovation, security, fraud prevention, and business impact. Trusted by global partners, we deliver award-winning solutions for the digital age
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <DgmarqFeatures />
-            <Verified verificationData={AboutpageVarified}/>
+            <DgmarqFeatures  data={CompanyDgmarqFeatures}/>
+            <Verified verificationData={AboutpageVarified} />
             <div className="max-w-1440 flex items-center justify-center w-full py-12  bg-[#0E092C]">
                 <div className="flex flex-col items-start justify-center gap-7 max-w-1260 w-full m-auto">
                     <h3 className="text-4xl font-bold font-poppins text-white">Discover our impact, commitments and how <span className="uppercase">dgmarq.COM</span> revolutionizing digital entertainment</h3>
