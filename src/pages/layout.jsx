@@ -1,34 +1,37 @@
-import { Header, Footer } from "@/components"
-import { Outlet, useLocation } from "react-router-dom"
+import { Header, Footer } from "@/components";
+import { Outlet, useLocation } from "react-router-dom";
 
-
+import bg1 from "../assets/Homepagebg.jpg";
+import bg2 from "../assets/Softwarepagebg.png";
+import bg3 from "../assets/Randomkeyspagebg.png";
+import bg4 from "../assets/Bestsellersbg.png";
+import bg5 from "../assets/Steamgiftcardbg.png";
 
 
 const Layout = () => {
-    const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
-    // Map routes to background images
-    const routeBgMap = {
-        "/": "bg-[url('./images/Homepagebg.jpg')]",
-        "/software": "bg-[url('./images/Softwarepagebg.png')]",
-        "/random-keys": "bg-[url('./images/Randomkeyspagebg.png')]",
-        "/best-sellers": "bg-[url('./images/Bestsellersbg.png')]",
-        "/steam-gift": "bg-[url('./images/Steamgiftcardbg.png')]",
-        // "/about-company": "/images/AboutCompanyBg.jpg",
-        // "/marketplace": "/images/MarketplaceBg.jpg",
-        // "/security": "/images/SecurityBg.jpg",
-        // "/contactus": "/images/ContactBg.jpg",
-        // "/careers": "/images/CareersBg.jpg"
-    };
+  const routeBgMap = {
+    "/": bg1,
+    "/software": bg2,
+    "/random-keys": bg3,
+    "/best-sellers": bg4,
+    "/steam-gift": bg5,
+    // Add more routes here...
+  };
 
-    const backgroundImage = routeBgMap[pathname] || "bg-[url('./images/Homepagebg.jpg')]";
-    return (
-        <div className={`${backgroundImage} bg-cover  bg-no-repeat bg-top w-full `}>
-            <Header />
-            <Outlet />
-            <Footer />
-        </div>
-    )
-}
+  const backgroundImage = routeBgMap[pathname] || bg1;
 
-export default Layout
+  return (
+    <div
+      className="bg-cover bg-no-repeat bg-top w-full min-h-screen"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
