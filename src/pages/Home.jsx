@@ -97,9 +97,7 @@ const Home = () => {
             <FooterBlogs />
             {/* Footer Blogs section ends here */}
             
-            {/* Footer section starts here */}
-            <Footer />
-            {/* Footer section ends here */}
+
         </div>
     )
 }
