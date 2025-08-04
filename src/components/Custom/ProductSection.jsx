@@ -2,7 +2,7 @@ import {
     useQuery,
 } from '@tanstack/react-query'
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../ui/card"
-import { Skeleton } from "../ui/skeleton"
+
 import { Link } from 'react-router-dom'
 const ProductSection = ({ data }) => {
     console.log(data)
