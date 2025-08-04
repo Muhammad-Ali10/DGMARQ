@@ -4,29 +4,33 @@ import LoadingCard from '@/components/Custom/LoadingCard';
 import { useCategoryQuery } from '@/hooks/useHomeQuery';
 import { Button } from '@/components/ui/button';
 
-const Software = () => {
+const ProductbyCategory = ({ brandName, page, limit }) => {
     const { data, isPending, error } = useCategoryQuery(1, 6);
+
+    console.log(brandName)
 
     const categoryProducts = data?.data || [];
 
     // Efficient filtering using useMemo
     const softwareProducts = useMemo(() => {
-        return categoryProducts.filter(item => item.brandName === "Software");
+
+        return categoryProducts.filter((item) => {
+            return (item.brandName === brandName)
+        });
     }, [categoryProducts]);
 
     // Skeleton loading condition
     const isSkeleton = isPending || softwareProducts.length === 0;
     const skeletonArray = Array.from({ length: 6 });
-
+    console.log(softwareProducts)
     return (
         <section
-            id="software"
             className="flex flex-col items-center max-w-1260 w-full justify-center pt-12 gap-6"
             aria-labelledby="software-heading"
         >
             <div className="flex flex-col text-white font-poppins gap-2.5">
                 <h2 id="software-heading" className="text-4xl font-semibold text-center">
-                    {softwareProducts.length > 0 ? softwareProducts[0]?.brandName : "Software"}
+                    {softwareProducts.length > 0 ? softwareProducts[0]?.brandName : ""}
                 </h2>
                 <p className="text-base font-normal text-center">
                     The hottest items on our marketplace – discover what captured our users' hearts!
@@ -68,4 +72,4 @@ const Software = () => {
     );
 };
 
-export default Software;
+export default ProductbyCategory;

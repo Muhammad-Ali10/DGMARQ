@@ -1,12 +1,22 @@
 import {
-    Antivirus,
-    BestSeller,
-    GraphicDesign,
-    IosUtilities,
+    BestSeller,           
     TrendingOffer,
-    Vpns
+    ProductbyCategory
 } from "@/components";
 
+ 
+
+const NavItem = [
+    { name: "Bestsellers", id: "bestSellers" },
+    { name: "Upcoming Games", id: "upcoming-games" },
+    { name: "Flash Deal", id: "FlashDeal" },
+    { name: "Trending Categories", id: "trending-categories" },
+    { name: "Software", id: "software" },
+    { name: "Gaming gift cards", id: "gaming-gift-cards" },
+    { name: "Random Keys", id: "random-keys" },
+    { name: "Cryptocurrencies", id: "cryptocurrencies" },
+    { name: "Game Accounts", id: "bg-game_bg" },
+]
 
 const SoftwarePage = () => {
     return (
@@ -17,20 +27,16 @@ const SoftwarePage = () => {
                 <h3 className=" text-4xl -tracking-tight font-semibold text-center">Best Software</h3>
                 <p className="text-base font-normal -tracking-tight text-center">For Home and Business</p>
             </div>
-            <TrendingOffer gridNumber="grid-cols-3" />
+            <TrendingOffer gridNumber={3} />
             <img src="./images/softwarebanner.png" alt="offerimage" className="max-w-1260 w-full" />
 
 
 
             <BestSeller />
-            <Vpns />
-
-            <IosUtilities />
-
-            <GraphicDesign />
-            <Antivirus />
-
-
+            <ProductbyCategory brandName="Vpns" />
+            <ProductbyCategory brandName="iOS utilities" />
+            <ProductbyCategory brandName="Graphic Design" />
+            <ProductbyCategory brandName="Antivirus and security" />
         </div>
     )
 }

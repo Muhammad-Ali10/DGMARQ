@@ -16,6 +16,8 @@ export { default as CompanyIntroSection } from "./Careers/CompanyIntroSection";
 export { default as DgmarDna } from "./Careers/DgmarDan";
 export {default as Footer} from "./Custom/Footer"
 export {default as Header} from "./Custom/Header"
+export {default as LoadingCard} from "./Custom/LoadingCard"
+
 // export { default as PromoCard } from './Custom/PromoCard';
 
 // Main Components (direct imports without index.js in folders)
@@ -31,8 +33,8 @@ export { default as Software } from './shared/Software/Software';
 export { default as TopGames } from './shared/TopGames/TopGames';
 export { default as TrendingCategories } from './shared/TrendingCategories/TrendingCategories';
 export { default as UpcomingGames } from './shared/Upcoming-Games/UpcomingGames';
-
-export { default as GamesBanner } from './shared/Banners/GamesBanner';
+export { default as GameAccount } from './shared/GameAccount/GameAccount';
+export {default as ProductbyCategory} from "./shared/ProductsbyCategory/ProductbyCategory";
 export { default as CallToAction } from './shared/CallToAction/CallToAction';
 export { default as TrendingOffer } from "./shared/TrendingOffer/TrendingOffer";
 export { default as Vpns } from "./shared/Vpns/Vpns";
@@ -54,4 +56,4 @@ export { default as FarmeWork } from "./shared/FarmeWork/FarmeWork";
 export { default as Help } from "./shared/Help/Help";
 export { default as Slider2 } from "./shared/Slider2/Slider2";
 export { default as Faqs } from "./shared/Faqs/Faqs";
-
+export { default as PopularTopics} from "./shared/PopularTopics/PopularTopics"

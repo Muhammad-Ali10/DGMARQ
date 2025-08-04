@@ -1,38 +1,46 @@
 import {
     useQuery,
 } from '@tanstack/react-query'
-//import { BestSellerApi } from "../../../lib/api/bestsellerapi"
-import ProductCardHorizontal from '@/components/Custom/ProductCardHorizontal'
-import { Button } from '../ui/button'
-
-
-const ProductSection = ({productimage, title, description, id}) => {
-   /* const { isPending, error, data } = useQuery({
-        queryKey: ['BestSeller'],
-        queryFn: () => BestSellerApi(1, 6)
-    })
-
-    const newFavorites = data?.data || [];
-
-  console.log(data)*/
- 
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../ui/card"
+import { Skeleton } from "../ui/skeleton"
+import { Link } from 'react-router-dom'
+const ProductSection = ({ data }) => {
+    console.log(data)
     return (
-        <div className="flex flex-col items-center max-w-1260 w-full justify-center pt-12 gap-6 " id={id}>
-            <div className="flex flex-col text-white font-poppins">
-                <h3 className=" text-4xl -tracking-tight font-semibold text-center">{title}</h3>
-                <p className="text-base font-normal -tracking-tight text-center">{description}</p>
-            </div>
-            {/*isPending && <div>Loading...</div>*/}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 lg:grid-cols-4 xl:grid-cols-6 md:gap-[15px]">
-                {productimage?.map((product,index) =>
-                    <ProductCardHorizontal key={index} productimage={product}/>
-                  
-                )}
-            </div>
-            <Button className="text-base font-normal font-poppins tracking-tight text-[#F05F00] bg-[#F05F00]/10 border border-[#F05F00]">
-                Show More
-            </Button>
-        </div>
+        <Link to={`/product-details/${data?._id}`}  >
+            <Card className="w-[196px] flex flex-col bg-[#041536] p-4 rounded-21 border-0 text-white font-poppins gap-2.5 box-border">
+                <img
+                    src={data.images[0]}
+                    alt={data.title}
+                    className="size-[166px] rounded-2xl"
+                />
+                <CardHeader className="p-0">
+                    <CardTitle className="text-sm font-semibold -tracking-normal w-[166px] truncate">
+                        {data.title}
+                    </CardTitle>
+                    <span className="text-sm font-normal -tracking-normal">
+                        Microsoft Store
+                    </span>
+                    <p className="text-sm font-normal -tracking-normal">
+                        Key <span className="font-bold">Global</span>
+                    </p>
+                </CardHeader>
+                <CardContent className="flex fle-row justify-between items-center w-full p-0">
+                    <p className="text-sm font-bold">
+                        {data.discountPrice} &nbsp;
+                        <span className="font-normal uppercase">USD</span>
+                    </p>
+                    <h3 className="text-sm font-semibold px-1 py-0.5 bg-primary rounded-[6px]">
+                        {(((data.actualPrice - data.discountPrice) / data.actualPrice) * 100).toFixed(0)}%
+                    </h3>
+                </CardContent>
+                <CardFooter className="p-0">
+                    <del className="text-sm font-normal uppercase">
+                        {data.actualPrice} usd
+                    </del>
+                </CardFooter>
+            </Card>
+        </Link>
     )
 }
 

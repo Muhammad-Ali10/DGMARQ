@@ -1,11 +1,5 @@
 import {
-    RandomKeySeller,
-    Champions,
-    SingleKeys,
-    FiveKeys,
-    ThreeKeys,
-    Fortnite,
-    TwoKeys,
+        ProductbyCategory,
     FooterBlogs
 } from "@/components";
 
@@ -21,14 +15,11 @@ const RandomKeys = () => {
             </div>
             <img src="./images/RandomKeybanner.png" alt="offerimage" className="max-w-1260 w-full mt-12" />
 
-            <RandomKeySeller />
-            <Champions />
-            <FiveKeys />
-            <SingleKeys />
-            <ThreeKeys />
-            <Fortnite />
-            <TwoKeys />
-              {/* Footer Blogs section starts here */}
+            <ProductbyCategory brandName="Try to catch one of our bestsellers!" />
+            <ProductbyCategory brandName="Meet the champions!" />
+            <ProductbyCategory brandName="How about 5 keys?" />
+            <ProductbyCategory brandName="Single randoms are pretty great too!" />
+            {/* Footer Blogs section starts here */}
             <FooterBlogs />
             {/* Footer Blogs section ends here */}
         </div>

@@ -14,27 +14,21 @@ import {
     TopGames,
     TrendingCategories,
     UpcomingGames,
-    GamesBanner,
+
     CallToAction,
     FooterBlogs,
-    Footer
+    Footer,
+    GameAccount
 } from "@/components";
 import { Button } from "@/components/ui/button";
+import ProductbyCategory from "../components/shared/ProductsbyCategory/ProductbyCategory";
 
 
 
 const Home = () => {
 
 
-    const product = [
-        "./images/BestSeller1.png",
-        "./images/BestSeller2.png",
-        "./images/BestSeller3.png",
-        "./images/BestSeller4.png",
-        "./images/BestSeller5.png",
-        "./images/BestSeller6.png",
-
-    ]
+ 
     const NavItem = [
         { name: "Bestsellers", id: "bestSellers" },
         { name: "Upcoming Games", id: "upcoming-games" },
@@ -48,9 +42,9 @@ const Home = () => {
     ]
 
     return (
-        <div className="flex flex-col items-center justify-center m-auto overflow-hidden gap-12 px-5">
+        <div className="flex flex-col items-center justify-center m-auto overflow-hidden gap-12">
             <Hero />
-            <div className="w-full max-w-1260 mx-auto flex flex-col md:flex-row items-center justify-center text-white border rounded-xl py-1.5 px-4 mt-9">
+            <div className="hidden w-full max-w-1260 mx-auto lg:flex flex-row flex-wrap items-center justify-center text-white border rounded-xl py-1.5 px-4 mt-9">
                 {NavItem.map(({ name, id }, index) => (
                     <React.Fragment key={id}>
                         <Button
@@ -67,36 +61,33 @@ const Home = () => {
 
             </div>
 
-            <BestSeller product={product} id="bestSellers" />
-            <FlashDeal displayImage={false} displayDirection="flex-row" />
+            <BestSeller  id="bestSellers" />
+            <FlashDeal />
 
             <UpcomingGames />
-         
+            <TrendingOffer displayImage={true}  gridNumber={2}/>
 
-            <div className="flex flex-col  lg:flex-row-reverse md:px-0 justify-center items-center max-w-1260 w-full gap-6 pt-11" id="FlashDeal" >
-
-                <img src="./images/offerimage.png" alt="offerimage" className="h-[500px]" />
-                <TrendingOffer gridNumber="grid-cols-2" />
-            </div>
             <TrendingCategories />
-            <Software id="software" />
+            <ProductbyCategory brandName="Software" />
+            {/* <Software />  */}
 
             <TopGames />
             <BundleDeals />
-            <RandomKeys />
-            <CryptoCorner />
-
+            {/* <RandomKeys /> */}
+            <ProductbyCategory brandName="Random Keys" />
+            <ProductbyCategory brandName="Cryptocurrencies" />
+            {/* <CryptoCorner /> */}
+            <GameAccount />
             <FavoriteItems />
-            {/*Games Banner section starts here */}
-            <GamesBanner />
 
-            {/* Call to Action section starts here */}
+            {/* <GamesBanner /> */}
+
+            Call to Action section starts here
             <CallToAction />
-            {/* Call to Action section ends here */}
-            {/* Footer Blogs section starts here */}
+            Call to Action section ends here
+            Footer Blogs section starts here
             <FooterBlogs />
-            {/* Footer Blogs section ends here */}
-            
+            Footer Blogs section ends here
 
         </div>
     )

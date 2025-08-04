@@ -133,7 +133,6 @@ export default function Header() {
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end" className="w-full text-base font-medium font-poppins">
                                 {languages.map((languages) => {
-                                    console.log(languages)
                                   return(
                                       <DropdownMenuItem
                                         key={languages.name}
@@ -157,8 +156,10 @@ export default function Header() {
                         </Button>
 
                         {/* Cart */}
-                        <Button variant="ghost" size="icon" className="bg-primary text-white hover:bg-white/10 p-2">
-                            <ShoppingCart className="h-5 w-5" />
+                        <Button variant="ghost" size="icon" className="bg-primary text-white hover:bg-white/10 p-2" asChild>
+                            <Link to="/cart">
+                                <ShoppingCart className="h-5 w-5" />
+                            </Link>
                         </Button>
 
                         {/* Mobile Menu Toggle */}
@@ -195,9 +196,8 @@ export default function Header() {
                             {/* Navigation Items */}
                             <nav className="hidden lg:flex items-center space-x-6">
                                 {navigationItems.map((item) => (
-                                    <Button asChild className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" >
+                                    <Button asChild className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" key={item.name}>
                                         <Link
-                                            key={item.name}
                                             to={item.Url}>
                                             {item.hasIcon && item.hasIcon}
                                             {item.name}
@@ -209,9 +209,8 @@ export default function Header() {
                             {/* Mobile Navigation */}
                             <nav className="lg:hidden flex items-center space-x-4 overflow-x-auto py-1 flex-1 scrollbar-hide">
                                 {navigationItems.map((item) => (
-                                    <Button asChild>
+                                    <Button asChild key={item.name}>
                                         <Link
-                                            key={item.name}
                                             to={item.Url}
                                             className="flex items-center gap-2 text-white/90 hover:text-white transition-colors py-1 text-sm font-medium bg-[#07142E]">
                                             {item.hasIcon && item.hasIcon}

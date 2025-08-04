@@ -11,7 +11,7 @@ const RandomKeys = () => {
         "./images/BestSeller6.png",
     ]
     return (
-        <>
+        <> 
             {/*isPending && <div>Loading...</div>*/}
             {/*queryKey="BestSeller"
                 queryFn={() => BestSellerApi(1, 6)}*/}

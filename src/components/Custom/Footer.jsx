@@ -21,29 +21,24 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-base font-poppins font-semibold uppercase pb-4">For buyers</h3>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Buyer support</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">How to buy</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Buy with DGMARQ Plus</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Earn ith DGMARQ Goldmine</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Gaming news  </Link>
+                    <Link to="/buyer-support" className="font-poppins font-normal text-sm leading-7 underline ">Buyer support</Link>
+                    <Link to="/how-to-buy" className="font-poppins font-normal text-sm leading-7 underline ">How to buy</Link>
+                    <Link to="/buyer-support" className="font-poppins font-normal text-sm leading-7 underline ">Buy with DGMARQ Plus</Link>
+                    <Link to="/buyer-support" className="font-poppins font-normal text-sm leading-7 underline ">Gaming news  </Link>
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-base font-poppins font-semibold uppercase pb-4">For Seller</h3>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Seller support</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">How to Sell</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Import via API</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Try out DGMARQ Ads</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Partnership program</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Creator Partnership</Link>
+                    <Link to="/seller-support" className="font-poppins font-normal text-sm leading-7 underline ">Seller support</Link>
+                    <Link to="/how-to-sell" className="font-poppins font-normal text-sm leading-7 underline ">How to Sell</Link>
+                    <Link to="/partnerships" className="font-poppins font-normal text-sm leading-7 underline ">Partnership program</Link>
+                    <Link to="/partnerships" className="font-poppins font-normal text-sm leading-7 underline ">Creator Partnership</Link>
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-base font-poppins font-semibold uppercase pb-4">Support</h3>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Terms and conditions</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Privacy and cookie Policy</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Digital Services Act</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Refund Policy</Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Category map </Link>
-                    <Link to="/" className="font-poppins font-normal text-sm leading-7 underline ">Creator Partnership</Link>
+                    <Link to="/terms-conditions" className="font-poppins font-normal text-sm leading-7 underline ">Terms and conditions</Link>
+                    <Link to="/privacy-policy" className="font-poppins font-normal text-sm leading-7 underline ">Privacy and cookie Policy</Link>
+                    <Link to="/stay-safe" className="font-poppins font-normal text-sm leading-7 underline ">Stay Safe</Link>
+                    <Link to="/partnerships" className="font-poppins font-normal text-sm leading-7 underline ">Creator Partnership</Link>
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-base font-poppins font-semibold uppercase pb-4">Media</h3>
