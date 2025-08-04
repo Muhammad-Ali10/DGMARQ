@@ -1,7 +1,11 @@
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel"
+import bg1 from "../../../../public/images/cardimage1.png"
+import bg2 from "../../../../public/images/cardimage2.png"
+import bg3 from "../../../../public/images/cardimage3.png"
+import bg4 from "../../../../public/images/cardimage4.png"
+import bg5 from "../../../../public/images/cardimage5.png"
 
-
-const Hero = () => {
+const Hero = () => {  
   return (
     <div className="w-full   py-8 relative overflow-hidden">
      {/* <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl"/>
@@ -13,7 +17,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[259px] h-[280px] md:h-[349px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full bg-gradient-to-b from-blue-500 to-blue-700">
                 <img
-                  src="./images/cardimage1.png"
+                  src={bg1}
                   alt="Windows 11"
                   className="w-full h-full object-cover"
                 />
@@ -26,7 +30,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[285px] h-[280px] md:h-[382px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full">
                 <img
-                  src="./images/cardimage2.png"
+                  src={bg2}
                   alt="Tekken 8"
                   className="w-full h-full object-cover"
                 />
@@ -39,7 +43,7 @@ const Hero = () => {
             <div className="w-[220px] md:w-[409px] h-[320px] md:h-[529px] rounded-2xl overflow-hidden shadow-xl relative">
               <div className="relative h-full">
                 <img
-                  src="./images/cardimage3.png"
+                  src={bg3}
                   alt="The Last of Us Part II Remastered"
                   className="w-full h-full object-cover"
                 />
@@ -61,7 +65,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[285px] h-[280px] md:h-[382px] rounded-2xl overflow-hidden shadow-lg ">
               <div className="relative h-full bg-gradient-to-b from-purple-500 to-purple-700">
                 <img
-                  src="./images/cardimage4.png"
+                  src={bg4}
                   alt="Cyberpunk 2077"
                   className="w-full h-full object-cover"
                 />
@@ -74,7 +78,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[259px] h-[280px] md:h-[349px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full">
                 <img
-                  src="./images/cardimage5.png"
+                  src={bg5}
                   alt="Red Dead Redemption 2"
                   className="w-full h-full object-cover"
                 />

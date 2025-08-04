@@ -276,7 +276,7 @@ console.log("product",products)
                     actualPrice:products?.actualPrice
                   })
                 )
-
+ 
                 toast.success('Product add to cart successfuly!')
               }} className=" bg-secondary text-black py-2 w-full rounded-md hover:bg-blue-700">
                 Add to Cart
