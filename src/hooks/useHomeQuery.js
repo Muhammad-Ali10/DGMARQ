@@ -9,7 +9,7 @@ import {
     GameAccountApi,
     WishlistApi
 } from "@/lib/api/Api";
-
+ 
 
 export const useBestSellerQuery = (page = 1, limit = 6) => {
     return useQuery({

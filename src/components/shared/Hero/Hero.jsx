@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel"
-import bg1 from "../../../../public/images/cardimage1.png"
+import card1 from '/public/images/cardimage1.png';
 import bg2 from "../../../../public/images/cardimage2.png"
 import bg3 from "../../../../public/images/cardimage3.png"
 import bg4 from "../../../../public/images/cardimage4.png"
@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[259px] h-[280px] md:h-[349px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full bg-gradient-to-b from-blue-500 to-blue-700">
                 <img
-                  src={bg1}
+                  src={card1}
                   alt="Windows 11"
                   className="w-full h-full object-cover"
                 />

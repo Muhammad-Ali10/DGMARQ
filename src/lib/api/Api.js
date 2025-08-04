@@ -14,7 +14,7 @@ export const UpcommingGamesApi = async () => {
     return response.data
 }
 
-
+ 
 export const CategoryApi = async (page, limit) => {
 
     const response = await axios.get(`${Base_url}/products/productByCategory?productPage=${page}&productLimit=${limit}`)

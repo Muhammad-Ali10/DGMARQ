@@ -21,7 +21,7 @@ const Layout = () => {
   };
 
   const backgroundImage = routeBgMap[pathname] || bg1;
-
+console.log(backgroundImage)
   return (
     <div
       className="bg-cover bg-no-repeat bg-top w-full min-h-screen"
