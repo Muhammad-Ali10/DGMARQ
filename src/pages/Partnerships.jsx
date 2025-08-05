@@ -58,7 +58,7 @@ const Partnerships = () => {
 
                         <h1 className=' text-3xl uppercase font-semibold'>Influencers and content creators</h1>
                         <p>
-                            G2A empowers the gaming community through partnerships and sponsorships with highly engaging content creators and influencers. Are you are a streamer, YouTuber or a gaming influencer? Excellent – let’s work together!
+                            DGAMRQ empowers the gaming community through partnerships and sponsorships with highly engaging content creators and influencers. Are you are a streamer, YouTuber or a gaming influencer? Excellent – let’s work together!
 
 
                         </p>
@@ -84,7 +84,7 @@ const Partnerships = () => {
                         <h1 className=' text-3xl uppercase font-semibold'>Marketing partnerships
                         </h1>
                         <p>
-                            Do you want to create or participate in G2A’s marketing campaigns? If you have talent and interest in engaging and entertaining users, contact us for more information.
+                            Do you want to create or participate in DGAMRQ marketing campaigns? If you have talent and interest in engaging and entertaining users, contact us for more information.
 
 
 

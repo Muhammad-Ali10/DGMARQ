@@ -18,7 +18,7 @@ const TrendingCategories = () => {
                         backgroundPosition: 'center'
                     }} className="rounded-21 flex justify-end  max-w-[430px] w-full h-[461px] p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
-                            <img src="/images/TopSeller1.png" className="w-24 h-32" />
+                            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754398500/TopSeller1_tcm5uv.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
                                 <Button className="bg-[#F05F00] px-2.5 py-1.5 rounded-lg font-poppins text-base text-white">Best seller</Button>
                                 <h3 className="text-26 font-bold font-poppins text-white">IndieFlix Gift Card 1 Month</h3>
@@ -28,7 +28,7 @@ const TrendingCategories = () => {
                     </Card>
                     <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
-                            <img src="/images/TopSeller1.png" className="w-24 h-32" />
+                            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754398595/image_2_zo5vzf.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
                                 <Button className="bg-[#F05F00] px-2.5 py-1.5 rounded-lg font-poppins text-base text-white">Best seller</Button>
                                 <h3 className="text-26 font-bold font-poppins text-white">IndieFlix Gift Card 1 Month</h3>
@@ -40,7 +40,7 @@ const TrendingCategories = () => {
                 <div className="flex flex-col md:flex-row-reverse w-full justify-between z-20 gap-4 md:gap-8">
                     <Card className="rounded-21 flex justify-end  max-w-[430px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
-                            <img src="/images/TopSeller1.png" className="w-24 h-32" />
+                            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754398595/image_3_nkfn8b.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
                                 <Button className="bg-[#F05F00] px-2.5 py-1.5 rounded-lg font-poppins text-base text-white">Best seller</Button>
                                 <h3 className="text-26 font-bold font-poppins text-white">IndieFlix Gift Card 1 Month</h3>
@@ -50,7 +50,7 @@ const TrendingCategories = () => {
                     </Card>
                     <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
-                            <img src="/images/TopSeller1.png" className="w-24 h-32" />
+                            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754398595/image_4_qdvvkn.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
                                 <Button className="bg-[#F05F00] px-2.5 py-1.5 rounded-lg font-poppins text-base text-white">Best seller</Button>
                                 <h3 className="text-26 font-bold font-poppins text-white">IndieFlix Gift Card 1 Month</h3>

@@ -29,7 +29,7 @@ const Dashboard = () => {
                                         <h2 className=' text-black text-2xl pb-2 font-semibold'>Your collection is empty :(</h2>
                                         <div>
                                             <p className=' text-sm'>What are you waiting for?</p>
-                                            <p className=' text-sm'>There are thousands of games on G2A.COM to choose from!
+                                            <p className=' text-sm'>There are thousands of games on DGAMRQ.COM to choose from!
                                             </p>
                                         </div>
                                     </div>

@@ -213,7 +213,7 @@ const ProfilePopup = () => {
                 </button>
                 <button className="w-full flex items-center justify-center p-3 bg-blue text-white rounded-sm hover:bg-secondary">Sign in</button>
               </div>
-              <p className="text-xs text-gray-500 text-center mt-3">By clicking Sign in with Google, Facebook, or PayPal, you agree to G2A's Terms & Conditions and Privacy Policy.</p>
+              <p className="text-xs text-gray-500 text-center mt-3">By clicking Sign in with Google, Facebook, or PayPal, you agree to DGMARQ's Terms & Conditions and Privacy Policy.</p>
               <div className="text-center mt-4">
                 <p className="text-sm flex flex-col gap-2 text-black font-semibold">
                   Don't have an account?

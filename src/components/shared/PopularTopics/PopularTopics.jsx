@@ -5,10 +5,10 @@ const PopularTopics = () => {
     { title: "My payment/transaction failed. What should I do?" },
     { title: "The digital item that I purchased doesn’t work or stopped working. What should I do?" },
     { title: "How can I contact the seller if I have a question or problem with my item?" },
-    { title: "I noticed a monthly payment to G2A. What is this payment for?" },
+    { title: "I noticed a monthly payment to DGMARQ. What is this payment for?" },
     { title: "My order is processing. What does that mean?" },
     { title: "I didn’t receive my digital key or any email. What should I do?" },
-    { title: "What is G2A PLUS?" },
+    { title: "What is DGMARQ PLUS?" },
   ];
 
   return (

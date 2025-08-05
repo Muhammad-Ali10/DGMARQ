@@ -221,7 +221,7 @@ export default function Header() {
                             {/* DGMARO Plus Button */}
                             <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-xs lg:text-sm font-medium  px-3 lg:px-4 py-1.5 lg:py-2 ml-2 lg:ml-4 flex-shrink-0 shadow-md">
                                 <span className="hidden sm:inline">Save more with </span>
-                                <span className="font-bold">DGMARO Plus</span>
+                                <span className="font-bold">DGMARQ Plus</span>
                             </Button>
                         </div>
                     </div>

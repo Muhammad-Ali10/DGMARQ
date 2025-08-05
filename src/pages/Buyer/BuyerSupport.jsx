@@ -11,8 +11,8 @@ const BuyerSupport = () => {
         { title: "Digital Items", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/9e798bb562a8c832097696a9a659b07b.png" },
         { title: "Problem Solving", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/43219efae6cb2dee88e539c00e0764ca.png" },
         { title: "Payments", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/77c9e596bc4716ac7eb0e1291374bcc2.png" },
-        { title: "G2A Services", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/47944f7ae165db08219389854907658a.png" },
-        { title: "G2A Account", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/10fb2de61cb55320c16ea50d1885762f.png" },
+        { title: "DGAMRQ Services", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/47944f7ae165db08219389854907658a.png" },
+        { title: "DGAMRQ Account", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/10fb2de61cb55320c16ea50d1885762f.png" },
         { title: "For Developers", icon: "https://supporthub-prod.s3-eu-west-1.amazonaws.com/329412f395822ed3826014651ecd830d.png" },
       ];
 
