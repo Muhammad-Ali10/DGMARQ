@@ -18,7 +18,7 @@ const PayPalCheckout = ({ orderData, onSuccess }) => {
       onSuccess();
     }
   };
-
+ 
   return (
     <PayPalScriptProvider options={{ "client-id": import.meta.env.REACT_APP_PAYPAL_CLIENT_ID }}>
       <PayPalButtons
