@@ -25,8 +25,11 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import StaySafe from './pages/StaySafe'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
-
-
+import Checkout from './pages/Checkout'
+import Dashboard from './pages/Buyer/Dashboard/index'
+import Keys from './pages/Buyer/Keys/index'
+import OrderHistory from './pages/Buyer/OrderHistory/index'
+import Settings from './pages/Buyer/Settings/index'   
 
 function App() {
   const queryClient = new QueryClient()
@@ -56,7 +59,11 @@ function App() {
           <Route path='stay-safe' element={<StaySafe />} />
           <Route path='cart' element={<Cart />} />
           <Route path="/product-details/:id" element={<ProductDetails />} />
-
+          <Route path="checkout" element={<Checkout />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/keys" element={<Keys />} />
+          <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </QueryClientProvider>

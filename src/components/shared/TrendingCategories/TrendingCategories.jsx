@@ -13,7 +13,7 @@ const TrendingCategories = () => {
                     <p className="text-base font-normal -tracking-tight text-start text-white mb-4">From popular subscriptions and software to e-learning, top-ups, and more.</p></div>
                 <div className="flex flex-col md:flex-row w-full justify-between gap-4 md:gap-8">
                     <Card style={{
-                        backgroundImage: `url(${bgimg})`,
+                        backgroundImage: `url('https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }} className="rounded-21 flex justify-end  max-w-[430px] w-full h-[461px] p-5 border-0">
@@ -26,7 +26,7 @@ const TrendingCategories = () => {
                             </div>
                         </div>
                     </Card>
-                    <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(/images/BgCategories1.png)] bg-cover bg-center p-5 border-0">
+                    <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
                             <img src="/images/TopSeller1.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
@@ -38,7 +38,7 @@ const TrendingCategories = () => {
                     </Card>
                 </div>
                 <div className="flex flex-col md:flex-row-reverse w-full justify-between z-20 gap-4 md:gap-8">
-                    <Card className="rounded-21 flex justify-end  max-w-[430px] w-full h-[461px] bg-[url(/images/BgCategories1.png)] bg-cover bg-center p-5 border-0">
+                    <Card className="rounded-21 flex justify-end  max-w-[430px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
                             <img src="/images/TopSeller1.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">
@@ -48,7 +48,7 @@ const TrendingCategories = () => {
                             </div>
                         </div>
                     </Card>
-                    <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(/images/BgCategories1.png)] bg-cover bg-center p-5 border-0">
+                    <Card className="rounded-21 flex justify-end  max-w-[804px] w-full h-[461px] bg-[url(https://res.cloudinary.com/dptwervy7/image/upload/v1754393639/BgCategories1_cn0mq1.png)] bg-cover bg-center p-5 border-0">
                         <div className="flex flex-row items-start gap-5">
                             <img src="/images/TopSeller1.png" className="w-24 h-32" />
                             <div className="flex flex-col items-start gap-2">

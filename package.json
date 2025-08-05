@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
+    "@paypal/react-paypal-js": "^8.8.3",
     "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
@@ -27,6 +28,8 @@
     "country-flag-icons": "^1.5.19",
     "dotenv": "^17.0.0",
     "embla-carousel-react": "^8.6.0",
+    "firebase": "^12.0.0",
+    "jspdf": "^3.0.1",
     "lucide": "^0.524.0",
     "lucide-react": "^0.516.0",
     "prop-types": "^15.8.1",

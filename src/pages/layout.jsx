@@ -12,15 +12,15 @@ const Layout = () => {
   const { pathname } = useLocation();
 
   const routeBgMap = {
-    "/": bg1,
-    "/software": bg2,
-    "/random-keys": bg3,
-    "/best-sellers": bg4,
-    "/steam-gift": bg5,
+    "/": "https://res.cloudinary.com/dptwervy7/image/upload/v1754395487/Homepagebg_idyipm.jpg",
+    "/software": "https://res.cloudinary.com/dptwervy7/image/upload/v1754395511/Softwarepagebg_gm6szw.png",
+    "/random-keys": "https://res.cloudinary.com/dptwervy7/image/upload/v1754395487/Randomkeyspagebg_wu2pkc.png",
+    "/best-sellers": "https://res.cloudinary.com/dptwervy7/image/upload/v1754395485/Bestsellersbg_hittvu.png",
+    "/steam-gift": "https://res.cloudinary.com/dptwervy7/image/upload/v1754395488/Steamgiftcardbg_qtpqnd.png",
     // Add more routes here...
   };
 
-  const backgroundImage = routeBgMap[pathname] || bg1;
+  const backgroundImage = routeBgMap[pathname] || "https://res.cloudinary.com/dptwervy7/image/upload/v1754395487/Homepagebg_idyipm.jpg";
 console.log(backgroundImage)
   return (
     <div

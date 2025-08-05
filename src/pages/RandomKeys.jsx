@@ -13,7 +13,7 @@ const RandomKeys = () => {
                 <h3 className=" text-4xl -tracking-tight font-semibold text-center">Best Software</h3>
                 <p className="text-base font-normal -tracking-tight text-center">For Home and Business</p>
             </div>
-            <img src="./images/RandomKeybanner.png" alt="offerimage" className="max-w-1260 w-full mt-12" />
+            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393693/RandomKeybanner_j6tngk.png" alt="offerimage" className="max-w-1260 w-full mt-12" />
 
             <ProductbyCategory brandName="Try to catch one of our bestsellers!" />
             <ProductbyCategory brandName="Meet the champions!" />

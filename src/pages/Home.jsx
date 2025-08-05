@@ -28,7 +28,7 @@ import ProductbyCategory from "../components/shared/ProductsbyCategory/Productby
 const Home = () => {
 
 
- 
+
     const NavItem = [
         { name: "Bestsellers", id: "bestSellers" },
         { name: "Upcoming Games", id: "upcoming-games" },
@@ -61,11 +61,11 @@ const Home = () => {
 
             </div>
 
-            <BestSeller  id="bestSellers" />
+            <BestSeller id="bestSellers" />
             <FlashDeal />
 
             <UpcomingGames />
-            <TrendingOffer displayImage={true}  gridNumber={2}/>
+            <TrendingOffer displayImage={true} gridNumber={2} />
 
             <TrendingCategories />
             <ProductbyCategory brandName="Software" />
@@ -82,12 +82,10 @@ const Home = () => {
 
             {/* <GamesBanner /> */}
 
-            Call to Action section starts here
             <CallToAction />
-            Call to Action section ends here
-            Footer Blogs section starts here
+
             <FooterBlogs />
-            Footer Blogs section ends here
+
 
         </div>
     )

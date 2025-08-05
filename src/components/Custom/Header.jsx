@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Link } from "react-router-dom"
 import { US, ZA, FR, ES } from 'country-flag-icons/react/3x2'
-
+import ProfilePopup from "./ProfilePopup"
 
 
 const languages = [
@@ -69,7 +69,7 @@ export default function Header() {
                     {/* Logo */}
                     <div className="flex items-center gap-3 flex-shrink-0">
                         <Link to="/">
-                            <img src="./images/logo.png" alt="Logo" className="w-36 h-11" />
+                            <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393665/logo_nojqxu.png" alt="Logo" className="w-36 h-11" />
                         </Link>
                     </div>
 
@@ -146,10 +146,8 @@ export default function Header() {
                             </DropdownMenuContent>
                         </DropdownMenu>
                         {/* Register Button */}
-                        <Button className="bg-primary text-white text-sm font-medium px-4 py-1.5 hidden sm:inline-flex">
-                            Register
-                        </Button>
-
+                 
+<ProfilePopup/>
                         {/* Wishlist */}
                         <Button variant="ghost" size="icon" className=" bg-primary text-white hover:bg-white/10 p-2">
                             <Heart className="h-5 w-5" />
@@ -272,7 +270,7 @@ export default function Header() {
                             </div>
 
                             {/* Mobile Register Button */}
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium">Register</Button>
+                            <ProfilePopup/>
                         </div>
                     </div>
                 )}

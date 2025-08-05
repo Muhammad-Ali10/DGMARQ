@@ -31,7 +31,7 @@ const TrendingOffer = ({ displayImage, gridNumber }) => {
                         />
                     ))}
                 </div>
-                {displayImage && <img src="./images/offerimage.png" alt="offerimage" className="h-[500px]" />}
+                {displayImage && <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393667/offerimage_j9psny.png" alt="offerimage" className="h-[500px]" />}
             </div>
 
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductSection, RandomKeySeller, FooterBlogs } from '@/components';
+import { ProductSection, RandomKeySeller, FooterBlogs, BestSeller, ProductbyCategory } from '@/components';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -66,26 +66,14 @@ const BestSellers = () => {
             <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" /> */}
             {/* <BestSellers component starts here in this componemet Our Marketplace Best Sellers */}
 
-            <ProductSection productimage={product} title="Best sellers" description="The hottest items on our marketplace – discover what captured our users' hearts!" />
-
+            <BestSeller />
             {/* <BestSellers component ends here */}
 
-
-
-
-            <RandomKeySeller />
-
+     
 
             {/* Random key Seller component ends here */}
-
-
+            <ProductbyCategory brandName="How about 5 keys?" />
             {/* software Bestseller section starts here */}
-
-
-
-
-            <ProductSection productimage={SoftwareBestSeller} title="Software Best sellers" description="The hottest software items on our marketplace – discover what captured our users' hearts!" />
-
 
             {/* software Bestseller section ends here */}
 

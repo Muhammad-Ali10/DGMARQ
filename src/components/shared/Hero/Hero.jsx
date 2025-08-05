@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[259px] h-[280px] md:h-[349px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full bg-gradient-to-b from-blue-500 to-blue-700">
                 <img
-                  src={card1}
+                  src='https://res.cloudinary.com/dptwervy7/image/upload/v1754393643/cardimage1_ejqqfq.png'
                   alt="Windows 11"
                   className="w-full h-full object-cover"
                 />
@@ -30,7 +30,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[285px] h-[280px] md:h-[382px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full">
                 <img
-                  src={bg2}
+                  src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393646/cardimage2_zl6lut.png"
                   alt="Tekken 8"
                   className="w-full h-full object-cover"
                 />
@@ -43,7 +43,7 @@ const Hero = () => {
             <div className="w-[220px] md:w-[409px] h-[320px] md:h-[529px] rounded-2xl overflow-hidden shadow-xl relative">
               <div className="relative h-full">
                 <img
-                  src={bg3}
+                  src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393646/cardimage3_nlpwzx.png"
                   alt="The Last of Us Part II Remastered"
                   className="w-full h-full object-cover"
                 />
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[285px] h-[280px] md:h-[382px] rounded-2xl overflow-hidden shadow-lg ">
               <div className="relative h-full bg-gradient-to-b from-purple-500 to-purple-700">
                 <img
-                  src={bg4}
+                  src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393649/cardimage4_crqqnw.png"
                   alt="Cyberpunk 2077"
                   className="w-full h-full object-cover"
                 />
@@ -78,7 +78,7 @@ const Hero = () => {
             <div className="w-[180px] md:w-[259px] h-[280px] md:h-[349px] rounded-2xl overflow-hidden shadow-lg">
               <div className="relative h-full">
                 <img
-                  src={bg5}
+                  src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393647/cardimage5_xm7zvc.png"
                   alt="Red Dead Redemption 2"
                   className="w-full h-full object-cover"
                 />

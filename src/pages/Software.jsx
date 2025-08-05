@@ -34,9 +34,11 @@ const SoftwarePage = () => {
 
             <BestSeller />
             <ProductbyCategory brandName="Vpns" />
-            <ProductbyCategory brandName="iOS utilities" />
-            <ProductbyCategory brandName="Graphic Design" />
-            <ProductbyCategory brandName="Antivirus and security" />
+            {setTimeout(()=>{
+                return (
+                    <ProductbyCategory brandName="iOS utilities" />)
+            },1000)}
+ 
         </div>
     )
 }

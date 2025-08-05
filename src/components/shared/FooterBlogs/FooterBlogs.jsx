@@ -3,10 +3,10 @@ import { BlogCard } from "@/components";
 const FooterBlogs = () => {
   
     const blogs = [
-        { Image: "./images/Blog1.png" },
-        { Image: "./images/Blog2.png" },
-        { Image: "./images/Blog3.png" },
-        { Image: "./images/Blog4.png" },
+        { Image: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393640/Blog1_vz4f7o.png" },
+        { Image: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393640/Blog2_dobiva.png" },
+        { Image: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393641/Blog3_bnk0nt.png" },
+        { Image: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393641/Blog4_nozx5u.png" },
     ]
 
     return (

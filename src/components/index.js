@@ -57,3 +57,6 @@ export { default as Help } from "./shared/Help/Help";
 export { default as Slider2 } from "./shared/Slider2/Slider2";
 export { default as Faqs } from "./shared/Faqs/Faqs";
 export { default as PopularTopics} from "./shared/PopularTopics/PopularTopics"
+export {default as PayPalCheckout} from "./shared/paypal/PayPalCheckout"
+export {default as Sidebar} from "./shared/Admin/Sidebar" 
+export {default as AdminNav } from "./shared/Admin/AdminNav"

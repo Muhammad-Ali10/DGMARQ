@@ -7,7 +7,7 @@ const Footer = () => {
             <div className=" w-full py-10 bg-[#07173D] ">
             <div className="max-w-1260  flex flex-col md:flex-row justify-between items-center w-full m-auto">
                 <h3 >Payment methods:</h3>
-                <img src="./images/payments.png" alt="payments" className="w-full max-w-[460px]" />
+                <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393674/payments_qpgfwb.png" alt="payments" className="w-full max-w-[460px]" />
             </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 max-w-1260 p-5 md:py-6 xl:py-13 m-auto">
