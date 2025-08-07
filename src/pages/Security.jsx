@@ -8,8 +8,9 @@ import {
 } from "@/components";
 import {
     SecurityHeroSection,
-    FarmeWorkData,
-    SecurityPromoSection
+    SecurityFeatures,
+    SecurityPromoSection1,
+    SecurityPromoSection2
 } from "@/lib/data";
 
 
@@ -21,11 +22,11 @@ const Security = () => {
                 <CustomizedHero data={SecurityHeroSection}/>
              {/*Hero Section End Here*/}
              
-            <PromoSection data={SecurityPromoSection}/>
+            <PromoSection data={SecurityPromoSection1}/>
 
-            <FarmeWork FarmeWorkData={FarmeWorkData} />
+            <FarmeWork data={SecurityFeatures} />
 
-            <PromoSection />
+            <PromoSection data={SecurityPromoSection2}/>
 
             <Help />
 

@@ -29,7 +29,16 @@ import Checkout from './pages/Checkout'
 import Dashboard from './pages/Buyer/Dashboard/index'
 import Keys from './pages/Buyer/Keys/index'
 import OrderHistory from './pages/Buyer/OrderHistory/index'
-import Settings from './pages/Buyer/Settings/index'   
+import Settings from './pages/Buyer/Settings/index'
+import Register from "./pages/auth/Register/index"
+import Login from "./pages/auth/Login/index"
+import ForgotPassword from "./pages/auth/ForgetPassword/index"
+import NewPassword from "./pages/auth/ForgetPassword/NewPassword"
+import Category from './pages/Category/index'
+import SubCategory from './pages/SubCategory/index'
+import SubSubCategory from './pages/SubSubCategory/index'
+
+
 
 function App() {
   const queryClient = new QueryClient()
@@ -59,12 +68,19 @@ function App() {
           <Route path='stay-safe' element={<StaySafe />} />
           <Route path='cart' element={<Cart />} />
           <Route path="/product-details/:id" element={<ProductDetails />} />
+          <Route path="/category/:id" element={<Category />} />
+          <Route path="/sub-category/:id" element={<SubCategory />} />
+          <Route path="/sub-sub-category/:id" element={<SubSubCategory />} />
           <Route path="checkout" element={<Checkout />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/keys" element={<Keys />} />
-          <Route path="/order-history" element={<OrderHistory />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/new-password" element={<NewPassword />} />
         </Route>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/keys" element={<Keys />} />
+        <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </QueryClientProvider>
   )

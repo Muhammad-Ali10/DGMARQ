@@ -58,7 +58,7 @@ const AboutCompany = () => {
                     </div>
                 </div>
             </div>
-            <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-hard-light bg-blue-3  bg-[url('./images/Aboutbg2.png')]">
+            <div className="relative w-full h-[479px] bg-cover bg-center bg-no-repeat bg-blend-hard-light bg-blue-3  bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461128/Aboutbg2_gzysgp.png')]">
 
                 {/* Content */}
                 <div className="relative z-10 flex items-center justify-center h-full">

@@ -76,7 +76,7 @@ const Dashboard = () => {
                          <div>
                             <div className=' flex justify-between items-center'>
                               <div>
-                                <img src={require('../../../assets/images/logo-footer.png')} className=' w-32' alt='' />
+                                <img src='https://res.cloudinary.com/dptwervy7/image/upload/v1754460024/logo-footer_gvmwjm.png' className=' w-32' alt='' />
                               </div>
                             <div className=' text-red-600 flex  items-center gap-2'>
                             <IoMdCloseCircleOutline size={25} />

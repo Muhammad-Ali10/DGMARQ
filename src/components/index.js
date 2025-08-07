@@ -5,7 +5,9 @@ export { default as ProductCardVertical } from './Custom/ProductCardVertical';
 export { default as ProductSection } from './Custom/ProductSection';
 export { default as BlogCard } from './Custom/BlogCard';
 export { default as GiftCard } from './Custom/GiftCard';
-export { default as FilterSidebar } from "./Custom/FilterBar";
+export { default as FilterSidebar } from "./Custom/FilterBar"
+export { default as ProductList } from "./Custom/ProductList"
+export { default as PaginationControls } from "./Custom/PaginationControls"
 export { default as Slider } from "./Custom/Slider";
 export { default as PromoSection } from "./Custom/PromoSection";
 export { default as ContactFrom } from "./Custom/ContactForm";
@@ -14,9 +16,9 @@ export { default as CustomizedHero } from "./Custom/CustomizedHero";
 export { default as ValuePropositionSection } from "./Custom/ValuePropositionSection";
 export { default as CompanyIntroSection } from "./Careers/CompanyIntroSection";
 export { default as DgmarDna } from "./Careers/DgmarDan";
-export {default as Footer} from "./Custom/Footer"
-export {default as Header} from "./Custom/Header"
-export {default as LoadingCard} from "./Custom/LoadingCard"
+export { default as Footer } from "./Custom/Footer"
+export { default as Header } from "./Custom/Header"
+export { default as LoadingCard } from "./Custom/LoadingCard"
 
 // export { default as PromoCard } from './Custom/PromoCard';
 
@@ -34,7 +36,7 @@ export { default as TopGames } from './shared/TopGames/TopGames';
 export { default as TrendingCategories } from './shared/TrendingCategories/TrendingCategories';
 export { default as UpcomingGames } from './shared/Upcoming-Games/UpcomingGames';
 export { default as GameAccount } from './shared/GameAccount/GameAccount';
-export {default as ProductbyCategory} from "./shared/ProductsbyCategory/ProductbyCategory";
+export { default as ProductbyCategory } from "./shared/ProductsbyCategory/ProductbyCategory";
 export { default as CallToAction } from './shared/CallToAction/CallToAction';
 export { default as TrendingOffer } from "./shared/TrendingOffer/TrendingOffer";
 export { default as Vpns } from "./shared/Vpns/Vpns";
@@ -56,7 +58,8 @@ export { default as FarmeWork } from "./shared/FarmeWork/FarmeWork";
 export { default as Help } from "./shared/Help/Help";
 export { default as Slider2 } from "./shared/Slider2/Slider2";
 export { default as Faqs } from "./shared/Faqs/Faqs";
-export { default as PopularTopics} from "./shared/PopularTopics/PopularTopics"
-export {default as PayPalCheckout} from "./shared/PayPal/PayPalCheckout"
-export {default as Sidebar} from "./shared/Admin/Sidebar" 
-export {default as AdminNav } from "./shared/Admin/AdminNav"
+export { default as PopularTopics } from "./shared/PopularTopics/PopularTopics"
+export { default as PayPalCheckout } from "./shared/PayPal/PayPalCheckout"
+export { default as Sidebar } from "./shared/Admin/Sidebar"
+export { default as AdminNav } from "./shared/Admin/AdminNav"
+

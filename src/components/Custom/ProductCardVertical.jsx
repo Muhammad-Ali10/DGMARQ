@@ -10,7 +10,7 @@ const ProductCardVertical = ({image, actualPrice, discountPrice, title}) => {
             <img src={image} className="w-[150px] h-[150px] rounded-2xl"/>
            <div className="w-full md:max-w-[175px]">
              <CardHeader className="p-0 text-start">
-                <CardTitle className="text-sm font-semibold -tracking-normal w-[186px] truncate">Minecraft: Java & Bedrock Edition Java & Bedrock Edition PC</CardTitle>
+                <CardTitle className="text-sm font-semibold -tracking-normal w-[186px] truncate">{title}</CardTitle>
                 <span className="text-sm font-normal -tracking-normal ">Microsoft Store</span>
                 <p className="text-sm font-normal -tracking-normal">Key <span className="font-bold">GLOBAL</span></p>
             </CardHeader>
@@ -24,7 +24,7 @@ const ProductCardVertical = ({image, actualPrice, discountPrice, title}) => {
             </CardFooter>
            </div>
 
-        </Card>
+        </Card> 
     )
 }
 

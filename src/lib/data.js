@@ -196,7 +196,7 @@ export const giftCards = [
 
 // About Page Data Start
 export const AboutpageVarified = {
-    imgSrc: "./images/verifiedlogo.png",
+    imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461214/verifiedlogo_py6dfi.png",
     title: "Recognized as “Best Marketplace” of the 21st Century",
     description: "in the Spanish VII Edition of the 21st Century National Technology Awards 2024"
 }
@@ -204,25 +204,25 @@ export const AboutpageVarified = {
 export const CompanyHeroSection = {
     title: "Your talent will flourish at DGMAR.COM",
     description: "DGMAE is the world’s leading marketplace for digital entertainment, recognized for excellence in innovation, security, fraud prevention, and business impact. Trusted by global partners, we deliver award-winning solutions for the digital age",
-    bgurl: "bg-blend-overlay bg-blue-3 bg-[url('./images/bgAbout.png')]",
+    bgurl: "bg-blend-overlay bg-blue-3 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461118/bgAbout_jbqrzi.png')]",
 }
 
 export const CompanyDgmarqFeatures =
     [
         {
-            imageUrl: "./images/mobileapp.svg",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461271/mobileapp_kzxphj.svg",
             title: "Top global digital entertainment marketplace",
         },
         {
-            imageUrl: "./images/share.svg",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461302/share_dp2lom.svg",
             title: "Pioneering online fraud prevention and security",
         },
         {
-            imageUrl: "./images/mobile.svg",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461251/mobile_wlrikg.svg",
             title: "Collaborating with leading partners worldwide",
         },
         {
-            imageUrl: "./images/mobile.svg",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461251/mobile_wlrikg.svg",
             title: "Enabling seamless transactions worldwide     ",
         }
     ]
@@ -343,15 +343,30 @@ export const FaqsData = [
 //Security page
 export const SecurityHeroSection = {
     title: "DGMARQ.COM: secure and trusted marketplace",
-    bgurl: " bg-blend-overlay bg-black/50 bg-[url('./images/bgSecurity.png')] "
+    bgurl: " bg-blend-overlay bg-black/50 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461610/bgSecurity_hqevsu.png')] "
 }
-export const SecurityPromoSection = {
+export const SecurityPromoSection1 = {
     title: "How we operate",
     description: "The gaming and non-gaming items on DGMAR.COM come from trusted, verified partners from all over the world, ensuring security, quality, and a wide range of offers",
     buttonText: "Go For Details",
+    imageSrc:'https://res.cloudinary.com/dptwervy7/image/upload/v1754461645/secure_dxswnp.png'
+}
+export const SecurityPromoSection2 = {
+    title: "Is DGMAR.COM safe and legit place to buy cheap games? We talk about it in our Support Hub article",
+    buttonText: "Read at Support Hub",
+     imageSrc:'https://res.cloudinary.com/dptwervy7/image/upload/v1754462704/image_5_tvucqr.png'
 }
 
+export const SecurityFeatures  =
+{
+    title: "Safe shopping",
+    description: "We guarantee security and transparency as all our sellers undergo strict business and AML verification. We ensure an easy, safe and fast purchasing process as our clients’ satisfaction is the top priority for us",
+    buttonName: "Find out more",
+    url: "#",
+    bgurl: "bg-blend-overlay  bg-blue-2  bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754462986/image_6_gnom4l.png')]"
 
+}
+ 
 
 //ContactUs Page 
 
@@ -381,35 +396,35 @@ export const ContactUsHeroSection = {
             description: "teachers using games in education",
         },
     ],
-    bgurl: "bg-blend-soft-light bg-blue-2 bg-[url('./images/Contactusbg.png')]",
+    bgurl: "bg-blend-soft-light bg-blue-2 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461721/Contactusbg_xx4qb4.png')]",
 }
 
 
-
+ 
 //ContactUs Page 
 
 export const CareersHeroSection = {
     title: "Your talent will flourish at DGMAR.COM",
     description: "Looking for an exciting challenge? Join over 400 talents shaping the future of global e-commerce together. Discover everything we can offer you. Meet our team, values, and culture. See for yourself that DGMAR.COM is the place to unlock your full potentia",
-    bgurl: "bg-blend-hard-light bg-blue-3 bg-[url('./images/Careersbg.png')]",
+    bgurl: "bg-blend-hard-light bg-blue-3 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754393650/Careersbg_rcukdo.png')]",
 }
 
 export const CareerDgmarqFeatures =
     [
         {
-            imageUrl: "./images/web.png",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393715/web_ff27ic.png",
             title: "Global impact – influence millions of people worldwide",
         },
         {
-            imageUrl: "./images/hands.png",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393661/hands_xbrwcx.png",
             title: "Inclusive culture – DEI at the core of everything we do",
         },
         {
-            imageUrl: "./images/Flexiblework.png",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393660/Flexiblework_r5fa5h.png",
             title: "Flexible work – hybrid or remote, whichever suits you best",
         },
         {
-            imageUrl: "./images/rocket.png",
+            imageUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393699/rocket_kadhdy.png",
             title: "Future-oriented solutions – first in digital – digital first",
         }
     ]
@@ -421,7 +436,7 @@ export const CareerFarmeWork =
     description: "Our culture is built on trust, collaboration, and openness to diversity. We create a friendly and inclusive space for everyone, regardless of their personal traits, experiences, or roles",
     buttonName: "More about DEI",
     url: "#",
-    bgurl: "bg-blend-screen bg-blue-6  bg-[url('./images/Careerwork.png')]"
+    bgurl: "bg-blend-screen bg-blue-6  bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461671/Careerwork_y0aflc.png')]"
 
 }
 

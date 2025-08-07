@@ -117,7 +117,7 @@ const ProfilePopup = () => {
         <div className="flex items-center gap-2">
           <div onClick={openProfileFun} className="w-12 h-12 rounded-full overflow-hidden cursor-pointer">
             <img
-              src={userInfo?.logo || require("../../assets/images/profile.jpg")}
+              src={userInfo?.logo || "https://res.cloudinary.com/dptwervy7/image/upload/v1754459918/profile_offplh.jpg"}
               className="w-full h-full bg-center object-cover"
               alt="Profile"
             />
@@ -131,7 +131,7 @@ const ProfilePopup = () => {
                 <div className="flex justify-start gap-6 items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden">
                     <img
-                      src={userInfo?.logo || require("../../assets/images/profile.jpg")}
+                      src={userInfo?.logo || "https://res.cloudinary.com/dptwervy7/image/upload/v1754459918/profile_offplh.jpg"}
                       className="w-full h-full bg-center object-cover"
                       alt="Profile"
                     />

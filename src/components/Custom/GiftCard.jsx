@@ -1,24 +1,22 @@
 import { CircleCheck, Heart } from 'lucide-react';
 
-const Giftcards = ({ cards }) => {
-  console.log(cards);
+const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, isSponsored, url,like }) => {
   return (
-    <div className="flex flex-col gap-6">
-      {cards.map((item, index) => (
+    <div className="flex flex-col gap-6 mt-">
+    
         <div
-          key={index}
           className="flex flex-col md:flex-row items-center justify-center gap-2.5 p-4 bg-blue-4 rounded-21 max-w-[875px] "
         >
           <div className="w-[174px] h-[240px]">
             <img
-              src="./images/gift-card.png"
+              src={image}
               alt="Gift cards"
               className="w-full h-full object-cover rounded-21"
             />
           </div>
           <div className="flex flex-col items-start justify-center flex-1">
             <h2 className="text-3xl tracking-tight font-poppins font-semibold text-white flex flex-row justify-between items-center w-full">
-              {item.title} <span>{item.price} USD</span>
+              {title} <span>{originalPrice} USD</span>
             </h2>
             <div className="flex flex-col items-start justify-between w-full gap-4">
               <div className="flex flex-row items-center justify-start w-full">
@@ -26,7 +24,7 @@ const Giftcards = ({ cards }) => {
                   Platform
                 </p>
                 <p className="text-lg font-normal font-poppins tracking-tight text-white capitalize">
-                  {item.platform}
+                  Steam
                 </p>
               </div>
               <div className="flex flex-row items-center justify-start w-full">
@@ -34,7 +32,7 @@ const Giftcards = ({ cards }) => {
                   Type
                 </p>
                 <p className="text-lg font-normal font-poppins tracking-tight text-white uppercase">
-                  {item.type}
+                  kEY
                 </p>
               </div>
               <div className="flex flex-row items-center justify-start w-full">
@@ -42,7 +40,7 @@ const Giftcards = ({ cards }) => {
                   Region
                 </p>
                 <p className="text-lg font-normal font-poppins tracking-tight text-white">
-                  {item.region}
+                  For USD Currency only
                 </p>
               </div>
               <div className="flex flex-row items-center justify-start w-full gap-2.5">
@@ -60,7 +58,6 @@ const Giftcards = ({ cards }) => {
             </div>
           </div>
         </div>
-      ))}
     </div>
   );
 };

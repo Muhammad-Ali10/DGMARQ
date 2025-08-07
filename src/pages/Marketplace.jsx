@@ -101,7 +101,7 @@ const Marketplace = () => {
 
 
             <PromoSection />
-            <FarmeWork FarmeWorkData={FarmeWorkData} />
+            <FarmeWork data={FarmeWorkData} />
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 px-5 py-6 md:px-8 md:py-8 lg:px-11 lg:py-10 xl:px-22 xl:py-13 max-w-1440 w-full mx-auto place-items-center">
 
                 <h1 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-4xl font-poppins font-bold text-white leading-snug">
@@ -114,7 +114,7 @@ const Marketplace = () => {
             <Partner />
             <Help />
             <Slider2 />
-            <Faqs faqs={FaqsData} />
+            <Faqs data={FaqsData} />
             <CallToAction />
             <FooterBlogs />
         </div>

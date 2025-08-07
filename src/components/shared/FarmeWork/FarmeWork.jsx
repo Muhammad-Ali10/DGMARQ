@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 const FarmeWork = ({ data }) => {
+    console.log(data)
     return (
         <div
             className={`relative w-full h-[400px] lg:h-[479px] bg-cover bg-center bg-no-repeat ${data?.bgurl} max-w-1440 p-4 sm:p-5 md:px-6 md:py-6 lg:px-11 lg:py-6 xl:px-22 xl:py-13`}

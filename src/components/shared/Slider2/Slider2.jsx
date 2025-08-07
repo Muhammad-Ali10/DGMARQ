@@ -11,46 +11,46 @@ import {
 const Slider2 = () => {
   const rewards = [
     {
-      imgSrc: "./images/reward1.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461205/reward1_jiahe4.png",
       title: "Marketplace",
       decripition: "21st Century National Technology Awards, 2024",
     },
     {
-      imgSrc: "./images/reward2.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461203/reward2_i3kw9o.png",
       title: "Payments Innovations of the Year category (3rd place)",
       decripition: "eCommerce Awards 2024",
     },
     {
-      imgSrc: "./images/reward3.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461201/reward3_laq1fb.png",
       title: "Best Digital Marketing Campaign (1st place)",
       decripition: "21st Century National Technology Awards, 2024",
     },
     {
-      imgSrc: "./images/reward4.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461199/reward4_xph6eu.png",
       title: "Company of the Year: Retail Gold Winner",
       decripition: "21st Century National Technology Awards, 2024",
     },
     {
-      imgSrc: "./images/reward1.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461205/reward1_jiahe4.png",
       title: "Marketplace",
       decripition: "21st Century National Technology Awards, 2024",
     },
     {
-      imgSrc: "./images/reward2.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461203/reward2_i3kw9o.png",
       title: "Payments Innovations of the Year category (3rd place)",
       decripition: "eCommerce Awards 2024",
     },
     {
-      imgSrc: "./images/reward3.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461201/reward3_laq1fb.png",
       title: "Best Digital Marketing Campaign (1st place)",
       decripition: "21st Century National Technology Awards, 2024",
     },
     {
-      imgSrc: "./images/reward4.png",
+      imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461199/reward4_xph6eu.png",
       title: "Company of the Year: Retail Gold Winner",
       decripition: "21st Century National Technology Awards, 2024",
-    },
-  ];
+    }
+  ]
 
   return (
     <div className="w-full flex flex-col items-center justify-center ">

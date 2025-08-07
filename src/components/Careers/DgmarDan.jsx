@@ -3,27 +3,27 @@ import { Button } from "@/components/ui/button";
 const DgmarDna = () => {
   const DAN_Data = [
     {
-      imgUrl: "./images/DAN_Deliver.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393654/DAN_Deliver_hdehg9.png",
       title: "Deliver Value",
     },
     {
-      imgUrl: "./images/DNA_Team.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393656/DNA_Team_uunmwd.png",
       title: "Team Spirit",
     },
     {
-      imgUrl: "./images/DNA_Growth.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393656/DNA_Growth_jq0nu3.png",
       title: "Growth",
     },
     {
-      imgUrl: "./images/DNA_Communication.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393655/DNA_Communication_zcru4f.png",
       title: "Communication",
     },
     {
-      imgUrl: "./images/DNA_Accountability.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393655/DNA_Accountability_rrh1tt.png",
       title: "Trust",
     },
     {
-      imgUrl: "./images/DNA_Trust.png",
+      imgUrl: "https://res.cloudinary.com/dptwervy7/image/upload/v1754393657/DNA_Trust_ijli0i.png",
       title: "Accountability",
     },
   ];

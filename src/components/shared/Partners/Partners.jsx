@@ -1,9 +1,9 @@
 const Partner = () => {
   const partnersData = [
-    { title: "Industry", imgSrc: "./images/partners1.png" },
-    { title: "Business", imgSrc: "./images/partners2.png" },
-    { title: "Developers and publishers", imgSrc: "./images/partners3.png" },
-    { title: "Influencers", imgSrc: "./images/partners4.png" },
+    { title: "Industry", imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461182/partners1_f0nuzz.png" },
+    { title: "Business", imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461185/partners2_wqht3c.png" },
+    { title: "Developers and publishers", imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461189/partners3_kdy4vk.png" },
+    { title: "Influencers", imgSrc: "https://res.cloudinary.com/dptwervy7/image/upload/v1754461188/partners4_dr7dvi.png" },
   ];
 
   return (

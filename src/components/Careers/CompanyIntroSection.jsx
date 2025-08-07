@@ -2,7 +2,7 @@ const CompanyIntroSection = () => {
   return (
     <div className="w-full relative max-w-1260 py-12 grid grid-cols-1 xl:grid-cols-2 gap-8">
    
-        <div className="h-96 relative rounded-[21px] overflow-hidden bg-blend-color-dodge bg-blue-3 bg-[url('./images/team.png')] bg-cover bg-no-repeat bg-center w-full"></div>
+        <div className="h-96 relative rounded-[21px] overflow-hidden bg-blend-color-dodge bg-blue-3 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754393714/team_l7q3vg.png')] bg-cover bg-no-repeat bg-center w-full"></div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 text-white">
         <div className="flex flex-col gap-6 items-center md:items-start justify-center text-center md:text-left">

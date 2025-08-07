@@ -35,7 +35,7 @@ const WorkingSteps = () => {
 
         {/* Image */}
         <img 
-          src="./images/stepimage.png" 
+          src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393705/stepimage_t4qqjw.png" 
           alt="Working Steps" 
           className="rounded-xl w-full max-w-full h-auto object-contain" 
         />

@@ -1,114 +1,181 @@
-"use client"
+import React, { useEffect, useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { FilterSidebar, ProductList, PaginationControls } from "@/components";
+import axios from "axios";
+import { Base_url } from "../utils/Base_url";
+import { Separator } from "@/components/ui/separator";
 
-import { useState,useEffect, useMemo } from "react"
-import { FilterSidebar } from "@/components"
-import { GiftCard, CallToAction, FooterBlogs } from "@/components"
-import { giftCards } from "@/lib/data"
+const Shop = () => {
+  const { id } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-const SteamGiftCard = ()=> {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
-    categories: [],
-    priceRange: { min: "", max: "" },
-    availability: [],
+    platform: "",
+    minPrice: "",
+    maxPrice: "",
+    type: "",
+    region: "",
+    categoryId: "",
+    title: "",
+    sort: "",
+  });
+  const [checkboxFilters, setCheckboxFilters] = useState({
     platform: [],
     region: [],
-    device: [],
     type: [],
-    amount: [],
-  })
+    categoryId: [],
+  });
+  const [layout, setLayout] = useState("listing");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
-  const handleFilterChange = (filterType, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [filterType]: value,
-    }))
-  }
+  const [platforms, setPlatforms] = useState([]);
+  const [regions, setRegions] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [sort, setSort] = useState("");
 
-  const [isMobile, setIsMobile] = useState(false)
+  // Build query string dynamically
+  const buildQueryString = (filters) => {
+    const params = new URLSearchParams();
+    Object.entries(filters).forEach(([key, value]) => {
+      if (value) params.append(key, value);
+    });
+    return params.toString();
+  };
 
-  // Check if mobile on mount and resize
+  // Update filters and URL
+  const updateFilters = (updatedFilters) => {
+    setFilters(updatedFilters);
+    const query = buildQueryString(updatedFilters);
+    navigate({ search: query });
+  };
+
+  // Sync filters from URL
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024)
+    const queryParams = new URLSearchParams(location.search);
+    const newFilters = Object.fromEntries(queryParams.entries());
+    setFilters((prev) => ({ ...prev, ...newFilters }));
+    setSort(newFilters.sort || "");
+    fetchInitialData();
+    loadProducts({ ...filters, ...newFilters }, currentPage);
+    // eslint-disable-next-line
+  }, [location.search, currentPage]);
+
+  // Fetch filter options
+  const fetchInitialData = async () => {
+    try {
+      const [regionsRes, categoriesRes, platformsRes] = await Promise.all([
+        axios.get(`${Base_url}/region/getAll`),
+        axios.get(`${Base_url}/category/getAll`),
+        axios.get(`${Base_url}/platform/getAll`)
+      ]);
+      setRegions(regionsRes.data?.data || []);
+      setCategories(categoriesRes.data?.data || []);
+      setPlatforms(platformsRes.data?.data || []);
+    } catch (error) {
+      console.error("Error fetching filters:", error);
     }
+  };
 
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
+  // Fetch products
+  const loadProducts = async (filters, page) => {
+    setLoading(true);
+    try {
+      // Only include filters with values
+      const queryObj = { ...filters, page };
+      Object.keys(queryObj).forEach(
+        (key) => (queryObj[key] === "" || queryObj[key] == null) && delete queryObj[key]
+      );
+      const query = buildQueryString(queryObj);
+      const response = await axios.get(`${Base_url}/products/getAll?${query}`);
+      setProducts(response.data?.data || []);
+      setTotalPages(response.data?.pagination?.totalPages || 1);
+    } catch (error) {
+      setProducts([]);
+      setTotalPages(1);
+      console.error("Error loading products:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
+  // Handle checkbox filter changes
+  const handleCheckboxChange = (type, id) => {
+    const updated = checkboxFilters[type].includes(id)
+      ? checkboxFilters[type].filter(item => item !== id)
+      : [...checkboxFilters[type], id];
 
-  const filteredCards = useMemo(() => {
-    return giftCards.filter((card) => {
-      // Category filter
-      if (filters.categories.length > 0 && !filters.categories.includes(card.category)) {
-        return false
-      }
+    const updatedCheckbox = { ...checkboxFilters, [type]: updated };
+    setCheckboxFilters(updatedCheckbox);
 
-      // Price range filter
-      if (filters.priceRange.min && card.price < Number.parseFloat(filters.priceRange.min)) {
-        return false
-      }
-      if (filters.priceRange.max && card.price > Number.parseFloat(filters.priceRange.max)) {
-        return false
-      }
+    // Update filters with comma-separated values
+    const newFilters = {
+      ...filters,
+      [type]: updated.join(","),
+    };
+    updateFilters(newFilters);
+  };
 
-      // Availability filter
-      if (filters.availability.length > 0) {
-        if (filters.availability.includes("available-pakistan") && !card.canActivateInPakistan) {
-          return false
-        }
-        if (filters.availability.includes("in-stock") && card.availability !== "in-stock") {
-          return false
-        }
-      }
-
-      // Platform filter
-      if (filters.platform.length > 0 && !filters.platform.includes(card.platform)) {
-        return false
-      }
-
-      // Region filter
-      if (filters.region.length > 0 && !filters.region.includes(card.region)) {
-        return false
-      }
-
-      // Device filter
-      if (filters.device.length > 0 && !filters.device.includes(card.device)) {
-        return false
-      }
-
-      // Type filter
-      if (filters.type.length > 0 && !filters.type.includes(card.type)) {
-        return false
-      }
-
-      // Amount filter
-      if (filters.amount.length > 0 && !filters.amount.includes(card.amount)) {
-        return false
-      }
-
-      return true
-    })
-  }, [filters])
+  // Handle price and sort changes
+  const handleInputChange = (key, value) => {
+    const newFilters = { ...filters, [key]: value };
+    updateFilters(newFilters);
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-12 w-full overflow-hidden">
-    <div className="flex flex-col md:flex-row items-start justify-between max-w-1260 m-auto pt-12">
-      {/* <img src="./images/LeftShedow.png" alt="shedow" className="absolute left-0 top-0 drop-shadow-2xl" />
-            <img src="./images/RightShedow.png" alt="shedow" className="absolute right-0 top-0 drop-shadow-2xl" /> */}
-      <FilterSidebar filters={filters} onFilterChange={handleFilterChange} isMobile={isMobile} />  
-  
-       <GiftCard cards={filteredCards} />
-    </div>
- {/* Call to Action section starts here */}
-            <CallToAction />
-            {/* Call to Action section ends here */}
-            {/* Footer Blogs section starts here */}
-            <FooterBlogs />
-            {/* Footer Blogs section ends here */}
-    </div>
-  )
-}
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="flex justify-between items-center mb-4">
+        <div>
+          <h1 className="text-4xl text-white font-poppins font-bold capitalize">Steam Gift Card</h1>
+        </div>
+        <div className="flex gap-4 items-center">
+          <select
+            value={sort}
+            onChange={(e) => handleInputChange("sort", e.target.value)}
+            className="border rounded-md text-sm px-3 py-1 bg-background"
+          >
+            <option value="">Sort By</option>
+            <option value="releaseDate-asc">Release Date - Oldest</option>
+            <option value="releaseDate-desc">Release Date - Newest</option>
+            <option value="price-asc">Price - Low to High</option>
+            <option value="price-desc">Price - High to Low</option>
+          </select>
+        </div>
+      </div>
 
-export default SteamGiftCard
+      <Separator className="mb-6" />
+
+      <div className="flex gap-8">
+        <FilterSidebar
+          filters={filters}
+          checkboxFilters={checkboxFilters}
+          setCheckboxFilters={setCheckboxFilters}
+          updateFilters={updateFilters}
+          handleCheckboxChange={handleCheckboxChange}
+          handleInputChange={handleInputChange}
+          platforms={platforms}
+          regions={regions}
+          categories={categories}
+        />
+        <div className="flex-1">
+          <ProductList
+            products={products}
+            layout={layout}
+            setLayout={setLayout}
+            loading={loading}
+          />
+          <PaginationControls
+            currentPage={currentPage}
+            totalPages={totalPages}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Shop;

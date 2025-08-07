@@ -24,7 +24,7 @@ const ContactUs = () => {
                     </div>
                     <div className="flex flex-col gap-5">
                         <h3 className="text-26 font-poppins font-bold text-white">Find us on social media</h3>
-                        <img src="./images/Social.png" className="w-full max-w-[409px]"/>
+                        <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393674/payments_qpgfwb.png" className="w-full max-w-[409px]"/>
                     </div>
                 </div>
 

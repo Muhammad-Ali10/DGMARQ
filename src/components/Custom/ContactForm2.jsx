@@ -123,6 +123,6 @@ const ContactFrom2 = () => {
             </Form>
         </div>
     )
-}
+} 
 
 export default ContactFrom2

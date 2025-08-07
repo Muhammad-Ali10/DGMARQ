@@ -92,7 +92,7 @@ const Careers = () => {
                 </>
             </div>
 
-            <ValuePropositionSection imageUrl="./images/CareeerFeatures.png" data={CareerValueProposition} btn={false} />
+            <ValuePropositionSection imageUrl="https://res.cloudinary.com/dptwervy7/image/upload/v1754461684/CareeerFeatures_xvaacs.png" data={CareerValueProposition} btn={false} />
 
 
             <div className="max-w-1440 mx-auto flex flex-col gap-[30px] text-white px-4 py-12">
@@ -102,7 +102,7 @@ const Careers = () => {
 
                 <div className="flex flex-col lg:flex-row gap-[30px] max-w-1260 mx-auto">
                     {/* Block 1 */}
-                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/80 bg-[url('./images/Careersbannerbg1.png')] bg-cover bg-no-repeat bg-center text-center px-6 w-full">
+                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/80 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461687/Careersbannerbg1_nyjspa.png')] bg-cover bg-no-repeat bg-center text-center px-6 w-full">
                         <h3 className="font-poppins font-bold text-[22px]">Our Values and Culture</h3>
                         <p className="text-base font-normal font-poppins">
                             Find out how we co-create an open and inspiring culture based on strong values that matter most to us
@@ -113,7 +113,7 @@ const Careers = () => {
                     </div>
 
                     {/* Block 2 */}
-                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/30 bg-[url('./images/Careersbannerbg2.png')] bg-cover bg-no-repeat bg-center text-center px-6">
+                    <div className="flex flex-col gap-[30px] items-center justify-center h-[539px] rounded-xl bg-blend-overlay bg-[#060606]/30 bg-[url('https://res.cloudinary.com/dptwervy7/image/upload/v1754461697/Careersbannerbg2_ttvnbc.png')] bg-cover bg-no-repeat bg-center text-center px-6">
                         <h3 className="font-poppins font-bold text-[22px]">Learning, Development and Well-being</h3>
                         <p className="text-base font-normal font-poppins">
                             Explore a wide range of development opportunities, knowledge-sharing programs, and initiatives supporting well-being, including work-life balance

@@ -23,7 +23,7 @@ export const useUpcommingGamesQuery = () => {
         queryKey: ['UpcommingGames'],
         queryFn: UpcommingGamesApi,
     });
-};
+}; 
 
 export const useCategoryQuery = (page = 1, limit = 6) => {
     return useQuery({
@@ -31,6 +31,8 @@ export const useCategoryQuery = (page = 1, limit = 6) => {
         queryFn: () => CategoryApi(page, limit),
     });
 };
+
+
 
 export const useProductByKeyQuery = (page = 1, limit = 6) => {
     return useQuery({
