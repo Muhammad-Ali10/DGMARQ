@@ -264,8 +264,10 @@ const Navbar = () => {
 
             <ProfilePopup />
             {/* Wishlist */}
-            <Button variant="ghost" size="icon" className=" bg-primary text-white hover:bg-white/10 p-2">
-              <Heart className="h-5 w-5" />
+            <Button variant="ghost" size="icon" className=" bg-primary text-white hover:bg-white/10 p-2" asChild>
+              <Link to="/Wishlist">
+                <Heart className="h-5 w-5" />
+              </Link>
             </Button>
 
             {/* Cart */}

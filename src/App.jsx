@@ -37,7 +37,7 @@ import NewPassword from "./pages/auth/ForgetPassword/NewPassword"
 import Category from './pages/Category/index'
 import SubCategory from './pages/SubCategory/index'
 import SubSubCategory from './pages/SubSubCategory/index'
-
+import Wishlist from './pages/WishList'
 
 
 function App() {
@@ -76,6 +76,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/new-password" element={<NewPassword />} />
+          <Route path="/Wishlist" element={<Wishlist />} />
         </Route>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/keys" element={<Keys />} />
