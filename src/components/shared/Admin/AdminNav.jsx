@@ -33,10 +33,9 @@ const AdminNav = ({ openSidebar, side, closeSidebar }) => {
 
   return (
     <nav
-      className={`fixed  z-30 top-0 right-0   ${side === "left-0 md:-left-0" ? "left-20 md:left-64" : "left-0 "
-        }`}
-    >
-      <div className="   bg-[#000000] shadow-md w-full flex justify-between  items-center p-4">
+      className={`fixed border-b z-30 top-0 right-0   ${side === "left-0 md:-left-0" ? "left-20 md:left-64" : "left-0 "
+        }`}>
+      <div className="  w-full flex justify-between  items-center p-4">
         <div className=" flex items-center gap-4">
           {side === "left-64 md:left-0" ? (
             <RiCloseLargeFill size={30} onClick={closeSidebar} className=" cursor-pointer" color="white" />

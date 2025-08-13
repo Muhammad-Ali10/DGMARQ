@@ -38,12 +38,15 @@ import Category from './pages/Category/index'
 import SubCategory from './pages/SubCategory/index'
 import SubSubCategory from './pages/SubSubCategory/index'
 import Wishlist from './pages/WishList'
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
   const queryClient = new QueryClient()
 
   return (
+   <>
+      <ToastContainer/>
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -67,6 +70,7 @@ function App() {
           <Route path='privacy-policy' element={<PrivacyPolicy />} />
           <Route path='stay-safe' element={<StaySafe />} />
           <Route path='cart' element={<Cart />} />
+          
           <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/category/:id" element={<Category />} />
           <Route path="/sub-category/:id" element={<SubCategory />} />
@@ -84,6 +88,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </QueryClientProvider>
+   </>
   )
 }
 

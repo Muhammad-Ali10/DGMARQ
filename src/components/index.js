@@ -19,7 +19,7 @@ export { default as DgmarDna } from "./Careers/DgmarDan";
 export { default as Footer } from "./Custom/Footer"
 export { default as Header } from "./Custom/Header"
 export { default as LoadingCard } from "./Custom/LoadingCard"
-
+export {default as BottomHeader} from "./Custom/Categorybutton"
 // export { default as PromoCard } from './Custom/PromoCard';
 
 // Main Components (direct imports without index.js in folders)

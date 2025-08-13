@@ -7,7 +7,7 @@ const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, i
         <div
           className="flex flex-col md:flex-row items-center justify-center gap-2.5 p-4 bg-blue-4 rounded-21 max-w-[875px] "
         >
-          <div className="w-[174px] h-[240px]">
+          <div className="w-full  object-cover md:w-[174px] md:h-[240px]">
             <img
               src={image}
               alt="Gift cards"
@@ -15,8 +15,8 @@ const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, i
             />
           </div>
           <div className="flex flex-col items-start justify-center flex-1">
-            <h2 className="text-3xl tracking-tight font-poppins font-semibold text-white flex flex-row justify-between items-center w-full">
-              {title} <span>{originalPrice} USD</span>
+            <h2 className="text-xl md:text-3xl tracking-tight font-poppins font-semibold text-white flex flex-row justify-between items-center w-full">
+              {title} <span className='flex-1'>{originalPrice} USD</span>
             </h2>
             <div className="flex flex-col items-start justify-between w-full gap-4">
               <div className="flex flex-row items-center justify-start w-full">

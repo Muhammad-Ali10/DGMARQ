@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { Search, ChevronDown, ChevronUp, X } from 'lucide-react';
 
 const FilterSidebar = ({
   filters,
@@ -28,6 +28,8 @@ const FilterSidebar = ({
     platforms: ""
   });
 
+  const [isOpen, setIsOpen] = useState(false); // Mobile filter toggle
+
   const toggleSection = (section) => {
     setExpandedSections(prev => ({
       ...prev,
@@ -47,7 +49,7 @@ const FilterSidebar = ({
     return items.filter(item =>
       item.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  };
+  }; 
 
   const FilterSection = ({ title, children, section, hasSearch = false, itemCount }) => (
     <div className="bg-slate-800 rounded-lg overflow-hidden mb-4 text-white">
@@ -153,93 +155,205 @@ const FilterSidebar = ({
     : filteredPlatforms.slice(0, 5);
 
   return (
-    <aside className="w-80 space-y-4">
-      {/* Categories */}
-      <FilterSection
-        title="Categories"
-        section="categories"
-        hasSearch={categories.length > 10}
-        itemCount={checkboxFilters.categoryId?.length || 0}
-      >
-        {displayedCategories.map(cat => (
-          <CheckboxItem
-            key={cat._id}
-            id={cat._id}
-            title={cat.title}
-            type="categoryId"
-            count={cat.count}
-          />
-        ))}
-      </FilterSection>
+    <div className="relative">
+      {/* Mobile Filter Button */}
+      <div className="md:hidden absolute -top-20 right-4 z-0">
+        <Button onClick={() => setIsOpen(true)} className="bg-blue-600 text-white">
+          Filters
+        </Button>
+      </div>
 
-      {/* Price Range */}
-      <div className="bg-slate-800 rounded-lg overflow-hidden mb-4">
-        <div className="bg-[#043086] px-4 py-3">
-          <h3 className="text-white font-medium text-sm uppercase tracking-wide">
-            Price (USD)
-          </h3>
-        </div>
-        <div className="p-4 bg-[#06051C]/60">
-          <div className="flex items-center space-x-3">
-            <div className="flex-1">
-              <Input
-                type="number"
-                placeholder="From"
-                value={filters.minPrice || ""}
-                onChange={(e) => handleInputChange("minPrice", e.target.value)}
-                className="bg-transparent text-white placeholder-slate-400 focus:border-red-500"
-              />
-            </div>
-            <span className="text-slate-400">—</span>
-            <div className="flex-1">
-              <Input
-                type="number"
-                placeholder="To"
-                value={filters.maxPrice || ""}
-                onChange={(e) => handleInputChange("maxPrice", e.target.value)}
-                className="bg-transparent border-slate-600 text-white placeholder-slate-400 focus:border-red-500"
-              />
+      {/* Sidebar for Desktop */}
+      <aside className="hidden md:block w-80 space-y-4">
+        {/* Categories */}
+        <FilterSection
+          title="Categories"
+          section="categories"
+          hasSearch={categories.length > 10}
+          itemCount={checkboxFilters.categoryId?.length || 0}
+        >
+          {displayedCategories.map(cat => (
+            <CheckboxItem
+              key={cat._id}
+              id={cat._id}
+              title={cat.title}
+              type="categoryId"
+              count={cat.count}
+            />
+          ))}
+        </FilterSection>
+
+        {/* Price Range */}
+        <div className="bg-slate-800 rounded-lg overflow-hidden mb-4">
+          <div className="bg-[#043086] px-4 py-3">
+            <h3 className="text-white font-medium text-sm uppercase tracking-wide">
+              Price (USD)
+            </h3>
+          </div>
+          <div className="p-4 bg-[#06051C]/60">
+            <div className="flex items-center space-x-3">
+              <div className="flex-1">
+                <Input
+                  type="number"
+                  placeholder="From"
+                  value={filters.minPrice || ""}
+                  onChange={(e) => handleInputChange("minPrice", e.target.value)}
+                  className="bg-transparent text-white placeholder-slate-400 focus:border-red-500"
+                />
+              </div>
+              <span className="text-slate-400">—</span>
+              <div className="flex-1">
+                <Input
+                  type="number"
+                  placeholder="To"
+                  value={filters.maxPrice || ""}
+                  onChange={(e) => handleInputChange("maxPrice", e.target.value)}
+                  className="bg-transparent border-slate-600 text-white placeholder-slate-400 focus:border-red-500"
+                />
+              </div>
             </div>
           </div>
         </div>
+
+        {/* Region */}
+        <FilterSection
+          title="Region"
+          section="regions"
+          hasSearch={regions.length > 5}
+          itemCount={checkboxFilters.region?.length || 0}
+        >
+          {displayedRegions.map(region => (
+            <CheckboxItem
+              key={region._id}
+              id={region._id}
+              title={region.title}
+              type="region"
+              count={region.count}
+            />
+          ))}
+        </FilterSection>
+
+        {/* Platform */}
+        <FilterSection
+          title="Platform"
+          section="platforms"
+          hasSearch={platforms.length > 5}
+          itemCount={checkboxFilters.platform?.length || 0}
+        >
+          {displayedPlatforms.map(platform => (
+            <CheckboxItem
+              key={platform._id}
+              id={platform._id}
+              title={platform.title}
+              type="platform"
+              count={platform.count}
+            />
+          ))}
+        </FilterSection>
+      </aside>
+
+      {/* Mobile Slide-In Drawer */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-slate-900 z-50 transform transition-transform duration-300 md:hidden ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex justify-between items-center p-4 bg-[#043086]">
+          <h2 className="text-white font-bold">Filters</h2>
+          <button onClick={() => setIsOpen(false)}>
+            <X className="text-white" />
+          </button>
+        </div>
+
+        <div className="p-4 overflow-y-auto space-y-4 h-full">
+          {/* Same filter sections as desktop */}
+          <FilterSection
+            title="Categories"
+            section="categories"
+            hasSearch={categories.length > 10}
+            itemCount={checkboxFilters.categoryId?.length || 0}
+          >
+            {displayedCategories.map(cat => (
+              <CheckboxItem
+                key={cat._id}
+                id={cat._id}
+                title={cat.title}
+                type="categoryId"
+                count={cat.count}
+              />
+            ))}
+          </FilterSection>
+
+          {/* Price Range */}
+          <div className="bg-slate-800 rounded-lg overflow-hidden mb-4">
+            <div className="bg-[#043086] px-4 py-3">
+              <h3 className="text-white font-medium text-sm uppercase tracking-wide">
+                Price (USD)
+              </h3>
+            </div>
+            <div className="p-4 bg-[#06051C]/60">
+              <div className="flex items-center space-x-3">
+                <div className="flex-1">
+                  <Input
+                    type="number"
+                    placeholder="From"
+                    value={filters.minPrice || ""}
+                    onChange={(e) => handleInputChange("minPrice", e.target.value)}
+                    className="bg-transparent text-white placeholder-slate-400 focus:border-red-500"
+                  />
+                </div>
+                <span className="text-slate-400">—</span>
+                <div className="flex-1">
+                  <Input
+                    type="number"
+                    placeholder="To"
+                    value={filters.maxPrice || ""}
+                    onChange={(e) => handleInputChange("maxPrice", e.target.value)}
+                    className="bg-transparent border-slate-600 text-white placeholder-slate-400 focus:border-red-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Region */}
+          <FilterSection
+            title="Region"
+            section="regions"
+            hasSearch={regions.length > 5}
+            itemCount={checkboxFilters.region?.length || 0}
+          >
+            {displayedRegions.map(region => (
+              <CheckboxItem
+                key={region._id}
+                id={region._id}
+                title={region.title}
+                type="region"
+                count={region.count}
+              />
+            ))}
+          </FilterSection>
+
+          {/* Platform */}
+          <FilterSection
+            title="Platform"
+            section="platforms"
+            hasSearch={platforms.length > 5}
+            itemCount={checkboxFilters.platform?.length || 0}
+          >
+            {displayedPlatforms.map(platform => (
+              <CheckboxItem
+                key={platform._id}
+                id={platform._id}
+                title={platform.title}
+                type="platform"
+                count={platform.count}
+              />
+            ))}
+          </FilterSection>
+        </div>
       </div>
-
-      {/* Region */}
-      <FilterSection
-        title="Region"
-        section="regions"
-        hasSearch={regions.length > 5}
-        itemCount={checkboxFilters.region?.length || 0}
-      >
-        {displayedRegions.map(region => (
-          <CheckboxItem
-            key={region._id}
-            id={region._id}
-            title={region.title}
-            type="region"
-            count={region.count}
-          />
-        ))}
-      </FilterSection>
-
-      {/* Platform */}
-      <FilterSection
-        title="Platform"
-        section="platforms"
-        hasSearch={platforms.length > 5}
-        itemCount={checkboxFilters.platform?.length || 0}
-      >
-        {displayedPlatforms.map(platform => (
-          <CheckboxItem
-            key={platform._id}
-            id={platform._id}
-            title={platform.title}
-            type="platform"
-            count={platform.count}
-          />
-        ))}
-      </FilterSection>
-    </aside>
+    </div>
   );
 };
 

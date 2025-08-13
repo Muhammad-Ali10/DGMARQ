@@ -13,7 +13,7 @@ import ProfilePopup from "./ProfilePopup";
 import { FaAngleDown } from "react-icons/fa";
 import SearchResults from "./SearchResults";
 import { US, ZA, FR, ES } from 'country-flag-icons/react/3x2'
-
+import { BottomHeader } from "@/components"
 
 
 const languages = [
@@ -91,7 +91,7 @@ const Navbar = () => {
 
 
   const navigationItems = [
-    { name: "Categories", Url: "/steam-gift", hasIcon: <Menu /> },
+    // { name: "Categories", Url: "/steam-gift", hasIcon: <Menu /> },
     { name: "Bestsellers", Url: "/best-sellers" },
     { name: "Steam Gift Cards", Url: "/steam-gift" },
     { name: "Random Keys", Url: "/random-keys" },
@@ -220,8 +220,8 @@ const Navbar = () => {
 
                   {isDropdownOpen && (
                     <>
-                      <div className="fixed inset-0 bg-black bg-opacity-30 z-45" />
-                      <ul className="absolute left-0 z-[70] top-10 right-0 bg-white rounded-sm shadow-lg search-dropdown">
+                      <div className="fixed inset-0 bg-opacity-30 z-45" />
+                      <ul className="absolute left-0 z-[70] top-10 right-0 bg-white rounded-sm shadow-lg ">
                         <SearchResults results={searchResults} />
                       </ul>
                     </>
@@ -309,7 +309,7 @@ const Navbar = () => {
                 className="text-white bg-[#6202EA] py-2 text-sm rounded-sm w-full text-left px-3 hover:border-b hover:text-[#EAE5D5]"
                 to={"#"}
               >
-                Save more with G2A Plus
+                Save more with DGMARQ Plus
               </Link>
             </div>
           </div>
@@ -403,7 +403,8 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between py-2.5">
             {/* Navigation Items */}
-            <nav className="hidden lg:flex items-center space-x-6">
+            <nav className="hidden   relative lg:flex items-center space-x-6">
+              <BottomHeader />
               {navigationItems.map((item) => (
                 <Button asChild className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" key={item.name}>
                   <Link
@@ -421,6 +422,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
     </>
   );
 };

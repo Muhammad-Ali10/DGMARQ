@@ -131,7 +131,7 @@ const Shop = () => {
         <div>
           <h1 className="text-4xl text-white font-poppins font-bold capitalize">Steam Gift Card</h1>
         </div>
-        <div className="flex gap-4 items-center">
+        {/* <div className="flex gap-4 items-center">
           <select
             value={sort}
             onChange={(e) => handleInputChange("sort", e.target.value)}
@@ -143,12 +143,12 @@ const Shop = () => {
             <option value="price-asc">Price - Low to High</option>
             <option value="price-desc">Price - High to Low</option>
           </select>
-        </div>
+        </div> */}
       </div>
 
       <Separator className="mb-6" />
 
-      <div className="flex gap-8">
+      <div className="flex gap-8 flex-col md:flex-row">
         <FilterSidebar
           filters={filters}
           checkboxFilters={checkboxFilters}

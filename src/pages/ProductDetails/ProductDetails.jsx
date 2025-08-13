@@ -18,7 +18,7 @@ const ProductDetails = ({
   const { id } = useParams();
   const [products, setProducts] = useState({});
   const [rating, setRatings] = useState([]);
-  const [overall,setOverall] = useState({});
+  const [overall, setOverall] = useState({});
   const { userInfo } = useSelector((state) => state.next);
   console.log(userInfo);
   const images = products?.images || [];
@@ -67,7 +67,7 @@ const ProductDetails = ({
       })
       .catch((error) => { });
 
-      axios
+    axios
       .get(`${Base_url}/rating/getOverall/${id}`)
       .then((res) => {
         console.log(res);
@@ -86,7 +86,7 @@ const ProductDetails = ({
   const dispatch = useDispatch();
 
   const [isOpenModal, setIsOpenModal] = useState(false);
- const [openSide,setOpenSide] = useState(false);
+  const [openSide, setOpenSide] = useState(false);
 
   const handleWhitelist = async () => {
     if (userInfo) {
@@ -113,7 +113,7 @@ const ProductDetails = ({
 
   };
 
-console.log("product",products)
+  console.log("product", products)
 
 
   return (
@@ -134,14 +134,14 @@ console.log("product",products)
           <div className="flex mb-8 items-center mt-2 text-white">
             {/* <span className="text-sm font-medium mr-1">4.75</span> */}
             <div className="flex space-x-1">
-            {[...Array(5)].map((_, index) => (
-            <div key={index}>
-              <FaStar
-                className={index < overall?.overallRating ? 'text-white' : 'text-gray-300'}
-                size={20}
-              />
-            </div>
-          ))}
+              {[...Array(5)].map((_, index) => (
+                <div key={index}>
+                  <FaStar
+                    className={index < overall?.overallRating ? 'text-white' : 'text-gray-300'}
+                    size={20}
+                  />
+                </div>
+              ))}
             </div>
             <span className="text-sm ml-2 text-white">({overall?.overallRating} reviews)</span>
           </div>
@@ -172,13 +172,13 @@ console.log("product",products)
 
                 <button
                   onClick={prev}
-                  className=" w-12 h-16 shadow  absolute left-0 top-32 flex  justify-center items-center bg-white/80 text-white hover:bg-white"
+                  className=" w-12 h-16 shadow  absolute left-0 top-32 flex  justify-center items-center bg-white text-[#060318] hover:bg-white"
                 >
                   <TfiAngleLeft size={20} className="" />
-                </button>
+                </button> 
                 <button
                   onClick={next}
-                  className=" w-12 h-16  absolute right-0 top-32 flex justify-center items-center shadow bg-white/80 text-white hover:bg-white"
+                  className=" w-12 h-16  absolute right-0 top-32 flex justify-center items-center shadow bg-white  text-[#060318] hover:bg-white"
                 >
                   <TfiAngleRight size={20} />
                 </button>
@@ -212,32 +212,32 @@ console.log("product",products)
                 <p className='  m-0 w-11 text-white  flex justify-center items-center rounded-sm h-11 bg-black'>
                   <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.668 7.158a4.395 4.395 0 00-.906-1.38 4.214 4.214 0 00-1.327-.935 3.936 3.936 0 00-1.632-.343 3.9 3.9 0 00-1.606.335 4.053 4.053 0 00-1.309.908A4.454 4.454 0 0016 7.104a4.76 4.76 0 00-.368 1.671l-2.71 3.969h-.028a3.135 3.135 0 00-1.658.481l-4.925-3.059a3.264 3.264 0 00-.799-1.926c-.474-.554-1.085-.898-1.821-1.044a3.381 3.381 0 00-1.282.064c-.404.1-.78.281-1.102.527a3.4 3.4 0 00-.836.927c-.226.366-.37.778-.42 1.207-.081.445-.064.882.043 1.299.11.426.28.808.513 1.153a3.16 3.16 0 002.038 1.336c.313.063.608.063.905.017.286-.056.573-.127.842-.228l5.302 3.088a3.296 3.296 0 001.047 2.08c.602.553 1.32.834 2.153.834.448 0 .862-.09 1.255-.273a3.52 3.52 0 001.023-.726c.287-.299.52-.654.698-1.063.171-.4.262-.835.262-1.298l3.64-2.943h.028c.582 0 1.13-.11 1.631-.336a3.972 3.972 0 001.328-.926c.377-.39.682-.853.905-1.38A4.224 4.224 0 0024 8.858a4.14 4.14 0 00-.332-1.698v-.002zm-3.856-.245c-.502 0-.933.191-1.292.572-.36.381-.538.835-.538 1.362 0 .526.18.972.538 1.344.359.372.79.563 1.292.563.501 0 .941-.191 1.309-.563.367-.372.556-.826.556-1.344 0-.527-.189-.98-.556-1.362a1.76 1.76 0 00-1.31-.572zM2.034 9.308c.53-.525 1.351-.6 1.965-.18h-.003l1.462.843a2.462 2.462 0 00-.834-1.443 2.232 2.232 0 00-1.497-.564c-.655 0-1.22.236-1.687.707a2.406 2.406 0 00-.698 1.745c0 .69.231 1.279.698 1.761.467.483 1.023.726 1.687.726.288 0 .573-.063.844-.181l-1.453-.817a1.481 1.481 0 01-.673-.571 1.621 1.621 0 01-.259-.908c0-.444.143-.82.448-1.118zm12.547 8.528a2.234 2.234 0 01-1.677.707 2.264 2.264 0 01-1.525-.564c-.44-.37-.698-.852-.798-1.442l1.453.846c.233.181.52.273.87.273.431 0 .79-.155 1.077-.453.287-.299.446-.7.44-1.117 0-.343-.09-.644-.26-.906a1.475 1.475 0 00-.673-.574l-1.426-.817c.25-.117.538-.18.843-.18.662 0 1.219.245 1.677.726.458.482.682 1.071.682 1.761 0 .689-.226 1.27-.683 1.742v-.002zm5.23-6.047c.8 0 1.471-.28 2.027-.844.547-.563.824-1.262.833-2.087 0-.828-.278-1.535-.835-2.11-.556-.57-1.23-.86-2.025-.86a2.591 2.591 0 00-1.094.227 2.888 2.888 0 00-1.516 1.588 3.109 3.109 0 00-.215 1.153c-.002.395.07.787.215 1.154.138.35.346.668.611.934.268.265.564.464.905.618.342.155.708.227 1.095.227z" fill="currentColor"></path></svg>
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-white">
                   <strong>Platform:</strong> {products?.platform?.title}
                 </p>
               </div>
               <div className=' flex  items-center gap-2'>
-                <p className='  m-0 w-11  text-gray-400       flex justify-center items-center rounded-sm h-11 border border-gray-200'>
+                <p className='  m-0 w-11  text-white      flex justify-center items-center rounded-sm h-11 border border-gray-200'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.5em" height="1.5em" fill="currentColor"><g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><path d="M6 12l4 4 8-8"></path><circle cx="12" cy="12" r="11"></circle></g></svg>                            </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-white">
                   <strong>Can activate in:</strong> United States
                 </p>
               </div>
               <div className=' flex  items-center gap-2'>
-                <p className='  m-0 w-11  text-gray-400       flex justify-center items-center rounded-sm h-11 border border-gray-200'>
+                <p className='  m-0 w-11  text-white      flex justify-center items-center rounded-sm h-11 border border-gray-200'>
                   <svg width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.417 23H3v-2.58c0-1.4.79-2.68 2.047-3.292 1.468-.715 3.707-1.461 6.661-1.461 2.955 0 5.194.746 6.662 1.46a3.655 3.655 0 012.047 3.293V23zM16.75 6.042c0 2.784-2.257 5.958-5.042 5.958-2.784 0-5.041-3.174-5.041-5.958a5.041 5.041 0 1110.083 0z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>                           </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-white">
                   <strong>Type:</strong> {products?.type}
                 </p>
               </div>
               <div className=' flex  items-center gap-2'>
-                <p className='  m-0 w-11  text-gray-400   flex justify-center items-center rounded-sm h-11 border border-gray-200'>
+                <p className='  m-0 w-11  text-white   flex justify-center items-center rounded-sm h-11 border border-gray-200'>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1.5em" height="1.5em" fill="currentColor"><g stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><path d="M5.11 3.425L6.722 4.75l1.645 1.756-.404 2.74-2.594 1.312L4 11.726l.667 1.138 1.307 1.4.706 2.473-1.963 1.647-.359 1.528M20.32 4.805l-1.477.838-3 .357-2.284-1.838-.62-1.813L12.127 1M19.007 12.903l-.928 2.098-.954 2.151-1.763 1.641-2.339.15-1.394-1.69.468-2.17-.403-2.143 1.593-1.997 2.227-.782 2.358.564 1.135 2.178z"></path><circle cx="12" cy="12" r="11"></circle></g></svg></p>                            <p className="text-sm text-gray-600">
                   <strong>Versions:</strong> <span className=' uppercase'> {products?.region?.title}</span>
                 </p>
               </div>
               <hr />
-              <p className=' text-gray-500 text-sm'>Forced to go rogue. Hunted from within. This is Call of Duty: Black Ops 6.</p>
+              <p className=' text-white text-sm'>Forced to go rogue. Hunted from within. This is Call of Duty: Black Ops 6.</p>
               {/* <span className=' text-secondary font-semibold'>Read more</span> */}
             </div>
 
@@ -253,13 +253,13 @@ console.log("product",products)
                   </div>
                 </Link>
                 <div>
-                  <p className=' text-black font-semibold m-0'>{products?.sellerId?.companyName}</p>
-                  <span className=' text-sm text-black font-bold'>97%  <span className='  text-sm  text-gray-500 font-normal'>Positive feedback</span> | <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className=' text-gray-500' width="1em" height="1em" fill="currentColor" font-size="16"><path d="M6 22a1 1 0 100-2 1 1 0 000 2zm14 0a1 1 0 100-2 1 1 0 000 2zm1.238-12.19L20 16H6L4 1H1m3.667 5H13" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M16.529 4.47a.75.75 0 10-1.06 1.06l2 2a.748.748 0 001.06 0l5-5a.75.75 0 00-1.06-1.06l-4.47 4.47-1.47-1.47z" fill="currentColor"></path><path d="M23.099 6.02a1 1 0 00-1.18.78 4 4 0 11-3.12-4.72 1 1 0 00.4-1.961 6 6 0 104.68 7.081 1.001 1.001 0 00-.78-1.18z" fill="currentColor"></path></svg> 8635 </span>
+                  <p className=' text-white font-semibold m-0'>{products?.sellerId?.companyName}</p>
+                  <span className=' text-sm text-white font-bold'>97%  <span className='  text-sm  text-white font-normal'>Positive feedback</span> | <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className=' text-gray-500' width="1em" height="1em" fill="currentColor" font-size="16"><path d="M6 22a1 1 0 100-2 1 1 0 000 2zm14 0a1 1 0 100-2 1 1 0 000 2zm1.238-12.19L20 16H6L4 1H1m3.667 5H13" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" fill="none"></path><path d="M16.529 4.47a.75.75 0 10-1.06 1.06l2 2a.748.748 0 001.06 0l5-5a.75.75 0 00-1.06-1.06l-4.47 4.47-1.47-1.47z" fill="currentColor"></path><path d="M23.099 6.02a1 1 0 00-1.18.78 4 4 0 11-3.12-4.72 1 1 0 00.4-1.961 6 6 0 104.68 7.081 1.001 1.001 0 00-.78-1.18z" fill="currentColor"></path></svg> 8635 </span>
 
                 </div>
               </div>
-              <div className="text-3xl pt-3 font-bold text-gray-800">${products?.discountPrice}</div>
-              <div className="text-sm text-gray-500">
+              <div className="text-3xl pt-3 font-bold text-white">${products?.discountPrice}</div>
+              <div className="text-sm text-white">
                 Save <span className="font-semibold text-green-600">${products?.actualPrice - products}</span> with DGAMRQ Plus
               </div>
               <button onClick={() => {
@@ -272,11 +272,11 @@ console.log("product",products)
                     title: products?.title,
                     quantity: 1,
                     price: products?.discountPrice,
-                    gst:products?.gst,
-                    actualPrice:products?.actualPrice
+                    gst: products?.gst,
+                    actualPrice: products?.actualPrice
                   })
                 )
- 
+
                 toast.success('Product add to cart successfuly!')
               }} className=" bg-secondary text-black py-2 w-full rounded-md hover:bg-blue-700">
                 Add to Cart
@@ -290,14 +290,14 @@ console.log("product",products)
       </section>
 
       <section className=' max-w-[1170px] mx-auto pb-12'>
-        <h1 className=' text-2xl font-semibold pb-4 text-black'>Product description</h1>
-        <p className=' text-gray-400'>{products?.description}</p>
+        <h1 className=' text-2xl font-semibold pb-4 text-white'>Product description</h1>
+        <p className=' text-white'>{products?.description}</p>
 
       </section>
 
-      <div className="bg-white px-3  max-w-[1170px] mx-auto">
+      <div className=" px-3 text-white max-w-[1170px] mx-auto">
         <h2 className="text-2xl font-bold mb-2">Reviews</h2>
-        <p className="text-gray-600 mb-4">
+        <p className="text-white mb-4">
           Check what our customers think of this title
         </p>
 
@@ -306,9 +306,9 @@ console.log("product",products)
 
           <div className=" sm:w-7/12 w-12/12 p-4 flex sm:flex-row flex-col gap-4">
             <div className=''>
-              <h2 className=' font-semibold text-black'>Overall item rating</h2>
+              <h2 className=' font-semibold text-white'>Overall item rating</h2>
               <div className=' flex  items-center py-2 gap-3'>
-                <div className="text-5xl font-bold text-black">{overall?.overallRating}</div>
+                <div className="text-5xl font-bold text-white">{overall?.overallRating}</div>
                 <div>
                   <div className=' flex gap-1 items-center'>
                     <FaStar className=' text-yellow-500' size={20} />
@@ -317,39 +317,39 @@ console.log("product",products)
                     <FaStar className=' text-yellow-500' size={20} />
                     <FaStar className=' text-yellow-500' size={20} />
                   </div>
-                  <div className="text-black text-sm   font-medium  pt-1">{overall?.totalRatings} reviews</div>
+                  <div className="text-white text-sm   font-medium  pt-1">{overall?.totalRatings} reviews</div>
                 </div>
               </div>
               <div>
 
-              
+
               </div>
             </div>
             <div className=' sm:w-5/12 w-12/12'>
               <div className=' py-1  flex  items-center justify-between'>
-                <h2 className=' font-semibold text-black'>Rating</h2>
-                <p className=' text-sm text-gray-500'>Select a row to filter reviews</p>
+                <h2 className=' font-semibold text-white'>Rating</h2>
+                <p className=' text-sm text-white'>Select a row to filter reviews</p>
               </div>
               <div className=' flex flex-col gap-2'>
-              {[5, 4, 3, 2, 1].map((star, index) => {
-  const ratingCount = overall?.ratingCounts?.[star] || 0;
-  const totalRatings = overall?.totalRatings || 1;
+                {[5, 4, 3, 2, 1].map((star, index) => {
+                  const ratingCount = overall?.ratingCounts?.[star] || 0;
+                  const totalRatings = overall?.totalRatings || 1;
 
-  return (
-    <div key={index} className="flex items-center gap-2 mb-2">
-      <span className="text-black font-bold items-center flex gap-2">
-        {star} <FaStar className="text-yellow-500" />
-      </span>
-      <div className="w-full bg-gray-300 rounded h-3">
-        <div
-          className="bg-black h-3 rounded"
-          style={{ width: `${(ratingCount / totalRatings) * 100}%` }}
-        ></div>
-      </div>
-      <span className="text-gray-600 text-sm">{ratingCount}</span>
-    </div>
-  );
-})}
+                  return (
+                    <div key={index} className="flex items-center gap-2 mb-2">
+                      <span className="text-white font-bold items-center flex gap-2">
+                        {star} <FaStar className="text-yellow-500" />
+                      </span>
+                      <div className="w-full bg-gray-300 rounded h-3">
+                        <div
+                          className="bg-yellow-500 h-3 rounded"
+                          style={{ width: `${(ratingCount / totalRatings) * 100}%` }}
+                        ></div>
+                      </div>
+                      <span className="text-white text-sm">{ratingCount}</span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -388,17 +388,17 @@ console.log("product",products)
               <div className=' flex flex-col justify-between items-center h-full'>
                 <div className=' flex justify-between gap-2'>
                   <ul className=' m-0 flex gap-1'>
-                    
-                  {[...Array(5)].map((_, index) => (
-            <li key={index}>
-              <FaStar
-                className={index < review.rating ? 'text-yellow-500' : 'text-gray-300'}
-                size={18}
-              />
-            </li>
-          ))}
+
+                    {[...Array(5)].map((_, index) => (
+                      <li key={index}>
+                        <FaStar
+                          className={index < review.rating ? 'text-yellow-500' : 'text-gray-300'}
+                          size={18}
+                        />
+                      </li>
+                    ))}
                   </ul>
-                  
+
                   <p className="text-sm text-gray-500 flex  gap-2">{review?.platform}  <img src='https://static.g2a.com/_/pc-drmGaming/steam.svg' className=' w-4 h-4' alt='' /> </p>
 
                 </div>
