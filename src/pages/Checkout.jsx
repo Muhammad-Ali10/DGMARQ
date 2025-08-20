@@ -87,6 +87,11 @@ const Checkout = () => {
                                         <input type="radio" className="w-5 h-5" checked={paymentMethod === 'card'} onChange={() => setPaymentMethod('card')} />
                                         <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1755082409/visa_hd4nfk.png" className="w-14" alt="Visa" />
                                     </li>
+                                       <li className="flex items-center gap-2 p-3">
+                                        <input type="radio" className="w-5 h-5" checked={paymentMethod === 'masterCard'} onChange={() => setPaymentMethod('paypal')} />
+                                        <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1755692141/mastercard_logo_y48axq.webp" className="w-20" alt="MasterCard" />
+                                        {/* <span className="text-gray-500 text-sm">Pay with PayPal</span> */}
+                                    </li>
                                     <li className="flex items-center gap-2 p-3">
                                         <input type="radio" className="w-5 h-5" checked={paymentMethod === 'paypal'} onChange={() => setPaymentMethod('paypal')} />
                                         <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1755082405/paypal_v2_yk5bwc.png" className="w-20" alt="MasterCard" />

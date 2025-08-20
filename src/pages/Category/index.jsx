@@ -224,7 +224,7 @@ const Category = () => {
                                                     checked={checkboxFilters.categoryId.includes(item?._id)}
                                                     onChange={() => handleCheckboxChange("categoryId", item?._id)}
                                                 />
-                                                <span className=" text-sm hover:underline">{item?.title}</span>
+                                                <span className=" text-base hover:underline text-white">{item?.title}</span>
                                             </div>
                                             <span className=" text-sm text-gray-400"></span>
                                         </li>
@@ -405,7 +405,8 @@ const Category = () => {
                                         title={item?.title}
                                         discount={3}
                                         price={item?.discountPrice}
-                                        originalPrice={item?.actualPrice} />
+                                        originalPrice={item?.actualPrice} 
+                                        />
                                 )
                             })
                             :
