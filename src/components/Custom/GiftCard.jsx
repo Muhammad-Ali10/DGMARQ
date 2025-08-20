@@ -1,9 +1,11 @@
 import { CircleCheck, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, isSponsored, url,like }) => {
+const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, isSponsored, url, like }) => {
   return (
-    <div className="flex flex-col gap-6 mt-">
-    
+    <Link to={url}>
+      <div className="flex flex-col gap-6 mt-">
+
         <div
           className="flex flex-col md:flex-row items-center justify-center gap-2.5 p-4 bg-blue-4 rounded-21 max-w-[875px] "
         >
@@ -58,7 +60,8 @@ const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, i
             </div>
           </div>
         </div>
-    </div>
+      </div>
+    </Link>
   );
 };
 
