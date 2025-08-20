@@ -7,7 +7,7 @@ const SearchResults = ({ results }) => {
     {results?.length===0?null:
      <div className="absolute bg-white right-0 shadow-lg rounded-lg  w-full mt-2 z-50">
      <div className="p-4">
-       <h3 className="text-lg font-bold mb-4">Product Results</h3>
+       <h3 className="text-lg font-bold mb-4 text-black">Product Results</h3>
        <div className="flex flex-col overflow-y-auto  space-y-4 pb-2 scrollbar-thin scrollbar-thumb-gray-300">
          {results.map((product, index) => (
            <Link to={`/product-details/${product._id}`}

@@ -6,7 +6,7 @@ import axios from "axios";
 import { Base_url } from "../../utils/Base_url";
 
 const BottomHeader = () => {
-    const [desktopMenuOpen, setDesktopMenuOpen] = useState(true);
+    const [desktopMenuOpen, setDesktopMenuOpen] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [subCategory, setSubCategory] = useState(null);
     const [subSubCategory, setSubSubCategory] = useState([]);

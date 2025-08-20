@@ -14,6 +14,7 @@ import { FaAngleDown } from "react-icons/fa";
 import SearchResults from "./SearchResults";
 import { US, ZA, FR, ES } from 'country-flag-icons/react/3x2'
 import { BottomHeader } from "@/components"
+import { useLocation } from "react-router-dom" // if using React Router
 
 
 const languages = [
@@ -63,6 +64,7 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
+  const location = useLocation() 
 
 
   const Items = [
@@ -145,6 +147,23 @@ const Navbar = () => {
       setIsDropdownOpen(false);
     }
   };
+
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      // If dropdown is open and clicked outside
+      if (isDropdownOpen && !e.target.closest(".dropdown-container")) {
+        setIsDropdownOpen(false)
+      }
+    }
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [isDropdownOpen])
+
+  // Close dropdown on URL change
+  useEffect(() => {
+    setIsDropdownOpen(false)
+  }, [location.pathname])
 
   const closeSubMenu = () => {
     setDesktopMenuOpen(false);
