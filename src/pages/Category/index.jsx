@@ -158,22 +158,22 @@ const Category = () => {
             <div className="max-w-1260 px-3 mx-auto pb-10 ">
                 <div className=" py-3 z-40 sticky top-0 flex justify-between items-center">
                     <div>
-                        <h1 className=" font-semibold text-2xl pb-2">Top Up Mobile Games</h1>
-                        <h6 className="h6">306,182 listings</h6>
+                        <h1 className=" font-semibold text-2xl pb-2 text-white">Top Up Mobile Games</h1>
+                        <h6 className="h6 text-white">306,182 listings</h6>
                     </div>
 
                     <div className="flex items-center gap-2">
                         <div className="md:block hidden">
                             <div className="flex gap-4 items-center">
                                 <div>
-                                    <FaListUl className={`cursor-pointer ${layout === 'listing' ? 'text-secondary' : ''}`} onClick={() => setLayout('listing')} size={25} />
+                                    <FaListUl className={`cursor-pointer ${layout === 'listing' ? 'text-[#0f66d8]' : 'text-white'}`} onClick={() => setLayout('listing')} size={25} />
                                 </div>
                                 <div>
-                                    <TfiLayoutGrid3 onClick={() => setLayout('grid')} className={`cursor-pointer ${layout === 'grid' ? 'text-secondary' : ''}`} size={25} />
+                                    <TfiLayoutGrid3 onClick={() => setLayout('grid')} className={`cursor-pointer  ${layout === 'grid' ? 'text-[#0f66d8]' : 'text-white'}`} size={25} />
                                 </div>
 
                                 <div className="flex gap-3 items-center">
-                                    <p className="m-0 font-semibold ">Sort by</p>
+                                    <p className="m-0 font-semibold text-white">Sort by</p>
                                     <select
                                         value={sort}
                                         onChange={(e) => handleFilterChange('sort', e.target.value)}
@@ -212,7 +212,7 @@ const Category = () => {
                         </div>
 
                         <div className="h-full pb-12 px-4 sm:overflow-y-hidden overflow-y-scroll">
-                            <h1 className="text-black font-bold  pb-2">Categories</h1>
+                            <h1 className="text-white font-bold  pb-2">Categories</h1>
                             <ul className="leading-7">
                                 {category?.map((item, index) => {
                                     return (
@@ -233,7 +233,7 @@ const Category = () => {
                             </ul>
 
                             <div className="pt-3">
-                                <h1 className="text-black font-bold pb-4">Price <span className="font-normal">(USD)</span></h1>
+                                <h1 className="text-white font-bold pb-4">Price <span className="font-normal">(USD)</span></h1>
                                 <div className="grid grid-cols-2 gap-2 items-center">
                                     <input
                                         placeholder="From"
@@ -251,7 +251,7 @@ const Category = () => {
                             </div>
 
                             {/* <div className="pt-5">
-                                <h1 className="text-black font-bold  pb-4">Availability</h1>
+                                <h1 className="text-white font-bold  pb-4">Availability</h1>
                                 <ul className="flex gap-3 flex-col">
                                     <li className="flex gap-2 ">
                                         <input
@@ -277,7 +277,7 @@ const Category = () => {
                                 </ul>
                             </div> */}
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-1">Region</h1>
+                                <h1 className="text-white font-bold pb-1">Region</h1>
                                 <div className=" relative pb-3">
                                     <div className=" absolute left-2 top-3">
                                         <IoIosSearch size={20} className=" text-gray-400" />
@@ -302,7 +302,7 @@ const Category = () => {
                                                         checked={checkboxFilters.region.includes(item?._id)}
                                                         onChange={() => handleCheckboxChange("region", item?._id)}
                                                     />
-                                                    <span className=" text-sm uppercase">{item?.title}</span>
+                                                    <span className=" text-sm text-white uppercase">{item?.title}</span>
                                                 </div>
                                                 <span className=" text-gray-400 text-sm"></span>
                                             </li>
@@ -313,7 +313,7 @@ const Category = () => {
                             <hr className="mt-4" />
 
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-1">Platform</h1>
+                                <h1 className="text-white font-bold pb-1">Platform</h1>
                                 <div className=" relative pb-3">
                                     <div className=" absolute left-2 top-3">
                                         <IoIosSearch size={20} className=" text-gray-400" />
@@ -338,7 +338,7 @@ const Category = () => {
                                                         checked={checkboxFilters.platform.includes(item?._id)}
                                                         onChange={() => handleCheckboxChange("platform", item?._id)}
                                                     />
-                                                    <span className=" text-sm">{item?.title}</span>
+                                                    <span className=" text-sm text-white">{item?.title}</span>
                                                 </div>
                                                 <span className=" text-gray-400 text-sm"></span>
                                             </li>
@@ -349,7 +349,7 @@ const Category = () => {
                             </div>
                             <hr className="mt-4" />
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-3">Type</h1>
+                                <h1 className="text-white font-bold pb-3">Type</h1>
 
                                 <ul className="flex gap-3 flex-col">
                                     <li className="justify-between flex gap-2 items-center">
@@ -360,7 +360,7 @@ const Category = () => {
                                                 checked={checkboxFilters.type.includes("Key")}
                                                 onChange={() => handleCheckboxChange("type", "Key")}
                                             />
-                                            <span className=" text-sm">Key</span>
+                                            <span className=" text-sm text-white">Key</span>
                                         </div>
                                         <span className=" text-gray-400 text-sm"></span>
                                     </li>
@@ -373,7 +373,7 @@ const Category = () => {
                                                 checked={checkboxFilters.type.includes("Gift")}
                                                 onChange={() => handleCheckboxChange("type", "Gift")}
                                             />
-                                            <span className=" text-sm">Gift</span>
+                                            <span className=" text-sm text-white">Gift</span>
                                         </div>
                                         <span className=" text-gray-400 text-sm"></span>
                                     </li>
@@ -385,7 +385,7 @@ const Category = () => {
                                                 checked={checkboxFilters.type.includes("Account")}
                                                 onChange={() => handleCheckboxChange("type", "Account")}
                                             />
-                                            <span className=" text-sm">Account</span>
+                                            <span className=" text-sm text-white">Account</span>
                                         </div>
                                         <span className=" text-gray-400 text-sm"></span>
                                     </li>
