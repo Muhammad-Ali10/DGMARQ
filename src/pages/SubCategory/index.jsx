@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Button} from "@/components/ui/button"
 import { MdClose } from "react-icons/md";
-import {ProductCardHorizontal}  from "@/components"
+import { ProductCardHorizontal, GiftCard } from "@/components"
 import { TfiLayoutGrid3 } from "react-icons/tfi";
 import { FaListUl } from "react-icons/fa";
 import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
@@ -154,30 +154,30 @@ const SubCategory = () => {
 
 
     return (
-        <>
-            <div className="max-w-1260 px-3 mx-auto pb-10">
-                <div className="bg-white py-3 z-40 sticky top-0 flex justify-between items-center">
+   <>
+            <div className="max-w-1260 px-3 mx-auto pb-10 ">
+                <div className=" py-3 z-40 sticky top-0 flex justify-between items-center">
                     <div>
-                        <h1 className="text-black font-semibold text-2xl pb-2">Top Up Mobile Games</h1>
-                        <h6 className="h6">306,182 listings</h6>
+                        <h1 className=" font-semibold text-2xl pb-2 text-white">Top Up Mobile Games</h1>
+                        <h6 className="h6 text-white">306,182 listings</h6>
                     </div>
 
                     <div className="flex items-center gap-2">
                         <div className="md:block hidden">
                             <div className="flex gap-4 items-center">
                                 <div>
-                                    <FaListUl className={`cursor-pointer ${layout === 'listing' ? 'text-secondary' : ''}`} onClick={() => setLayout('listing')} size={25} />
+                                    <FaListUl className={`cursor-pointer ${layout === 'listing' ? 'text-[#0f66d8]' : 'text-white'}`} onClick={() => setLayout('listing')} size={25} />
                                 </div>
                                 <div>
-                                    <TfiLayoutGrid3 onClick={() => setLayout('grid')} className={`cursor-pointer ${layout === 'grid' ? 'text-secondary' : ''}`} size={25} />
+                                    <TfiLayoutGrid3 onClick={() => setLayout('grid')} className={`cursor-pointer  ${layout === 'grid' ? 'text-[#0f66d8]' : 'text-white'}`} size={25} />
                                 </div>
 
                                 <div className="flex gap-3 items-center">
-                                    <p className="m-0 font-semibold text-black">Sort by</p>
+                                    <p className="m-0 font-semibold text-white">Sort by</p>
                                     <select
                                         value={sort}
                                         onChange={(e) => handleFilterChange('sort', e.target.value)}
-                                        className="border py-1 bg-lightGray rounded-md p-2.5 text-primary placeholder:text-primary"
+                                        className="border py-1 bg-lightGray rounded-md p-2.5 text-white placeholder:text-white"
                                     >
                                         <option value="releaseDate-asc">Release date - Oldest</option>
                                         <option value="releaseDate-des">Release date - Newest</option>
@@ -188,17 +188,17 @@ const SubCategory = () => {
                             </div>
                         </div>
 
-                        <Button
-                            onClick={toggleMenu}
+
+                        <Button onClick={toggleMenu}
                             className={"bg-black block md:hidden uppercase text-xs py-1 font-bold text-white"}>filter</Button>
                     </div>
                 </div>
 
                 <div className="flex pt-4 gap-12">
                     <div
-                        className={`sm:w-3/12 w-8/12 bg-white ${isMenuOpen
-                            ? "block fixed text-center lg:p-5 p-0 top-0 right-0 z-50 left-0 w-[70%] h-full bg-white"
-                            : "w-[20%] hidden lg:block bg-white"
+                        className={`sm:w-3/12 w-8/12  ${isMenuOpen
+                            ? "block fixed text-center lg:p-5 p-0 top-0 right-0 z-50 left-0 w-[70%] h-full "
+                            : "w-[20%] hidden lg:block "
                             }`}
                     >
                         <div className="p-2 border-t lg:hidden  border-b flex justify-between items-center">
@@ -212,7 +212,7 @@ const SubCategory = () => {
                         </div>
 
                         <div className="h-full pb-12 px-4 sm:overflow-y-hidden overflow-y-scroll">
-                            <h1 className="text-black font-bold  pb-2">Categories</h1>
+                            <h1 className="text-white font-bold  pb-2">Categories</h1>
                             <ul className="leading-7">
                                 {category?.map((item, index) => {
                                     return (
@@ -220,11 +220,11 @@ const SubCategory = () => {
                                             <div className=" flex gap-2">
                                                 <input
                                                     type="checkbox"
-                                                    className="border-2 w-5 h-5 border-gray-200 p-2 outline-none focus:border-secondary rounded-sm bg-white"
+                                                    className="w-5 h-5  p-2 outline-none focus:border-secondary rounded-sm bg-white"
                                                     checked={checkboxFilters.categoryId.includes(item?._id)}
                                                     onChange={() => handleCheckboxChange("categoryId", item?._id)}
                                                 />
-                                                <span className=" text-sm hover:underline">{item?.title}</span>
+                                                <span className=" text-base hover:underline text-white">{item?.title}</span>
                                             </div>
                                             <span className=" text-sm text-gray-400"></span>
                                         </li>
@@ -233,7 +233,7 @@ const SubCategory = () => {
                             </ul>
 
                             <div className="pt-3">
-                                <h1 className="text-black font-bold pb-4">Price <span className="font-normal">(USD)</span></h1>
+                                <h1 className="text-white font-bold pb-4">Price <span className="font-normal">(USD)</span></h1>
                                 <div className="grid grid-cols-2 gap-2 items-center">
                                     <input
                                         placeholder="From"
@@ -251,7 +251,7 @@ const SubCategory = () => {
                             </div>
 
                             {/* <div className="pt-5">
-                                <h1 className="text-black font-bold  pb-4">Availability</h1>
+                                <h1 className="text-white font-bold  pb-4">Availability</h1>
                                 <ul className="flex gap-3 flex-col">
                                     <li className="flex gap-2 ">
                                         <input
@@ -277,7 +277,7 @@ const SubCategory = () => {
                                 </ul>
                             </div> */}
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-1">Region</h1>
+                                <h1 className="text-white font-bold pb-1">Region</h1>
                                 <div className=" relative pb-3">
                                     <div className=" absolute left-2 top-3">
                                         <IoIosSearch size={20} className=" text-gray-400" />
@@ -302,7 +302,7 @@ const SubCategory = () => {
                                                         checked={checkboxFilters.region.includes(item?._id)}
                                                         onChange={() => handleCheckboxChange("region", item?._id)}
                                                     />
-                                                    <span className=" text-sm uppercase">{item?.title}</span>
+                                                    <span className=" text-sm text-white uppercase">{item?.title}</span>
                                                 </div>
                                                 <span className=" text-gray-400 text-sm"></span>
                                             </li>
@@ -313,7 +313,7 @@ const SubCategory = () => {
                             <hr className="mt-4" />
 
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-1">Platform</h1>
+                                <h1 className="text-white font-bold pb-1">Platform</h1>
                                 <div className=" relative pb-3">
                                     <div className=" absolute left-2 top-3">
                                         <IoIosSearch size={20} className=" text-gray-400" />
@@ -338,7 +338,7 @@ const SubCategory = () => {
                                                         checked={checkboxFilters.platform.includes(item?._id)}
                                                         onChange={() => handleCheckboxChange("platform", item?._id)}
                                                     />
-                                                    <span className=" text-sm">{item?.title}</span>
+                                                    <span className=" text-sm text-white">{item?.title}</span>
                                                 </div>
                                                 <span className=" text-gray-400 text-sm"></span>
                                             </li>
@@ -349,7 +349,7 @@ const SubCategory = () => {
                             </div>
                             <hr className="mt-4" />
                             <div className="pt-5">
-                                <h1 className="text-black font-bold pb-3">Type</h1>
+                                <h1 className="text-white font-bold pb-3">Type</h1>
 
                                 <ul className="flex gap-3 flex-col">
                                     <li className="justify-between flex gap-2 items-center">
@@ -360,7 +360,7 @@ const SubCategory = () => {
                                                 checked={checkboxFilters.type.includes("Key")}
                                                 onChange={() => handleCheckboxChange("type", "Key")}
                                             />
-                                            <span className=" text-sm">Key</span>
+                                            <span className=" text-sm text-white">Key</span>
                                         </div>
                                         <span className=" text-gray-400 text-sm"></span>
                                     </li>
@@ -373,7 +373,7 @@ const SubCategory = () => {
                                                 checked={checkboxFilters.type.includes("Gift")}
                                                 onChange={() => handleCheckboxChange("type", "Gift")}
                                             />
-                                            <span className=" text-sm">Gift</span>
+                                            <span className=" text-sm text-white">Gift</span>
                                         </div>
                                         <span className=" text-gray-400 text-sm"></span>
                                     </li>
@@ -385,9 +385,9 @@ const SubCategory = () => {
                                                 checked={checkboxFilters.type.includes("Account")}
                                                 onChange={() => handleCheckboxChange("type", "Account")}
                                             />
-                                            <span className=" text-sm">Account</span>
+                                            <span className=" text-sm text-white">Account</span>
                                         </div>
-                                        <span className=" text-gray-400 text-sm">65</span>
+                                        <span className=" text-gray-400 text-sm"></span>
                                     </li>
 
                                 </ul>
@@ -399,23 +399,14 @@ const SubCategory = () => {
                         {layout === 'listing' ?
                             products?.map((item, index) => {
                                 return (
-                                    <Link to={`/product-details/${item?._id}`} className="border flex gap-4 p-3" key={index}>
-                                        <div className="w-2/12">
-                                            <img src={item?.images[0]} className="w-full h-44" alt="" />
-                                        </div>
-                                        <div className="w-10/12">
-                                            <h4 className="font-semibold">{item?.title}</h4>
-                                            <div className="flex w-full flex-col pt-4">
-                                                <div className="flex items-center justify-between">
-                                                    <span className="text-sm text-gray-400">Platform: <b>ReidosCoins</b></span>
-                                                    <p className="font-semibold text-lg">${item?.discountPrice}</p>
-                                                </div>
-                                                <span className="text-sm text-gray-400">Type: <b>Key</b></span>
-                                                <span className="text-sm text-gray-400">Region: <b>GLOBAL</b></span>
-                                                <span className="text-sm text-gray-400">Can activate in: <b>Pakistan</b></span>
-                                            </div>
-                                        </div>
-                                    </Link>
+                                    <GiftCard key={index}
+                                        url={`/product-details/${item?._id}`}
+                                        image={item?.images?.[0]}
+                                        title={item?.title}
+                                        discount={3}
+                                        price={item?.discountPrice}
+                                        originalPrice={item?.actualPrice} 
+                                        />
                                 )
                             })
                             :
@@ -438,14 +429,12 @@ const SubCategory = () => {
 
 
                         <div className="flex  justify-end mt-8 gap-4">
-                            <Button
-                                onClick={handlePrevPage}
+                            <Button onClick={handlePrevPage}
                                 disabled={currentPage === 1}
                                 className={`bg-black text-white px-4 py-2  rounded-sm ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}>Previous</Button>
                             <span className="flex items-center">
                                 Page {currentPage} of {totalPages}
                             </span>
-
                             <Button onClick={handleNextPage}
                                 disabled={currentPage === totalPages}
                                 className={`bg-black text-white px-4 py-2   rounded-sm ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}>Next</Button>
@@ -453,6 +442,7 @@ const SubCategory = () => {
                     </div>
                 </div>
             </div>
+
         </>
     );
 };

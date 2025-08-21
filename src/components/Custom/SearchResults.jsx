@@ -29,15 +29,15 @@ const SearchResults = ({ results }) => {
                <p>
                {product.discountPrice ? (
                  <div>
-                <p className="text-lg font-bold m-0 text-black">{product?.discountPrice}</p>
+                <p className="text-lg font-bold m-0 text-black">$ {product?.discountPrice}</p>
 
                    <p className="text-gray-500 line-through text-xs">
-                     Rs.{product.actualPrice}
+                     $ {product.actualPrice}
                    </p>
                  </div>
                ) : (
                  <p className="text-gray-800 font-bold text-sm">
-                   Rs.{product.actualPrice}
+                   $ {product.actualPrice}
                  </p>
                )} 
                {product?.gst ?

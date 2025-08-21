@@ -1,8 +1,38 @@
 import { CircleCheck, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { toast, } from 'react-toastify'
+import { Base_url } from '../../utils/Base_url'
+
 
 const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, isSponsored, url, like }) => {
-  return (
+
+  const handleWhitelist = async () => {
+      if (userInfo) {
+  
+        try {
+          const response = await axios.post(`${Base_url}/wishlist/add`, {
+            productId: products?._id,
+            userId: userInfo?._id,
+          });
+          if (response.data?.status === 200) {
+            toast.success(response?.data?.message);
+          } else {
+            toast.success(response?.data?.message);
+          }
+        } catch (error) {
+          console.error('Error adding to wishlist:', error?.response?.data?.message);
+          toast.error(error?.response?.data?.message)
+        }
+  
+      } else {
+        toast.error('Please register your account');
+        navigate('/register')
+      }
+  
+    };
+
+
+  return ( 
     <Link to={url}>
       <div className="flex flex-col gap-6 mt-5">
 
@@ -56,7 +86,7 @@ const Giftcards = ({ image, title, price, originalPrice, discount, offerLabel, i
               <p className="text-sm font-bold font-poppins tracking-tight text-white">
                 SPONSORED
               </p>
-              <Heart className="text-white size-6" />
+              <Heart className="text-white size-6"  onClick={handleWhitelist}/>
             </div>
           </div>
         </div>
