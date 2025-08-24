@@ -261,7 +261,7 @@ const ProductDetails = ({
               <div className="text-3xl pt-3 font-bold text-white">${products?.discountPrice}</div>
               <div className="text-sm text-white">
                 Save <span className="font-semibold text-green-600">${products?.actualPrice - products}</span> with DGAMRQ Plus
-              </div>
+              </div> 
               <button onClick={() => {
                 setOpenSide(true)
                 dispatch(

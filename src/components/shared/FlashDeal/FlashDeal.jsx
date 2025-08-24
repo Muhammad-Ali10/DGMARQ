@@ -4,6 +4,7 @@ import ProductCardVertical from "@/components/Custom/ProductCardVertical";
 import { useFlashDealsQuery } from "@/hooks/useHomeQuery";
 import FlashDealCard from "@/components/Custom/FlashDealCard";
 
+
 const FlashDeal = () => {
   const { data, isPending, isError } = useFlashDealsQuery();
   const DealProducts = data?.data || [];
@@ -15,6 +16,8 @@ const FlashDeal = () => {
 
   if (isPending || !flashDealItem) return null; // or show a loading skeleton
 
+  console.log("flashDealItem", flashDealItem);
+
   return (
 
 
@@ -23,11 +26,12 @@ const FlashDeal = () => {
       <FlashDealCard
         startTime={new Date(flashDealItem.startDate).getTime()}
         endTime={new Date(flashDealItem.endDate).getTime()}
-        key={flashDealItem._id}
+        id={flashDealItem._id}
         actualPrice={flashDealItem.actualPrice}
         discountPrice={flashDealItem.discountPrice}
         image={flashDealItem.image}
         title={flashDealItem.title}
+        gst={flashDealItem.gst}
       />
       <div className="flex flex-col justify-center items-center md:items-start text-center md:text-start">
         <h3 className="text-26 -tracking-tight font-semibold  text-white">More currently trending offers</h3>
@@ -40,9 +44,10 @@ const FlashDeal = () => {
               discountPrice={item.discountPrice}
               image={item?.images[0]}
               title={item.title}
+              url={item._id}
             />
           ))}
-        </div>
+        </div> 
       </div>
     </div>
   );

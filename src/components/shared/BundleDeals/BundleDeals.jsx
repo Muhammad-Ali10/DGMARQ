@@ -3,8 +3,15 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 import { CirclePlus, CircleEqual } from 'lucide-react';
 import { useBundleDealsQuery } from "@/hooks/useHomeQuery";
 import { useMemo } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../store/productSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 const BundleDeals = () => {
+    const dispatch = useDispatch();
     const { data, isPending, isError } = useBundleDealsQuery();
     const Dealproduct = data?.data || [];
 
@@ -14,8 +21,23 @@ const BundleDeals = () => {
 
     if (isPending) return <p className="text-white">Loading...</p>;
     if (isError) return <p className="text-red-500">Error fetching deals</p>;
+  const handleAddToCart = (products) => {
+    products.forEach((product) => {
+      dispatch(
+        addToCart({
+          _id: product._id,
+          image: product.images[0],
+          description: product.description,
+          title: product.title,
+          quantity: 1,
+          price: product.discountPrice,
+        })
+      );
+    });
+    toast.success("Items added to cart successfully!");
+  };
 
- 
+
     return (
         <div className="flex flex-col max-w-1260 w-full text-white font-poppins ">
             <h3 className=" text-4xl -tracking-tight font-semibold text-center">Exclusive bundle deals</h3>
@@ -23,7 +45,7 @@ const BundleDeals = () => {
 
             <div className="flex flex-col gap-10 mt-9 px-5 xl:px-0">
                 {ApprovedProducts.map((bundle, index) => {
-                  
+
                     const totalPrice = bundle.productId.reduce((acc, product) => acc + (Number(product.discountPrice) || 0), 0);
                     const totalDiscount = bundle.productId.reduce((acc, product) => acc + (Number(product.actualPrice) || 0), 0);
                     const youSave = totalPrice - totalDiscount;
@@ -49,7 +71,7 @@ const BundleDeals = () => {
                                 </CardHeader>
                                 <CardContent>
                                     <CardDescription className="text-sm font-normal text-center font-poppins -tracking-tight   text-white pb-2">You save: ${youSave.toFixed(0)}</CardDescription>
-                                    <CardAction className="bg-primary rounded-md py-0.5 px-1.5 text-sm font-poppins font-semibold text-white m-auto">Add To Cart</CardAction>
+                                    <CardAction className="bg-primary rounded-md py-0.5 px-1.5 text-sm font-poppins font-semibold text-white m-auto"  onClick={() => handleAddToCart(bundle.productId)}>Add To Cart</CardAction>
                                 </CardContent>
                             </Card>
                         </div>

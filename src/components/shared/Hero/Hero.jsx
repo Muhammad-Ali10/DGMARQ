@@ -1,9 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel"
-import card1 from '/public/images/cardimage1.png';
-import bg2 from "../../../../public/images/cardimage2.png"
-import bg3 from "../../../../public/images/cardimage3.png"
-import bg4 from "../../../../public/images/cardimage4.png"
-import bg5 from "../../../../public/images/cardimage5.png"
+
+
 
 const Hero = () => {  
   return (

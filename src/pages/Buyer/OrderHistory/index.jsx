@@ -83,7 +83,7 @@ const OrderHistory = () => {
           <div className="space-y-6 mt-5">
             <div className="flex justify-between flex-wrap items-center mb-4">
               <div className=" flex items-center gap-2">
-                <label  className="font-semibold text-black">Search:</label>
+                <label  className="font-semibold text-white">Search:</label>
               <input
                 type="text"
                 placeholder="Search: Order number, product name"
@@ -94,7 +94,7 @@ const OrderHistory = () => {
               </div>
               <div className=" flex gap-5">
               <div className=" gap-2">
-              <label  className="font-semibold text-black">Start Date:</label>
+              <label  className="font-semibold text-white">Start Date:</label>
 
                 <input
                   type="date"
@@ -104,7 +104,7 @@ const OrderHistory = () => {
                 />
               </div>
               <div>
-              <label  className="font-semibold text-black">End Date:</label>
+              <label  className="font-semibold text-white">End Date:</label>
               <input
                   type="date"
                   value={endDate}
@@ -134,17 +134,17 @@ const OrderHistory = () => {
             {filteredOrders?.map((item, index) => (
               <div
                 key={index}
-                className="rounded-sm  mb-2 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
+                className="rounded-sm  mb-2  shadow-sm dark:border-white dark:bg-gray-800"
               >
-                <div className="px-6 bg-gray-100 flex justify-between items-center pt-4 pb-4">
-                  <p className="m-0 text-lg">
+                <div className="px-6 flex justify-between items-center pt-4 pb-4">
+                  <p className="m-0 text-lg text-white">
                     Order number:
-                    <b className="text-gray-400 text-sm">{item?._id}</b>
+                    <b className=" text-sm">{item?._id}</b>
                   </p>
                   
-                  <p className="m-0 text-lg">
+                  <p className="m-0 text-lg text-white">
                     Order status:
-                    <b className="text-gray-400 text-sm">{item?.status}</b>
+                    <b className=" text-sm">{item?.status}</b>
                   </p>
                 </div>
                 <hr />
@@ -162,17 +162,17 @@ const OrderHistory = () => {
                     />
                   </a>
                  </div>
-                  <p className="  text-lg font-bold text-gray-900 dark:text-white">
+                  <p className="  text-lg font-bold text-white">
                         ${item?.productIds?.[0]?.title}
                       </p>
                   </div>
                   <div className="flex items-center justify-between md:order-3 md:justify-end">
                     <div className="text-end md:order-4">
-                      <p className=" font-bold text-2xl flex items-center gap-2 text-gray-900 dark:text-white">
+                      <p className=" font-bold text-2xl flex items-center gap-2 text-white">
                       <p className=" text-gray-400 text-base">Total Payment:</p>
                       {item?.productIds?.[0]?.discountPrice} USD
                       </p>
-                      <p className="text-[10px] text-gray-400 text-end">
+                      <p className="text-[10px] text-white text-end">
                         Price includes VAT if applicable
                       </p>
                     </div>
@@ -180,12 +180,12 @@ const OrderHistory = () => {
                   <div className="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
                     <Link
                       to={`/product_details/${item?._id}`}
-                      className="text-base font-medium text-gray-900 hover:underline dark:text-white"
+                      className="text-base font-medium text-white hover:underline dark:text-white"
                     >
                       {item?.title}
                     </Link>
                     <div className=" items-center gap-4">
-                     <p className=" text-gray-400">Purchase date:</p>
+                     <p className=" text-white">Purchase date:</p>
                      <p>{item?.createdAt}</p>
                     </div>
                   </div>

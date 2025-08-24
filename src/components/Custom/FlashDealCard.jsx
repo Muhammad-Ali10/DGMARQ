@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ShoppingCart } from "lucide-react";
-
+import { useDispatch, useSelector } from 'react-redux'
+import { toast, } from 'react-toastify'
+import { addToCart } from '../../store/productSlice'
 const FlashDealCard = ({
   startTime,
   endTime,
@@ -8,9 +10,12 @@ const FlashDealCard = ({
   discountPrice,
   image,
   title,
+  id,
+  gst
 }) => {
   const calculateTimeLeft = () => {
     const now = Date.now();
+    
 
     if (startTime && now < startTime) {
       const diff = startTime - now;
@@ -42,6 +47,9 @@ const FlashDealCard = ({
     return () => clearInterval(interval);
   }, [startTime, endTime]);
 
+
+  const dispatch = useDispatch();
+
   return (
     <div className="w-full max-w-[454px] h-auto bg-primary rounded-21 p-5 flex flex-col gap-3.5 flex-shrink-0">
       <h2 className="text-2xl font-bold font-poppins text-center text-white">
@@ -49,8 +57,8 @@ const FlashDealCard = ({
         {timeLeft.status === "Coming Soon"
           ? "Starts in"
           : timeLeft.status === "Active"
-          ? "Ends in"
-          : "Deal Ended"}
+            ? "Ends in"
+            : "Deal Ended"}
       </h2>
 
       {/* Countdown Timer */}
@@ -113,7 +121,22 @@ const FlashDealCard = ({
       </div>
 
       {/* Buy Button */}
-      <button className="w-full bg-orange flex items-center justify-center gap-2 p-3 rounded-21 border border-[#D55603] text-white font-medium font-poppins">
+      <button className="w-full bg-orange flex items-center justify-center gap-2 p-3 rounded-21 border border-[#D55603] text-white font-medium font-poppins"
+        onClick={() => {
+
+          dispatch(
+            addToCart({
+              _id: id,
+              image: image,
+              title: title,
+              quantity: 1,
+              price: discountPrice,
+              gst:gst,
+           
+            })
+          )
+          toast.success('Product add to cart successfuly!')
+        }}>
         <ShoppingCart />
         Buy Now
       </button>

@@ -159,7 +159,6 @@ const SubCategory = () => {
                 <div className=" py-3 z-40 sticky top-0 flex justify-between items-center">
                     <div>
                         <h1 className=" font-semibold text-2xl pb-2 text-white">Top Up Mobile Games</h1>
-                        <h6 className="h6 text-white">306,182 listings</h6>
                     </div>
 
                     <div className="flex items-center gap-2">
