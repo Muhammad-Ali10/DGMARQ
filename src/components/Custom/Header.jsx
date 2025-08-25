@@ -183,7 +183,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link to="/">
-              <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393665/logo_nojqxu.png" alt="Logo" className="w-14 xl:w-36 h-11" />
+              <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393665/logo_nojqxu.png" alt="Logo" className="w-36 md:w-18 lg:w-30 xl:w-36 h-11" />
             </Link>
           </div>
           <div className="hidden md:flex flex-1 text-white justify-center items-center max-w-[700px]">
