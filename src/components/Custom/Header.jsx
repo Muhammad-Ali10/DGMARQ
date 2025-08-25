@@ -183,7 +183,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link to="/">
-              <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393665/logo_nojqxu.png" alt="Logo" className="w-36 h-11" />
+              <img src="https://res.cloudinary.com/dptwervy7/image/upload/v1754393665/logo_nojqxu.png" alt="Logo" className="w-14 xl:w-36 h-11" />
             </Link>
           </div>
           <div className="hidden md:flex flex-1 text-white justify-center items-center max-w-[700px]">
@@ -219,7 +219,7 @@ const Navbar = () => {
                           <Link
                             to={`/category/${category?._id}`}
                             key={category?._id}
-                            className={`px-3 py-2 text-[12px] block text-gray-700 hover:bg-gray-100  ${selectedCategory === category
+                            className={`px-3 py-2 text-[9px] xl:text-[12px] block text-gray-700 hover:bg-gray-100  ${selectedCategory === category
                               ? "bg-gray-200 font-semibold"
                               : ""
                               }`}

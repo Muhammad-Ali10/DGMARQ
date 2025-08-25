@@ -121,13 +121,14 @@ const ProfilePopup = () => {
               className="w-full h-full bg-center object-cover"
               alt="Profile"
             />
-          </div>
-          <div onClick={openProfileFun} className="relative">
-            <div className="flex flex-col items-center">
+             <div className="flex flex-col items-center">
               <span className="text-white text-[11px]  sm:block hidden whitespace-nowrap font-medium">Your Dgmarq</span>
             </div>
+          </div>
+          <div onClick={openProfileFun} className="relative">
+           
             {openProfile && (
-              <div className="absolute  sm:right-0 -left-36 mt-2 top-12  sm:w-80 w-72 bg-white shadow-lg rounded-md p-5 z-50">
+              <div className="absolute  sm:right-0 -left-60 mt-2 top-12  sm:w-80 w-72 bg-white shadow-lg rounded-md p-5 z-50">
                 <div className="flex justify-start gap-6 items-center">
                   <div className="w-12 h-12 rounded-full overflow-hidden">
                     <img
