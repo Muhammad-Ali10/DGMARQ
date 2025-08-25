@@ -2,25 +2,132 @@ import ProductSection from '@/components/Custom/ProductSection';
 import LoadingCard from '@/components/Custom/LoadingCard';
 import { useUpcommingGamesQuery } from '@/hooks/useHomeQuery';
 import { Button } from '@/components/ui/button';
-
+import { useDispatch, useSelector } from 'react-redux'
+import { toast, } from 'react-toastify'
+import { addToCart } from '../../../store/productSlice'
 const UpcomingGames = () => {
 
+    const dispatch = useDispatch()
 
     const { data, isPending, error } = useUpcommingGamesQuery(1, 6);
 
     const upcoming = data?.data || [];
 
+    console.log(upcoming);
+
     const isSkeleton = isPending || upcoming.length === 0;
     const skeletonArray = Array.from({ length: 6 });
 
 
-
+ 
     return (
         <div className="flex flex-col items-center max-w-1260 w-full justify-center pt-12 gap-6 " id="upcoming-games">
 
             <h3 className="font-poppins font-semibold text-4xl -tracking-tight text-center text-white mt-9">New and upcoming releases</h3>
 
-            {data && <img src={upcoming[2]?.banner} className="max-w-1260 w-full rounded-21 m-auto mt-9" />}
+            <div className="hidden lg:flex flex-row w-full justify-between items-end relative bg-white rounded-21 pb-10 h-[411px] bg-[url(./images/banner.png)] text-white bg-cover bg-center">
+                <div className=" w-full lg:10 xl:pl-20 ">
+                    <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
+                    <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
+                        <h3 className="text-2xl font-poppins font-semibold">${upcoming[0]?.productId.actualPrice}</h3>
+                        <Button  onClick={() => {
+                                        dispatch(
+                                          addToCart({
+                                            _id: upcoming[0]?.productId._id,
+                                            image: upcoming[0]?.productId?.images[0],
+                                            title: upcoming[0]?.productId.title,
+                                            quantity: 1,
+                                            gst: upcoming[0]?.productId.gst,
+                                            actualPrice: upcoming[0]?.productId.actualPrice
+                                          })
+                                        )
+                        
+                                        toast.success('Product add to cart successfuly!')
+                                      }}
+                        
+                        className="text-xs font-medium font-poppins bg-primary">
+                            Add to cart
+                        </Button>
+                    </div>
+                </div>
+                <div className="w-full max-w-[344px] absolute lg:right-5 xl:right-10">
+                    <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[1]?.productId.title}</h3>
+                    <div className="flex flex-row max-w-[350px] w-full justify-between items-center mt-10">
+                        <h3 className="text-2xl font-poppins font-semibold">${upcoming[1]?.productId.actualPrice}</h3>
+                        <Button
+                         onClick={() => {
+                                        dispatch(
+                                          addToCart({
+                                            _id: upcoming[1]?.productId._id,
+                                            image: upcoming[1]?.productId?.images[0],
+                                            title: upcoming[1]?.productId.title,
+                                            quantity: 1,
+                                            gst: upcoming[1]?.productId.gst,
+                                            actualPrice: upcoming[1]?.productId.actualPrice
+                                          })
+                                        )
+                        
+                                        toast.success('Product add to cart successfuly!')
+                                      }} className="text-xs font-medium font-poppins bg-primary">
+                            Add to cart
+                        </Button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="flex lg:hidden flex-col w-full justify-between items-center relative bg-white rounded-21 p-0">
+                <div className="flex flex-col pl-20 pt-56 bg-[url(./images/game2.png)] w-full h-[411px] bg-no-repeat text-white ">
+                    <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
+                    <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
+                        <h3 className="text-2xl font-poppins font-semibold">$ {upcoming[0]?.productId.actualPrice}</h3>
+                        <Button onClick={() => {
+                                        dispatch(
+                                          addToCart({
+                                            _id: upcoming[0]?.productId._id,
+                                            image: upcoming[0]?.productId?.images[0],
+                                            title: upcoming[0]?.productId.title,
+                                            quantity: 1,
+                                            gst: upcoming[0]?.productId.gst,
+                                            actualPrice: upcoming[0]?.productId.actualPrice
+                                          })
+                                        )
+                        
+                                        toast.success('Product add to cart successfuly!')
+                                      }} 
+                        
+                        className="text-xs font-medium font-poppins bg-primary">
+                            Add to cart
+                        </Button>
+                    </div>
+                </div>
+                <div className="flex flex-col pt-56 bg-[url(./images/game1.png)] bg-no-repeat
+                 w-full h-[411px] bg-right  text-white">
+                    <div className=" max-w-[344px] w-full right-5">
+                        <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[1]?.productId.title}</h3>
+                        <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
+                            <h3 className="text-2xl font-poppins font-semibold">$ {upcoming[1]?.productId.actualPrice}</h3>
+                            <Button  onClick={() => {
+                                        dispatch(
+                                          addToCart({
+                                            _id: upcoming[1]?.productId._id,
+                                            image: upcoming[1]?.productId?.images[0],
+                                            title: upcoming[1]?.productId.title,
+                                            quantity: 1,
+                                            gst: upcoming[1]?.productId.gst,
+                                            actualPrice: upcoming[1]?.productId.actualPrice
+                                          })
+                                        )
+                        
+                                        toast.success('Product add to cart successfuly!')
+                                      }} 
+                            className="text-xs font-medium font-poppins bg-primary">
+                                Add to cart
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="flex flex-col text-white font-poppins gap-2.5">
                 <h3 className=" text-4xl -tracking-tight font-semibold text-center">Upcoming games</h3>
                 <p className="text-base font-normal -tracking-tight text-center">Can’t wait to play your game? Preorder the key now and experience it on day one!</p>

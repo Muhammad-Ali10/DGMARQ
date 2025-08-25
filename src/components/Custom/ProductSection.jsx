@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "../ui/card
 
 import { Link } from 'react-router-dom'
 const ProductSection = ({ data }) => {
-    console.log(data)
+   
     return (
         <Link to={`/product-details/${data?._id}`}  >
             <Card className="w-[196px] flex flex-col bg-[#041536] p-4 rounded-21 border-0 text-white font-poppins gap-2.5 box-border">

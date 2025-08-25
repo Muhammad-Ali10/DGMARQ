@@ -420,9 +420,9 @@ const Navbar = () => {
       }
       <div className="bg-[#060318]/20 border-t border-blue-700/20 hidden md:block z-30">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between py-2.5">
+          <div className="flex overflow-hidden w-full items-center justify-between py-2.5">
             {/* Navigation Items */}
-            <nav className="hidden   relative lg:flex items-center space-x-6">
+            <nav className="hidden   relative md:contents items-center space-x-6">
               <BottomHeader />
               {navigationItems.map((item) => (
                 <Button asChild className="flex items-center gap-2 text-white py-2.5 px-5 text-sm font-medium font-poppins max-w-[181px] w-full bg-[#07142E]  rounded-none" key={item.name}>

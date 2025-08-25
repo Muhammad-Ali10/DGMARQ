@@ -103,7 +103,7 @@ const BottomHeader = () => {
       {desktopMenuOpen && (
         <section
           ref={menuRef}
-          className=" absolute z-50 left-0 right-0 top-10 w-full h-full"
+          className=" absolute z-50 left-0 right-0 top-36 w-full h-full"
         >
           <div className="flex w-full" onMouseLeave={closeMenu}>
             {/* Main Categories */}

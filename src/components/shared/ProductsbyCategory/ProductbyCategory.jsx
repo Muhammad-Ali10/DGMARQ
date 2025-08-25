@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 const ProductbyCategory = ({ brandName, page, limit }) => {
     const { data, isPending, error } = useCategoryQuery(1, 6);
 
-    console.log(brandName)
+    
 
     const categoryProducts = data?.data || [];
 
@@ -22,7 +22,7 @@ const ProductbyCategory = ({ brandName, page, limit }) => {
     // Skeleton loading condition
     const isSkeleton = isPending || softwareProducts.length === 0;
     const skeletonArray = Array.from({ length: 6 });
-    console.log(softwareProducts)
+
     return (
         <section
             className="flex flex-col items-center max-w-1260 w-full justify-center pt-12 gap-6"

@@ -53,7 +53,7 @@ const Home = () => {
                         >
                             {name}
                         </Button>
-                        {index < NavItem.length - 1 && (
+                         {index < NavItem.length - 1 && (
                             <hr className="border-t border-white w-5 rotate-90" />
                         )}
                     </React.Fragment>

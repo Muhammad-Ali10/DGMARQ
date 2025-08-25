@@ -20,7 +20,7 @@ export const CategoryApi = async (page, limit) => {
     const response = await axios.get(`${Base_url}/products/productByCategory?productPage=${page}&productLimit=${limit}`)
     return response.data
 }
-
+ 
 export const ProductByKey = async (page, limit) => {
 
     const response = await axios.get(`${Base_url}/products/getProductByKey?page=${page}&limit=${limit}`)
