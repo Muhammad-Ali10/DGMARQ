@@ -58,7 +58,7 @@ const ProductDetails = ({
 
     }).catch((res) => {
 
-    });
+    },[id]);
     axios
       .get(`${Base_url}/rating/getByProduct/${id}`)
       .then((res) => {
@@ -77,7 +77,7 @@ const ProductDetails = ({
 
 
 
-  }, [])
+  }, [id])
 
 
   const navigate = useNavigate();

@@ -45,7 +45,7 @@ const UpcomingGames = () => {
                                         toast.success('Product add to cart successfuly!')
                                       }}
                         
-                        className="text-xs font-medium font-poppins bg-primary">
+                        className="text-xs font-medium font-poppins bg-primary cursor-pointer">
                             Add to cart
                         </Button>
                     </div>
@@ -68,7 +68,7 @@ const UpcomingGames = () => {
                                         )
                         
                                         toast.success('Product add to cart successfuly!')
-                                      }} className="text-xs font-medium font-poppins bg-primary">
+                                      }} className="text-xs font-medium font-poppins bg-primary cursor-pointer">
                             Add to cart
                         </Button>
                     </div>
@@ -95,7 +95,7 @@ const UpcomingGames = () => {
                                         toast.success('Product add to cart successfuly!')
                                       }} 
                         
-                        className="text-xs font-medium font-poppins bg-primary">
+                        className="text-xs font-medium font-poppins bg-primary cursor-pointer">
                             Add to cart
                         </Button>
                     </div>
@@ -120,7 +120,7 @@ const UpcomingGames = () => {
                         
                                         toast.success('Product add to cart successfuly!')
                                       }} 
-                            className="text-xs font-medium font-poppins bg-primary">
+                            className="text-xs font-medium font-poppins bg-primary cursor-pointer">
                                 Add to cart
                             </Button>
                         </div>

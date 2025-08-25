@@ -121,7 +121,7 @@ const FlashDealCard = ({
       </div>
 
       {/* Buy Button */}
-      <button className="w-full bg-orange flex items-center justify-center gap-2 p-3 rounded-21 border border-[#D55603] text-white font-medium font-poppins"
+      <button className="w-full bg-orange flex items-center justify-center gap-2 p-3 rounded-21 border border-[#D55603] text-white font-medium font-poppins cursor-pointer"
         onClick={() => {
 
           dispatch(
