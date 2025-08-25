@@ -25,7 +25,7 @@ const UpcomingGames = () => {
 
             <h3 className="font-poppins font-semibold text-4xl -tracking-tight text-center text-white mt-9">New and upcoming releases</h3>
 
-            <div className="hidden lg:flex flex-row w-full justify-between items-end relative bg-white rounded-21 pb-10 h-[411px] bg-[url(./images/banner.png)] text-white bg-cover bg-center">
+            <div className={`hidden lg:flex flex-row w-full justify-between items-end relative bg-white rounded-21 pb-10 h-[411px]  text-white bg-cover bg-center`} style={{ backgroundImage: `url(${upcoming[0]?.productId?.images[0]})` }}>
                 <div className=" w-full lg:10 xl:pl-20 ">
                     <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
                     <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
@@ -76,7 +76,7 @@ const UpcomingGames = () => {
             </div>
 
             <div className="flex lg:hidden flex-col w-full justify-between items-center relative bg-white rounded-21 p-0">
-                <div className="flex flex-col pl-20 pt-56 bg-[url(./images/game2.png)] w-full h-[411px] bg-no-repeat text-white ">
+                <div className="flex flex-col pl-20 pt-56  w-full h-[411px] bg-no-repeat text-white " style={{ backgroundImage: `url(${upcoming[0]?.productId?.images[0]})` }}>
                     <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
                     <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
                         <h3 className="text-2xl font-poppins font-semibold">$ {upcoming[0]?.productId.actualPrice}</h3>
