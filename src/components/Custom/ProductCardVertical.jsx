@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const ProductCardVertical = ({ image, actualPrice, discountPrice, title, url }) => {
 
 
-
+console.log(url)
     return (
         <Link to={`/product-details/${url}`}  >
             <Card className=" w-[382px] flex flex-1 flex-row  items-start md:items-center bg-[#041536] p-4 rounded-21 border-0 text-white font-poppins gap-2.5 box-border">

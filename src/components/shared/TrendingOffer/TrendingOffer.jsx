@@ -28,6 +28,7 @@ const TrendingOffer = ({ displayImage, gridNumber }) => {
                             discountPrice={item.discountPrice}
                             image={item?.images[0]}
                             title={item.title}
+                             url={item._id}
                         />
                     ))}
                 </div>

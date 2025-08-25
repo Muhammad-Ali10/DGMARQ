@@ -17,7 +17,7 @@ const FlashDeal = () => {
   if (isPending || !flashDealItem) return null; // or show a loading skeleton
 
   console.log("flashDealItem", flashDealItem);
-
+ 
   return (
 
 
