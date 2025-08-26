@@ -178,8 +178,8 @@ const Navbar = () => {
   return (
     <>
 
-      <header className=" text-white relative z-50 w-full ">
-        <div className="flex items-center gap-4 max-w-1260 mx-auto px-2.5 py-3 md:py-5 justify-between">
+      <header className="flex flex-col gap-4 text-white relative z-50 w-full ">
+        <div className="flex items-center gap-4 max-w-1260 mx-auto px-2.5 py-3 md:py-5 justify-between w-full">
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link to="/">
@@ -303,6 +303,69 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <div className="block md:hidden w-full text-white justify-center items-center max-w-[700px] p-2.5">
+          <div className="p-[1px] rounded-md bg-gradient-to-r from-[#172AA4] via-purple-500 to-[#0E9FE2] w-full">
+            <div className=" w-full rounded-md bg-[#060318] px-2 items-center">
+
+              <form className=" h-11 z-50 w-full flex flex-row rounded-md items-center md:flex relative text-white text-base font-medium font-poppins">
+                <input
+                  value={searchQuery}
+                  onChange={handleInputChange}
+                  className="max-w-[254px] w-full p-3 rounded-tl-md rounded-bl-md  outline-none md:block relative z-50   placeholder:text-white"
+                  type="search"
+                  placeholder="What are you looking for?"
+                  onFocus={() => searchResults.length > 0 && setIsDropdownOpen(true)}
+                />
+                <div
+                  ref={dropdownRef}
+                  className="relative cursor-pointer max-w-[254px] w-full  flex items-center justify-between"
+                >
+                  <div className="border border-white w-5 rotate-90"></div>
+
+
+                  <div
+                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                    className="flex items-center "
+                  >
+                    <span className="text-white text-xs font-medium font-poppins">{Category}</span>
+                    <FaAngleDown className="ml-2 text-gray-400" />
+                  </div>
+                  {dropdownOpen && (
+                    <div className="absolute left-0 top-full w-60 bg-white shadow-lg border rounded-sm z-[60] ">
+                      {allCategory?.map((category) => (
+                        <Link
+                          to={`/category/${category?._id}`}
+                          key={category?._id}
+                          className={`px-3 py-2 text-[9px] block text-gray-700 hover:bg-gray-100  ${selectedCategory === category
+                            ? "bg-gray-200 font-semibold"
+                            : ""
+                            }`}
+                        >
+                          {category?.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                  <button
+                    className="bg-primary rounded-[9px] px-4 py-2.5 h-auto"
+                    type="submit"
+                  >
+                    <IoSearch size={20} />
+                  </button>
+                </div>
+
+                {isDropdownOpen && (
+                  <>
+                    <div className="fixed inset-0 bg-opacity-30 z-45" />
+                    <ul className="absolute left-0 z-[70] top-10 right-0 bg-white rounded-sm shadow-lg ">
+                      <SearchResults results={searchResults} />
+                    </ul>
+                  </>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
       </header >
       {mobileMenuOpen && (
         <section className="block md:hidden absolute left-0 right-0 z-50 h-screen w-full bg-primary py-2.5">
@@ -330,154 +393,112 @@ const Navbar = () => {
               >
                 Save more with DGMARQ Plus
               </Link>
-              <div className="w-full text-white justify-center items-center max-w-[700px]">
-                <div className="p-[1px] rounded-md bg-gradient-to-r from-[#172AA4] via-purple-500 to-[#0E9FE2] w-full">
-                  <div className=" w-full rounded-md bg-[#060318] px-2 items-center">
-
-                    <form className=" h-11 z-50 w-full flex flex-row rounded-md items-center md:flex relative text-white text-base font-medium font-poppins">
-                      <input
-                        value={searchQuery}
-                        onChange={handleInputChange}
-                        className="max-w-[254px] w-full p-3 rounded-tl-md rounded-bl-md  outline-none md:block relative z-50   placeholder:text-white"
-                        type="search"
-                        placeholder="What are you looking for?"
-                        onFocus={() => searchResults.length > 0 && setIsDropdownOpen(true)}
-                      />
-                      <div
-                        ref={dropdownRef}
-                        className="relative cursor-pointer max-w-[254px] w-full  flex items-center justify-between"
-                      >
-                        <div className="border border-white w-5 rotate-90"></div>
-
-
-                        <div
-                          onClick={() => setDropdownOpen(!dropdownOpen)}
-                          className="flex items-center "
-                        >
-                          <span className="text-white text-xs font-medium font-poppins">{Category}</span>
-                          <FaAngleDown className="ml-2 text-gray-400" />
-                        </div>
-                        {dropdownOpen && (
-                          <div className="absolute left-0 top-full w-60 bg-white shadow-lg border rounded-sm z-[60] ">
-                            {allCategory?.map((category) => (
-                              <Link
-                                to={`/category/${category?._id}`}
-                                key={category?._id}
-                                className={`px-3 py-2 text-[9px] block text-gray-700 hover:bg-gray-100  ${selectedCategory === category
-                                  ? "bg-gray-200 font-semibold"
-                                  : ""
-                                  }`}
-                              >
-                                {category?.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                        <button
-                          className="bg-primary rounded-[9px] px-4 py-2.5 h-auto"
-                          type="submit"
-                        >
-                          <IoSearch size={20} />
-                        </button>
-                      </div>
-
-                      {isDropdownOpen && (
-                        <>
-                          <div className="fixed inset-0 bg-opacity-30 z-45" />
-                          <ul className="absolute left-0 z-[70] top-10 right-0 bg-white rounded-sm shadow-lg ">
-                            <SearchResults results={searchResults} />
-                          </ul>
-                        </>
-                      )}
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           {desktopMenuOpen && (
-            <section className="fixed h-full top-0 w-80 z-50 left-0 right-0 bg-white border">
-              <div className="container mx-auto flex py-5">
-                <div className="sm:w-1/4 w-full border-r">
-                  <ul className="flex justify-between mt-6 flex-col w-full">
-                    {subCategory?.map((category, index) => (
-                      <Link
-                        onClick={() => {
-                          setDesktopMenuOpen(false)
-                          window.location.reload();
-                        }}
-                        to={`/category/${category?._id}`}
-                        key={index}
-                        className={`flex items-center gap-2 px-4 py-2 cursor-pointer ${Category === category?.midcategories
-                          ? "bg-gray-200"
-                          : "hover:bg-gray-100"
-                          }`}
-                        onMouseEnter={() => setCategory(category?.midcategories)}
-                      // onMouseLeave={() => setHoveredSubMenu(null)}
-                      >
-                        {category.title}
-                        <IoMdArrowDropright className="ml-auto" />
-                      </Link>
-                    ))}
-                  </ul>
-                </div>
-                {Category && (
-                  <div className="sm:w-3/4 flex">
-                    {subCategory
-                      .find((cat) => cat.midcategories === Category)
-                      ?.subcategories.map((submenu, index) => (
-                        <div key={index} className="px-4">
-                          <Link
-                            to={`/category/${submenu?._id}`}
-                            className="font-semibold text-gray-700"
-                          >
-                            {submenu.title}
-                          </Link>
-                          <ul className="mt-2 space-y-1">
-                            {submenu.items?.map((item, itemIndex) => (
-                              <li
-                                key={itemIndex}
-                                className="relative group"
-                              >
-                                <div
-                                  onClick={() => setOpenSubMenu(openSubMenu === item.label ? null : item.label)}
-                                  className="block px-2 py-1 hover:bg-gray-100 cursor-pointer"
-                                >
-                                  {item.label}
-                                </div>
-                                {openSubMenu === item.label && item.subItems && (
-                                  <ul className="absolute w-full left-full top-0 bg-white border shadow-md">
-                                    {item.subItems.map((subItem, subIndex) => (
-                                      <li key={subIndex}>
-                                        <a
-                                          href={subItem.href}
-                                          className="block px-3 py-1 hover:bg-gray-100"
-                                        >
-                                          {subItem.label}
-                                        </a>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                )}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                  </div>
-                )}
-                <div>
-                  <button
-                    onClick={closeSubMenu}
-                    className="absolute top-3 right-3 text-gray-700"
-                  >
+            <section className="fixed inset-0 z-50 bg-white overflow-y-auto">
+              <div className="flex flex-col h-full">
+
+                {/* Header */}
+                <div className="flex justify-between items-center p-4 border-b">
+                  <h2 className="text-lg font-semibold">Categories</h2>
+                  <button onClick={closeSubMenu} className="text-gray-700">
                     <IoMdClose className="w-6 h-6" />
                   </button>
                 </div>
 
+                {/* Category List */}
+                <div className="flex flex-col">
+                  {subCategory?.map((category) => {
+                    const isCategoryOpen = Category === category.midcategories;
+                    return (
+                      <div key={category._id} className="border-b">
+
+                        {/* Parent Category: toggle OR link */}
+                        {category.subcategories && category.subcategories.length > 0 ? (
+                          <button
+                            className="w-full flex justify-between items-center px-4 py-3 text-left hover:bg-gray-100"
+                            onClick={() =>
+                              setCategory(isCategoryOpen ? null : category.midcategories)
+                            }
+                          >
+                            <span>{category.title}</span>
+                            <IoMdArrowDropright
+                              className={`transform transition-transform ${isCategoryOpen ? "rotate-90" : ""
+                                }`}
+                            />
+                          </button>
+                        ) : (
+                          <Link
+                            to={`/category/${category._id}`}
+                            className="block px-4 py-3 hover:bg-gray-100"
+                            onClick={() => setDesktopMenuOpen(false)}
+                          >
+                            {category.title}
+                          </Link>
+                        )}
+
+                        {/* Subcategories Accordion */}
+                        {isCategoryOpen &&
+                          category.subcategories?.map((submenu) => {
+                            const isSubmenuOpen = openSubMenu === submenu.title;
+                            return (
+                              <div key={submenu._id} className="border-b pl-6">
+                                {submenu.items && submenu.items.length > 0 ? (
+                                  <>
+                                    <button
+                                      className="w-full flex justify-between items-center py-2 text-left hover:bg-gray-200 rounded"
+                                      onClick={() =>
+                                        setOpenSubMenu(
+                                          isSubmenuOpen ? null : submenu.title
+                                        )
+                                      }
+                                    >
+                                      {submenu.title}
+                                      <IoMdArrowDropright
+                                        className={`transform transition-transform ${isSubmenuOpen ? "rotate-90" : ""
+                                          }`}
+                                      />
+                                    </button>
+
+                                    {isSubmenuOpen && (
+                                      <ul className="flex flex-col pl-4 pb-2 space-y-1">
+                                        {submenu.items.map((item) => (
+                                          <li key={item.label}>
+                                            <Link
+                                              to={item.href}
+                                              className="block py-1 px-2 hover:bg-gray-200 rounded"
+                                              onClick={() =>
+                                                setDesktopMenuOpen(false)
+                                              }
+                                            >
+                                              {item.label}
+                                            </Link>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                  </>
+                                ) : (
+                                  <Link
+                                    to={`/category/${submenu._id}`}
+                                    className="block py-2 hover:bg-gray-100 rounded"
+                                    onClick={() => setDesktopMenuOpen(false)}
+                                  >
+                                    {submenu.title}
+                                  </Link>
+                                )}
+                              </div>
+                            );
+                          })}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </section>
           )}
+
         </section>
       )
       }
