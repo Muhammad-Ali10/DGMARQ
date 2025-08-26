@@ -25,7 +25,7 @@ const UpcomingGames = () => {
 
             <h3 className="font-poppins font-semibold text-4xl -tracking-tight text-center text-white mt-9">New and upcoming releases</h3>
 
-            <div className={`hidden lg:flex flex-row w-full justify-between items-end relative bg-white rounded-21 pb-10 h-[411px]  text-white bg-cover bg-center`} style={{ backgroundImage: `url(${upcoming[0]?.productId?.images[0]})` }}>
+            <div className={`hidden lg:flex flex-row w-full justify-between items-end relative bg-white rounded-21 pb-10 h-[411px]  text-white bg-cover bg-center`} style={{ backgroundImage: `url(${upcoming[0]?.banner})` }}>
                 <div className=" w-full lg:10 xl:pl-20 ">
                     <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
                     <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
@@ -75,11 +75,11 @@ const UpcomingGames = () => {
                 </div>
             </div>
 
-            <div className="flex lg:hidden flex-col w-full justify-between items-center relative bg-white rounded-21 p-0">
-                <div className="flex flex-col pl-20 pt-56  w-full h-[411px] bg-no-repeat text-white " style={{ backgroundImage: `url(${upcoming[0]?.productId?.images[0]})` }}>
-                    <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[0]?.productId.title}</h3>
+            <div className="flex lg:hidden flex-col w-full justify-between items-center relative bg-white rounded-21  p-0">
+                <div className="flex flex-col  justify-end w-full  bg-cover bg-start bg-no-repeat text-white pb-4 pt-30 pl-10"  style={{ backgroundImage: `url(${upcoming[2]?.banner})` }}>
+                    <h3 className="max-w-[284px] w-full font-poppins font-bold text-">{upcoming[0]?.productId.title}</h3>
                     <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
-                        <h3 className="text-2xl font-poppins font-semibold">$ {upcoming[0]?.productId.actualPrice}</h3>
+                        <h3 className="text-xl font-poppins font-semibold">$ {upcoming[0]?.productId.actualPrice}</h3>
                         <Button onClick={() => {
                                         dispatch(
                                           addToCart({
@@ -100,12 +100,11 @@ const UpcomingGames = () => {
                         </Button>
                     </div>
                 </div>
-                <div className="flex flex-col pt-56 bg-[url(./images/game1.png)] bg-no-repeat
-                 w-full h-[411px] bg-right  text-white">
-                    <div className=" max-w-[344px] w-full right-5">
+                <div className="flex flex-col  w-full bg-cover b bg-no-repeat bg-center  text-white pb-4 pt-30 pl-12"  style={{ backgroundImage: `url(${upcoming[5]?.banner})` }}>
+                    <div className=" max-w-[344px] w-full ">
                         <h3 className="max-w-[284px] w-full font-poppins font-bold text-xl">{upcoming[1]?.productId.title}</h3>
                         <div className="flex max-w-[350px] w-full justify-between items-center mt-10">
-                            <h3 className="text-2xl font-poppins font-semibold">$ {upcoming[1]?.productId.actualPrice}</h3>
+                            <h3 className="text-xl font-poppins font-semibold">$ {upcoming[1]?.productId.actualPrice}</h3>
                             <Button  onClick={() => {
                                         dispatch(
                                           addToCart({

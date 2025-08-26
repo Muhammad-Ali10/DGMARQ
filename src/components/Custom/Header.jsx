@@ -64,7 +64,7 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
-  const location = useLocation() 
+  const location = useLocation()
 
 
   const Items = [
@@ -330,6 +330,69 @@ const Navbar = () => {
               >
                 Save more with DGMARQ Plus
               </Link>
+              <div className="w-full text-white justify-center items-center max-w-[700px]">
+                <div className="p-[1px] rounded-md bg-gradient-to-r from-[#172AA4] via-purple-500 to-[#0E9FE2] w-full">
+                  <div className=" w-full rounded-md bg-[#060318] px-2 items-center">
+
+                    <form className=" h-11 z-50 w-full flex flex-row rounded-md items-center md:flex relative text-white text-base font-medium font-poppins">
+                      <input
+                        value={searchQuery}
+                        onChange={handleInputChange}
+                        className="max-w-[254px] w-full p-3 rounded-tl-md rounded-bl-md  outline-none md:block relative z-50   placeholder:text-white"
+                        type="search"
+                        placeholder="What are you looking for?"
+                        onFocus={() => searchResults.length > 0 && setIsDropdownOpen(true)}
+                      />
+                      <div
+                        ref={dropdownRef}
+                        className="relative cursor-pointer max-w-[254px] w-full  flex items-center justify-between"
+                      >
+                        <div className="border border-white w-5 rotate-90"></div>
+
+
+                        <div
+                          onClick={() => setDropdownOpen(!dropdownOpen)}
+                          className="flex items-center "
+                        >
+                          <span className="text-white text-xs font-medium font-poppins">{Category}</span>
+                          <FaAngleDown className="ml-2 text-gray-400" />
+                        </div>
+                        {dropdownOpen && (
+                          <div className="absolute left-0 top-full w-60 bg-white shadow-lg border rounded-sm z-[60] ">
+                            {allCategory?.map((category) => (
+                              <Link
+                                to={`/category/${category?._id}`}
+                                key={category?._id}
+                                className={`px-3 py-2 text-[9px] block text-gray-700 hover:bg-gray-100  ${selectedCategory === category
+                                  ? "bg-gray-200 font-semibold"
+                                  : ""
+                                  }`}
+                              >
+                                {category?.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                        <button
+                          className="bg-primary rounded-[9px] px-4 py-2.5 h-auto"
+                          type="submit"
+                        >
+                          <IoSearch size={20} />
+                        </button>
+                      </div>
+
+                      {isDropdownOpen && (
+                        <>
+                          <div className="fixed inset-0 bg-opacity-30 z-45" />
+                          <ul className="absolute left-0 z-[70] top-10 right-0 bg-white rounded-sm shadow-lg ">
+                            <SearchResults results={searchResults} />
+                          </ul>
+                        </>
+                      )}
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           {desktopMenuOpen && (

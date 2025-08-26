@@ -12,7 +12,7 @@ const SearchResults = ({ results }) => {
          {results.map((product, index) => (
            <Link to={`/product-details/${product._id}`}
              key={index}
-             className=" w-full   flex flex-row   border-b overflow-hidden shadow-sm"
+             className=" w-full   flex flex-col md:flex-row   border-b overflow-hidden shadow-sm"
            >
              <div className="block p-3 w-24 h-24 ">
                <img
