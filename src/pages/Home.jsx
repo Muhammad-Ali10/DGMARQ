@@ -43,7 +43,7 @@ const Home = () => {
 
     return (
         <div className="flex flex-col items-center justify-center m-auto overflow-hidden gap-12">
-            <Hero />
+            
             <div className="hidden w-full max-w-1260 mx-auto lg:flex flex-row flex-wrap items-center justify-center text-white border rounded-xl py-1.5 px-4 mt-9">
                 {NavItem.map(({ name, id }, index) => (
                     <React.Fragment key={id}>
