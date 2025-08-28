@@ -91,7 +91,7 @@ const Dashboard = () => {
                         </div>
 
 
-                        <div>
+                        {/* <div>
                             <div className=' mt-5 bg-blue-4 rounded-md'>
                                 <div className=' border'>
                                     <div className=' p-3 border-b flex justify-between items-center '>
@@ -135,7 +135,7 @@ const Dashboard = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
 
