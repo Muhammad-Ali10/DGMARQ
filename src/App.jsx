@@ -38,6 +38,9 @@ import Category from './pages/Category/index'
 import SubCategory from './pages/SubCategory/index'
 import SubSubCategory from './pages/SubSubCategory/index'
 import Wishlist from './pages/WishList'
+import SellerStore from "./pages/SellerStore/index";
+import StoreProduct from "./pages/SellerStore/StoreProduct";
+import AboutSellerStore from "./pages/SellerStore/AboutSellerStore";
 import { ToastContainer } from "react-toastify";
 
 
@@ -45,50 +48,54 @@ function App() {
   const queryClient = new QueryClient()
 
   return (
-   <>
-      <ToastContainer/>
-    <QueryClientProvider client={queryClient}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="software" element={<SoftwarePage />} />
-          <Route path="random-keys" element={<RandomKeys />} />
-          <Route path="best-sellers" element={<BestSellers />} />
-          <Route path="steam-gift" element={<SteamGiftCard />} />
-          <Route path="about-company" element={<AboutCompany />} />
-          <Route path="marketplace" element={<Marketplace />} />
-          <Route path="security" element={<Security />} />
-          <Route path="steamgift" element={<SteamGiftCard />} />
-          <Route path="contactus" element={<ContactUs />} />
-          <Route path="careers" element={<Careers />} />
-          <Route path="buyer-support" element={<BuyerSupport />} />
-          <Route path="how-to-buy" element={<HowToBuy />} />
-          <Route path='seller-support' element={<SellerSupport />} />
-          <Route path='how-to-sell' element={<HowToSell />} />
-          <Route path='partnerships' element={<Partnerships />} />
-          <Route path='terms-conditions' element={<TermsConditions />} />
-          <Route path='privacy-policy' element={<PrivacyPolicy />} />
-          <Route path='stay-safe' element={<StaySafe />} />
-          <Route path='cart' element={<Cart />} />
-          
-          <Route path="/product-details/:id" element={<ProductDetails />} />
-          <Route path="/category/:id" element={<Category />} />
-          <Route path="/sub-category/:id" element={<SubCategory />} />
-          <Route path="/sub-sub-category/:id" element={<SubSubCategory />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/new-password" element={<NewPassword />} />
-          <Route path="/Wishlist" element={<Wishlist />} />
-        </Route>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/keys" element={<Keys />} />
-        <Route path="/order-history" element={<OrderHistory />} />
-        <Route path="/settings" element={<Settings />} />
-      </Routes>
-    </QueryClientProvider>
-   </>
+    <>
+      <ToastContainer />
+      <QueryClientProvider client={queryClient}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="software" element={<SoftwarePage />} />
+            <Route path="random-keys" element={<RandomKeys />} />
+            <Route path="best-sellers" element={<BestSellers />} />
+            <Route path="steam-gift" element={<SteamGiftCard />} />
+            <Route path="about-company" element={<AboutCompany />} />
+            <Route path="marketplace" element={<Marketplace />} />
+            <Route path="security" element={<Security />} />
+            <Route path="steamgift" element={<SteamGiftCard />} />
+            <Route path="contactus" element={<ContactUs />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="buyer-support" element={<BuyerSupport />} />
+            <Route path="how-to-buy" element={<HowToBuy />} />
+            <Route path='seller-support' element={<SellerSupport />} />
+            <Route path='how-to-sell' element={<HowToSell />} />
+            <Route path='partnerships' element={<Partnerships />} />
+            <Route path='terms-conditions' element={<TermsConditions />} />
+            <Route path='privacy-policy' element={<PrivacyPolicy />} />
+            <Route path='stay-safe' element={<StaySafe />} />
+            <Route path='cart' element={<Cart />} />
+            <Route path='seller-store' element={<SellerStore />} />
+            {/* <Route path="/seller-store" element={<SellerStore/>} > */}
+            <Route path="store-products/:id" element={<StoreProduct />} />
+            <Route path="about" element={<AboutSellerStore />} />
+            {/* </Route> */}
+            <Route path="/product-details/:id" element={<ProductDetails />} />
+            <Route path="/category/:id" element={<Category />} />
+            <Route path="/sub-category/:id" element={<SubCategory />} />
+            <Route path="/sub-sub-category/:id" element={<SubSubCategory />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/new-password" element={<NewPassword />} />
+            <Route path="/Wishlist" element={<Wishlist />} />
+          </Route>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/keys" element={<Keys />} />
+          <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/settings" element={<Settings />} />
+        </Routes>
+      </QueryClientProvider>
+    </>
   )
 }
 

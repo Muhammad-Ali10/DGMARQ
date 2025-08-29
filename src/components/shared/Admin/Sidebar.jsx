@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 const Sidebar = ({ side, closeSidebar }) => {
   return (
     <div
-      className={` bg-transparent border-r fixed top-20  sm:left-0 w-20 overflow-x-auto h-screen  z-10 transition-all`}
+      className={` bg-[#060318] border-r fixed top-20  sm:left-0 w-20 overflow-x-auto h-screen  z-10 transition-all`}
     >
       <i
         className=" absolute text-black top-4 right-4 sm:hidden block cursor-pointer text-lg"
         onClick={closeSidebar}
       ></i>
 
-      <ul className=" pt-5 mx-2  m-auto flex flex-col  items-center justify-center">
+      <ul className="bg-[#060318]  pt-5 mx-2  m-auto flex flex-col  items-center justify-center">
         <li className=" cursor-pointer m-auto">
 
 
           <Link to="/dashboard" className="text-lg capitalize">
-            <div className=" w-10 h-10 text-white rounded-md bg-blue-500 flex  justify-center items-center">
+            <div className=" w-10 h-10 text-black rounded-md bg-blue-500 flex  justify-center items-center">
               <svg
 
                 viewBox="0 0 24 24"
@@ -87,7 +87,7 @@ const Sidebar = ({ side, closeSidebar }) => {
 
       </ul>
       {side === 'left-64 md:left-0' ?
-        <div className=" fixed  w-52 left-20 flex justify-between flex-col pb-5 shadow-2xl h-screen  top-0">
+        <div className="bg-[#060318]  fixed  w-52 left-20 flex justify-between flex-col pb-5 shadow-2xl h-screen  top-0">
           <div>
             <ul className=" mt-28">
               <li className=" w-full bg-blue-500 py-3">
@@ -100,7 +100,7 @@ const Sidebar = ({ side, closeSidebar }) => {
 
             <ul className=" mt-10">
               <li className=" px-3">
-                <p className=" text-gray-500 text-sm">ORDERS</p>
+                <p className=" text-white text-sm">ORDERS</p>
               </li>
               <li className=" w-full py-3">
                 <Link to={'/keys'} className=" px-3  text-white">
@@ -120,7 +120,7 @@ const Sidebar = ({ side, closeSidebar }) => {
             </ul>
           </div>
           <Link to={`https://seller.dgmarq.com/seller-verification`} className=" mx-2.5">
-            <button className="   capitalize border text-gray-300  w-full  border-gray-500 text-sm flex items-center  justify-between  px-4 py-3 rounded-md">become a seller <TbLogout size={25} className="" />            </button>
+            <button className="   capitalize border text-white w-full  border-gray-500 text-sm flex items-center  justify-between  px-4 py-3 rounded-md">become a seller <TbLogout size={25} className="" />            </button>
           </Link>
         </div> : null
       }
